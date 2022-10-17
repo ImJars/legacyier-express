@@ -11,9 +11,16 @@ module.exports = {
         'primary': '#0C0D11',
         'secondary': '#17181D',
         'tertiary': '#F21E4E',
+        'text-mini': '#AFADB5',
       },
       fontFamily:{
         'sans': ['Open Sans', 'sans-serif'],
+      },
+      maxWidth: {
+        250: '70rem',
+      },
+      width: {
+        'img': '600px',
       },
     },
   },
