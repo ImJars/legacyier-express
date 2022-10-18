@@ -6,6 +6,7 @@ import { FaProjectDiagram } from 'react-icons/fa';
 import { MdGroups, MdVerified, MdOutlineWork } from 'react-icons/md';
 import { BsFillEmojiSmileFill } from 'react-icons/bs';
 import { BiCodeAlt } from 'react-icons/bi';
+import Title from './components/title';
 
 const AboutMe = () => {
     return ( 
@@ -17,21 +18,11 @@ const AboutMe = () => {
                 <div
                     className='max-w-250 flex flex-col'
                 >
-                    <div
-                        className='border-l-2 border-tertiary pl-2'
-                    >
-                        <h1
-                            className='text-2xl font-bold'
-                        >
-                            About Me
-                        </h1>
-                        <h2
-                            className='text-xs'
-                        >
-                            Main informations about me
-                            and what I love to do.
-                        </h2>
-                    </div>
+                    <Title 
+                        title='About Me'
+                        subtitle='Main informations about me
+                                and what I love to do.'
+                    />
                     <div
                         className='flex mt-14'
                     >
