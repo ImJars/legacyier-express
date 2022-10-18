@@ -3,11 +3,13 @@ import AboutMe from "../components/about-me"
 import Home from "../components/home"
 // import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Services from "../components/services"
 
 const IndexPage = () => (
     <>
         <Home />
         <AboutMe />
+        <Services />
     </>
 )
 
