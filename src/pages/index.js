@@ -4,12 +4,14 @@ import Home from "../components/home"
 // import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Services from "../components/services"
+import Work from "../components/work"
 
 const IndexPage = () => (
     <>
         <Home />
         <AboutMe />
         <Services />
+        <Work />
     </>
 )
 
