@@ -1,6 +1,11 @@
 import React from 'react';
 import Img from '../images/gatsby-icon.png';
+import AboutCard from './components/about-card';
 import Data from './components/data';
+import { FaProjectDiagram } from 'react-icons/fa';
+import { MdGroups, MdVerified, MdOutlineWork } from 'react-icons/md';
+import { BsFillEmojiSmileFill } from 'react-icons/bs';
+import { BiCodeAlt } from 'react-icons/bi';
 
 const AboutMe = () => {
     return ( 
@@ -106,54 +111,42 @@ const AboutMe = () => {
                         className='flex mt-20 justify-between 
                                    font-sans text-sm'
                     >
-                        <div
-                            className='rounded-lg px-4 py-14
-                                        bg-secondary text-white'
+                        <AboutCard
+                            icon={ <FaProjectDiagram /> }
+                            description={ '130 projects completed' }
                         >
-                            <h1>
-                                130 projects completed
-                            </h1>
-                        </div>
-                        <div
-                            className='rounded-lg px-4 py-14
-                            bg-secondary text-white'
+                            
+                        </AboutCard>
+                        <AboutCard
+                            icon={ <MdGroups /> }
+                            description={ '400 satisfied clients' }
                         >
-                            <h1>
-                                400 satisfied clients
-                            </h1>
-                        </div>
-                        <div
-                            className='rounded-lg px-4 py-14
-                            bg-secondary text-white'
+                            
+                        </AboutCard>
+                        <AboutCard
+                            icon={ <MdVerified /> }
+                            description={ '100% positive feedback' }
                         >
-                            <h1>
-                                100% positive feedback
-                            </h1>
-                        </div>
-                        <div
-                            className='rounded-lg px-4 py-14
-                            bg-secondary text-white'
+                            
+                        </AboutCard>
+                        <AboutCard
+                            icon={ <BsFillEmojiSmileFill /> }
+                            description={ '10 years of experience' }
                         >
-                            <h1>
-                                10 years of experience
-                            </h1>
-                        </div>
-                        <div
-                            className='rounded-lg px-4 py-14
-                            bg-secondary text-white'
+                            
+                        </AboutCard>
+                        <AboutCard
+                            icon={ <BiCodeAlt /> }
+                            description={ '2000+ lines of code' }
                         >
-                            <h1>
-                                2000+ lines of code
-                            </h1>
-                        </div>
-                        <div
-                            className='rounded-lg px-4 py-14
-                            bg-secondary text-white'
+                            
+                        </AboutCard>
+                        <AboutCard
+                            icon={ <MdOutlineWork /> }
+                            description={ '2000+ hours of work' }
                         >
-                            <h1>
-                                2000+ hours of work
-                            </h1>
-                        </div>
+                            
+                        </AboutCard>
                     </div>
                 </div>
             </section>

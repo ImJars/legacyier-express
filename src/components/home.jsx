@@ -13,19 +13,19 @@ const Home = () => {
                     <div
                         className='flex space-x-4 mt-8 justify-center'
                     >
-                        <a href="#">
+                        <a href="https://github.com/ImJars">
                             <FaFacebookF />
                         </a>
-                        <a href="#">
+                        <a href="https://github.com/ImJars">
                             <FaTwitter />
                         </a>
-                        <a href="#">
+                        <a href="https://github.com/ImJars">
                             <FaInstagram />
                         </a>
-                        <a href="#">
+                        <a href="https://github.com/ImJars">
                             <FaLinkedinIn />
                         </a>
-                        <a href="#">
+                        <a href="https://github.com/ImJars">
                             <FaGithub />
                         </a>
                     </div>
