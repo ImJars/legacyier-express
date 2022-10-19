@@ -21,6 +21,7 @@ module.exports = {
       },
       width: {
         'img': '600px',
+        'card-img': '300px',
       },
     },
   },
