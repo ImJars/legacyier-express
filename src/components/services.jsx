@@ -6,6 +6,7 @@ const Services = () => {
     return ( 
         <>
             <section
+                id='Services'
                 className="w-full h-screen bg-primary text-white
                         font-sans flex justify-center items-center"
             >

@@ -12,6 +12,7 @@ const AboutMe = () => {
     return ( 
         <>
             <section
+                id='About'
                 className="w-full h-screen bg-primary text-white
                     font-sans flex justify-center items-center"
             >

@@ -11,8 +11,9 @@ const Blog = () => {
     return ( 
         <>
             <section
+                id='Blog'
                 className="w-full h-sfull bg-primary text-white
-                font-sans flex justify-center items-center py-40"
+                font-sans flex justify-center items-center py-20"
             >   
                 <div
                     className='max-w-250 flex flex-col'

@@ -8,6 +8,7 @@ const Contact = () => {
     return ( 
         <>
             <section
+                id='Contact'
                 className="w-full h-screen bg-primary text-white
                 font-sans flex justify-center items-center"
             >

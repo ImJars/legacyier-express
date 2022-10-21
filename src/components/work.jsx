@@ -8,8 +8,9 @@ const Work = () => {
     return ( 
         <>
             <section
-                className="w-full h-screen bg-primary text-white
-                font-sans flex justify-center items-center"
+                id='Works'
+                className="w-full h-full bg-primary text-white
+                font-sans flex justify-center items-center pt-20 pb-40"
             >
                 <div
                     className='max-w-250 flex flex-col'

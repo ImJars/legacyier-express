@@ -5,6 +5,7 @@ const Home = () => {
     return ( 
         <>
             <div
+                id='Home'
                 className='w-full h-screen bg-secondary text-white'
             >
                 <div 
