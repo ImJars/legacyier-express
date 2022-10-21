@@ -7,3 +7,14 @@
 html{
     scroll-behavior: smooth;
 }
+
+.tab-indicator {
+    position: absolute;
+    width: 7px;
+    height:7px;
+    top: 32%;
+    background: #F21E4E;
+    border-radius: 100%;
+    transform: translateY(-55px) translateX(55px);
+    transition: all 500ms ease-in-out;
+}

@@ -1,7 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BiGitBranch } from 'react-icons/bi';
 
 const Menu = () => {
+
+    const [tab, setTab] = useState(1);
+
+    function changeMenu (index) {
+        setTab(index);
+        if ( index === 1 ) {
+            document.querySelector('.tab-indicator').style.top = '32%';
+        } else if ( index === 2 ) {
+            document.querySelector('.tab-indicator').style.top = '39.5%';
+        } else if ( index === 3 ) {
+            document.querySelector('.tab-indicator').style.top = '47.5%';
+        } else if ( index === 4 ) {
+            document.querySelector('.tab-indicator').style.top = '55.3%';
+        } else if ( index === 5 ) {
+            document.querySelector('.tab-indicator').style.top = '63%';
+        } else if ( index === 6 ) {
+            document.querySelector('.tab-indicator').style.top = '71%';
+        }
+        
+    }
     return ( 
         <>
          <div
@@ -30,42 +50,67 @@ const Menu = () => {
                         <li
                             className='-rotate-90 text-center'
                         >
-                            <a href="#Home">
+                            <a 
+                                href="#Home"
+                                onClick={ () => changeMenu(1) }
+                                className={ tab === 1 ? 'text-tertiary transition duration-700 ease-in-out' : 'text-white transition duration-700 ease-in-out' }   
+                            >
                                 Home
                             </a>
                         </li>
+                        <div className='tab-indicator'/>
                         <li
                             className='-rotate-90 text-center'
                         >
-                            <a href="#About">
+                            <a 
+                                href="#About"
+                                onClick={ () => changeMenu(2) }
+                                className={ tab === 2 ? 'text-tertiary transition duration-700 ease-in-out' : 'text-white transition duration-700 ease-in-out' }
+                            >
                                 About
                             </a>
                         </li>
                         <li
                             className='-rotate-90 text-center'
                         >
-                            <a href="#Services">
+                            <a 
+                                href="#Services"
+                                onClick={ () => changeMenu(3) }
+                                className={ tab === 3 ? 'text-tertiary transition duration-700 ease-in-out' : 'text-white transition duration-700 ease-in-out' }
+                            >
                                 Services
                             </a>
                         </li>
                         <li
                             className='-rotate-90 text-center'
                         >
-                            <a href="#Works">
+                            <a 
+                                href="#Works"
+                                onClick={ () => changeMenu(4) }
+                                className={ tab === 4 ? 'text-tertiary transition duration-700 ease-in-out' : 'text-white transition duration-700 ease-in-out' }
+                            >
                                 Works
                             </a>
                         </li>
                         <li
                             className='-rotate-90 text-center'
                         >
-                            <a href="#Blog">
+                            <a 
+                                href="#Blog"
+                                onClick={ () => changeMenu(5) }
+                                className={ tab === 5 ? 'text-tertiary transition duration-700 ease-in-out' : 'text-white transition duration-700 ease-in-out' } 
+                            >
                                 Blog
                             </a>
                         </li>
                         <li
                             className='-rotate-90 text-center'
                         >
-                            <a href="#Contact">
+                            <a 
+                                href="#Contact"
+                                onClick={ () => changeMenu(6) }
+                                className={ tab === 6 ? 'text-tertiary transition duration-700 ease-in-out' : 'text-white transition duration-700 ease-in-out' } 
+                            >
                                 Contact
                             </a>
                         </li>
