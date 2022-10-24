@@ -8,10 +8,11 @@ import { BsFillEmojiSmileFill } from 'react-icons/bs';
 import { BiCodeAlt } from 'react-icons/bi';
 import Title from './components/title';
 
-const AboutMe = () => {
+const AboutMe = ({ refAbout }) => {
     return ( 
         <>
             <section
+                ref={ refAbout }
                 id='About'
                 className="w-full h-screen bg-primary text-white
                     font-sans flex justify-center items-center"

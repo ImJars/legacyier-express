@@ -1,10 +1,11 @@
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
-const Home = () => {
+const Home = ({ refHome }) => {
     return ( 
         <>
             <div
+                ref={ refHome}
                 id='Home'
                 className='w-full h-screen bg-secondary text-white'
             >

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { BiGitBranch } from 'react-icons/bi';
+import { motion } from 'framer-motion';
 
-const Menu = () => {
+const Menu = ({ animationHome, animationAbout, animateIndicator }) => {
 
     const [tab, setTab] = useState(1);
 
@@ -26,7 +27,7 @@ const Menu = () => {
         <>
          <div
             className='fixed w-20 h-screen bg-primary 
-                    text-white font-sans'
+                    text-white font-sans z-50 transform top-0 left-0'
          >
             <div
                 className='h-screen grid content-between'
@@ -49,25 +50,27 @@ const Menu = () => {
                         <li
                             className='-rotate-90 text-center'
                         >
-                            <a 
+                            <motion.a
+                                animate={ animationHome}
                                 href="#Home"
                                 onClick={ () => changeMenu(1) }
                                 className={ tab === 1 ? 'text-tertiary transition duration-700 ease-in-out' : 'text-white transition duration-700 ease-in-out' }   
                             >
                                 Home
-                            </a>
+                            </motion.a>
                         </li>
-                        <div className='tab-indicator'/>
+                        <motion.div animate={ animateIndicator } className='tab-indicator'/>
                         <li
                             className='-rotate-90 text-center'
                         >
-                            <a 
+                            <motion.a 
+                                animate={ animationAbout}
                                 href="#About"
                                 onClick={ () => changeMenu(2) }
                                 className={ tab === 2 ? 'text-tertiary transition duration-700 ease-in-out' : 'text-white transition duration-700 ease-in-out' }
                             >
                                 About
-                            </a>
+                            </motion.a>
                         </li>
                         <li
                             className='-rotate-90 text-center'
