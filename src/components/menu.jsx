@@ -8,17 +8,17 @@ const Menu = () => {
     function changeMenu (index) {
         setTab(index);
         if ( index === 1 ) {
-            document.querySelector('.tab-indicator').style.top = '32%';
+            document.querySelector('.tab-indicator').style.top = '4%';
         } else if ( index === 2 ) {
-            document.querySelector('.tab-indicator').style.top = '39.5%';
+            document.querySelector('.tab-indicator').style.top = '22.5%';
         } else if ( index === 3 ) {
-            document.querySelector('.tab-indicator').style.top = '47.5%';
+            document.querySelector('.tab-indicator').style.top = '41.5%';
         } else if ( index === 4 ) {
-            document.querySelector('.tab-indicator').style.top = '55.3%';
+            document.querySelector('.tab-indicator').style.top = '60.5%';
         } else if ( index === 5 ) {
-            document.querySelector('.tab-indicator').style.top = '63%';
+            document.querySelector('.tab-indicator').style.top = '79%';
         } else if ( index === 6 ) {
-            document.querySelector('.tab-indicator').style.top = '71%';
+            document.querySelector('.tab-indicator').style.top = '97.5%';
         }
         
     }
@@ -43,9 +43,8 @@ const Menu = () => {
                         </a>
                     </div>
                 </div>
-                
                     <div
-                        className='list-none space-y-12 text-sm'
+                        className='list-none transform space-y-12 text-sm'
                     >
                         <li
                             className='-rotate-90 text-center'

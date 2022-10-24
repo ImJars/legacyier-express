@@ -11,6 +11,7 @@ module.exports = {
         'primary': '#0C0D11',
         'secondary': '#17181D',
         'tertiary': '#F21E4E',
+        'quaternary': '#3399FF',
         'text-mini': '#AFADB5',
       },
       fontFamily:{
