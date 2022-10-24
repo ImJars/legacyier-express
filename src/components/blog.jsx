@@ -1,10 +1,10 @@
 import React from 'react';
 import BlogCard from './components/blog-card';
 import Title from './components/title';
-import Img01 from '../images/designer-01.jpg';
-import Img02 from '../images/designer-02.jpg';
-import Img03 from '../images/designer-03.jpg';
-import Img06 from '../images/designer-06.jpg';
+import Img01 from '../images/designer-01.webp';
+import Img03 from '../images/designer-03.webp';
+import Img02 from '../images/designer-02.webp';
+import Img06 from '../images/designer-06.webp';
 
 
 const Blog = () => {
