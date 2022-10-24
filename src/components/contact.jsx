@@ -4,10 +4,11 @@ import Title from './components/title';
 import { AiTwotonePhone, AiOutlineTwitter } from 'react-icons/ai';
 import { MdEmail, MdLocationOn } from 'react-icons/md';
 
-const Contact = () => {
+const Contact = ({ refContact }) => {
     return ( 
         <>
             <section
+                ref={ refContact }
                 id='Contact'
                 className="w-full h-screen bg-primary text-white
                 font-sans flex justify-center items-center"

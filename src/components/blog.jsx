@@ -7,10 +7,11 @@ import Img02 from '../images/designer-02.webp';
 import Img06 from '../images/designer-06.webp';
 
 
-const Blog = () => {
+export const Blog = ({ refBlog }) => {
     return ( 
         <>
             <section
+                ref={ refBlog }
                 id='Blog'
                 className="w-full h-sfull bg-primary text-white
                 font-sans flex justify-center items-center py-20"

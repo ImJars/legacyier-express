@@ -2,7 +2,15 @@ import React, { useState } from 'react';
 import { BiGitBranch } from 'react-icons/bi';
 import { motion } from 'framer-motion';
 
-const Menu = ({ animationHome, animationAbout, animateIndicator }) => {
+const Menu = ({ 
+    animationHome, 
+    animationAbout, 
+    animateIndicator, 
+    animationServices,
+    animationWorks,
+    animationBlog,
+    animationContact
+}) => {
 
     const [tab, setTab] = useState(1);
 
@@ -51,7 +59,7 @@ const Menu = ({ animationHome, animationAbout, animateIndicator }) => {
                             className='-rotate-90 text-center'
                         >
                             <motion.a
-                                animate={ animationHome}
+                                animate={ animationHome }
                                 href="#Home"
                                 onClick={ () => changeMenu(1) }
                                 className={ tab === 1 ? 'text-tertiary transition duration-700 ease-in-out' : 'text-white transition duration-700 ease-in-out' }   
@@ -64,7 +72,7 @@ const Menu = ({ animationHome, animationAbout, animateIndicator }) => {
                             className='-rotate-90 text-center'
                         >
                             <motion.a 
-                                animate={ animationAbout}
+                                animate={ animationAbout }
                                 href="#About"
                                 onClick={ () => changeMenu(2) }
                                 className={ tab === 2 ? 'text-tertiary transition duration-700 ease-in-out' : 'text-white transition duration-700 ease-in-out' }
@@ -75,46 +83,50 @@ const Menu = ({ animationHome, animationAbout, animateIndicator }) => {
                         <li
                             className='-rotate-90 text-center'
                         >
-                            <a 
+                            <motion.a 
+                                animate={ animationServices }
                                 href="#Services"
                                 onClick={ () => changeMenu(3) }
                                 className={ tab === 3 ? 'text-tertiary transition duration-700 ease-in-out' : 'text-white transition duration-700 ease-in-out' }
                             >
                                 Services
-                            </a>
+                            </motion.a>
                         </li>
                         <li
                             className='-rotate-90 text-center'
                         >
-                            <a 
+                            <motion.a
+                                animate={ animationWorks }
                                 href="#Works"
                                 onClick={ () => changeMenu(4) }
                                 className={ tab === 4 ? 'text-tertiary transition duration-700 ease-in-out' : 'text-white transition duration-700 ease-in-out' }
                             >
                                 Works
-                            </a>
+                            </motion.a>
                         </li>
                         <li
                             className='-rotate-90 text-center'
                         >
-                            <a 
+                            <motion.a
+                                animate={ animationBlog }
                                 href="#Blog"
                                 onClick={ () => changeMenu(5) }
                                 className={ tab === 5 ? 'text-tertiary transition duration-700 ease-in-out' : 'text-white transition duration-700 ease-in-out' } 
                             >
                                 Blog
-                            </a>
+                            </motion.a>
                         </li>
                         <li
                             className='-rotate-90 text-center'
                         >
-                            <a 
+                            <motion.a
+                                animate={ animationContact }
                                 href="#Contact"
                                 onClick={ () => changeMenu(6) }
                                 className={ tab === 6 ? 'text-tertiary transition duration-700 ease-in-out' : 'text-white transition duration-700 ease-in-out' } 
                             >
                                 Contact
-                            </a>
+                            </motion.a>
                         </li>
                     </div>
                 <div

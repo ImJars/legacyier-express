@@ -2,10 +2,11 @@ import React from 'react';
 import ServicesCard from './components/services-card';
 import Title from './components/title';
 
-const Services = () => {
+const Services = ({ refServices }) => {
     return ( 
         <>
             <section
+                ref= { refServices }
                 id='Services'
                 className="w-full h-screen bg-primary text-white
                         font-sans flex justify-center items-center"
