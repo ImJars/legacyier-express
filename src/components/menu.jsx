@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BiGitBranch } from 'react-icons/bi';
 import { motion } from 'framer-motion';
 
@@ -11,26 +11,6 @@ const Menu = ({
     animationBlog,
     animationContact
 }) => {
-
-    const [tab, setTab] = useState(1);
-
-    function changeMenu (index) {
-        setTab(index);
-        if ( index === 1 ) {
-            document.querySelector('.tab-indicator').style.top = '4%';
-        } else if ( index === 2 ) {
-            document.querySelector('.tab-indicator').style.top = '22.5%';
-        } else if ( index === 3 ) {
-            document.querySelector('.tab-indicator').style.top = '41.5%';
-        } else if ( index === 4 ) {
-            document.querySelector('.tab-indicator').style.top = '60.5%';
-        } else if ( index === 5 ) {
-            document.querySelector('.tab-indicator').style.top = '79%';
-        } else if ( index === 6 ) {
-            document.querySelector('.tab-indicator').style.top = '97.5%';
-        }
-        
-    }
     return ( 
         <>
          <div
@@ -61,8 +41,7 @@ const Menu = ({
                             <motion.a
                                 animate={ animationHome }
                                 href="#Home"
-                                onClick={ () => changeMenu(1) }
-                                className={ tab === 1 ? 'text-tertiary transition duration-700 ease-in-out' : 'text-white transition duration-700 ease-in-out' }   
+                                className={ 'transition duration-500 ease-in-out' }   
                             >
                                 Home
                             </motion.a>
@@ -74,8 +53,7 @@ const Menu = ({
                             <motion.a 
                                 animate={ animationAbout }
                                 href="#About"
-                                onClick={ () => changeMenu(2) }
-                                className={ tab === 2 ? 'text-tertiary transition duration-700 ease-in-out' : 'text-white transition duration-700 ease-in-out' }
+                                className={ 'transition duration-500 ease-in-out' }
                             >
                                 About
                             </motion.a>
@@ -86,8 +64,7 @@ const Menu = ({
                             <motion.a 
                                 animate={ animationServices }
                                 href="#Services"
-                                onClick={ () => changeMenu(3) }
-                                className={ tab === 3 ? 'text-tertiary transition duration-700 ease-in-out' : 'text-white transition duration-700 ease-in-out' }
+                                className={ 'transition duration-500 ease-in-out' }
                             >
                                 Services
                             </motion.a>
@@ -98,8 +75,7 @@ const Menu = ({
                             <motion.a
                                 animate={ animationWorks }
                                 href="#Works"
-                                onClick={ () => changeMenu(4) }
-                                className={ tab === 4 ? 'text-tertiary transition duration-700 ease-in-out' : 'text-white transition duration-700 ease-in-out' }
+                                className={ 'transition duration-500 ease-in-out' }
                             >
                                 Works
                             </motion.a>
@@ -110,8 +86,7 @@ const Menu = ({
                             <motion.a
                                 animate={ animationBlog }
                                 href="#Blog"
-                                onClick={ () => changeMenu(5) }
-                                className={ tab === 5 ? 'text-tertiary transition duration-700 ease-in-out' : 'text-white transition duration-700 ease-in-out' } 
+                                className={ 'transition duration-500 ease-in-out' } 
                             >
                                 Blog
                             </motion.a>
@@ -122,8 +97,7 @@ const Menu = ({
                             <motion.a
                                 animate={ animationContact }
                                 href="#Contact"
-                                onClick={ () => changeMenu(6) }
-                                className={ tab === 6 ? 'text-tertiary transition duration-700 ease-in-out' : 'text-white transition duration-700 ease-in-out' } 
+                                className={ 'transition duration-500 ease-in-out' } 
                             >
                                 Contact
                             </motion.a>
