@@ -4,7 +4,7 @@ const Title = ({ title, subtitle}) => {
     return ( 
         <>
             <div
-                className='border-l-2 border-tertiary pl-2'
+                className='border-l-2 border-septenary pl-2'
             >
                 <h1
                     className='text-2xl font-bold'

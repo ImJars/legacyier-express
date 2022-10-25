@@ -56,8 +56,8 @@ const Home = ({ refHome }) => {
                         </div>
                         <div>
                             <button
-                                className='border-2 border-tertiary 
-                                    px-4 py-2 mt-4 rounded-md bg-tertiary
+                                className='border-2 border-septenary 
+                                    px-4 py-2 mt-4 rounded-md bg-septenary
                                     hover:bg-secondary hover:transition-all 
                                     hover:duration-500'
                             >

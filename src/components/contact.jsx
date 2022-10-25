@@ -38,7 +38,7 @@ const Contact = ({ refContact }) => {
                                         type="text" 
                                         placeholder="Name" 
                                         className='bg-transparent p-1 border rounded-md border-primary outline-none 
-                                                focus:border-tertiary text-sm tracking-wider transition-all duration-500 ease-in-out'
+                                                focus:border-septenary text-sm tracking-wider transition-all duration-500 ease-in-out'
                                     />
                                 </div>
                                 <div
@@ -49,7 +49,7 @@ const Contact = ({ refContact }) => {
                                         type="text" 
                                         placeholder="Email" 
                                         className='bg-transparent p-1 border rounded-md border-primary outline-none 
-                                                focus:border-tertiary text-sm tracking-wider transition-all duration-500 ease-in-out'
+                                                focus:border-septenary text-sm tracking-wider transition-all duration-500 ease-in-out'
                                     />
                                 </div>
                                 <div
@@ -60,7 +60,7 @@ const Contact = ({ refContact }) => {
                                         type="text" 
                                         placeholder="Subject" 
                                         className='bg-transparent p-1 border rounded-md border-primary outline-none 
-                                                focus:border-tertiary text-sm tracking-wider transition-all duration-500 ease-in-out'
+                                                focus:border-septenary text-sm tracking-wider transition-all duration-500 ease-in-out'
                                     />
                                 </div>
                                 <div
@@ -72,11 +72,11 @@ const Contact = ({ refContact }) => {
                                         type="text" 
                                         placeholder="Message" 
                                         className='bg-transparent p-1 border rounded-md border-primary outline-none 
-                                                focus:border-tertiary text-sm tracking-wider transition-all duration-500 ease-in-out'    
+                                                focus:border-septenary text-sm tracking-wider transition-all duration-500 ease-in-out'    
                                     />
                                 </div>
                                 <a
-                                    className='bg-tertiary text-sm text-white mt-2 py-1 px-8 rounded-sm
+                                    className='bg-septenary text-sm text-white mt-2 py-1 px-8 rounded-md font-semibold
                                                 w-24 flex justify-center items-center' 
                                     href="https://github.com/ImJars"
                                 >

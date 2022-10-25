@@ -53,7 +53,7 @@ const Navigation = () => {
     useEffect(() => {
         if (inViewHome) {
             animationHome.start({
-                color: "#3399FF",
+                color: "#7B90FB",
                 transition: {
                     type: "spring", duration: 0,
                 },
@@ -78,7 +78,7 @@ const Navigation = () => {
     useEffect(() => {
         if (inViewAbout) {
             animationAbout.start({
-                color: "#3399FF",
+                color: "#7B90FB",
                 transition: {
                     type: "spring", duration: 0,
                 },
@@ -104,7 +104,7 @@ const Navigation = () => {
     useEffect(() => {
         if (inViewServices) {
             animationServices.start({
-                color: "#3399FF",
+                color: "#7B90FB",
                 transition: {
                     type: "spring", duration: 0,
                 },
@@ -130,7 +130,7 @@ const Navigation = () => {
     useEffect(() => {
         if (inViewWork) {
             animationWorks.start({
-                color: "#3399FF",
+                color: "#7B90FB",
                 transition: {
                     type: "spring", duration: 0,
                 },
@@ -156,7 +156,7 @@ const Navigation = () => {
     useEffect(() => {
         if (inViewBlog) {
             animationBlog.start({
-                color: "#3399FF",
+                color: "#7B90FB",
                 transition: {
                     type: "spring", duration: 0,
                 },
@@ -182,7 +182,7 @@ const Navigation = () => {
     useEffect(() => {
         if (inViewContact) {
             animationContact.start({
-                color: "#3399FF",
+                color: "#7B90FB",
                 transition: {
                     type: "spring", duration: 0,
                 },

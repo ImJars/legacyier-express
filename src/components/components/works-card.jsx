@@ -22,7 +22,7 @@ const WorkCard = ({ nameImg, title, link, icon}) => {
                     </h1>
                     <a
                         href={ link }
-                        className='text-tertiary flex justify-center items-center
+                        className='text-septenary flex justify-center items-center
                                 text-xl'
                     >
                         { icon }

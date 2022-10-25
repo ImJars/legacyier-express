@@ -12,9 +12,9 @@ const ServicesCard = ({ number, title, children}) => {
                     className='flex justify-center items-center'
                 >
                     <h1
-                        className='border border-tertiary 
+                        className='border border-septenary 
                                 rounded-full py-4 px-5 text-2xl
-                                font-bold text-tertiary mb-4'
+                                font-bold text-septenary mb-4'
                     >
                         { number }
                     </h1>

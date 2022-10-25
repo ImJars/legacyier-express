@@ -12,6 +12,9 @@ module.exports = {
         'secondary': '#17181D',
         'tertiary': '#F21E4E',
         'quaternary': '#3399FF',
+        'quinary': '#FEF805',
+        'senary': '#E69005',
+        'septenary': '#7B90FB',
         'text-mini': '#AFADB5',
       },
       fontFamily:{

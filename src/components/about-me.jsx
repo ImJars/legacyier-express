@@ -92,8 +92,8 @@ const AboutMe = ({ refAbout }) => {
                             >
                                 <a 
                                     href="https://github.com/ImJars"
-                                    className='bg-tertiary text-white px-4 py-2 
-                                                mt-6 rounded-md text-sm'
+                                    className='bg-septenary text-white px-4 py-2 
+                                                mt-6 rounded-md text-sm font-semibold'
                                 >
                                     Download my CV
                                 </a>

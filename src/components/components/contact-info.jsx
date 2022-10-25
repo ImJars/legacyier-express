@@ -15,7 +15,7 @@ const ContactInfo = ({ title, icon, children }) => {
                     className='flex content-center mt-1'
                 >
                     <div
-                        className='mr-1 text-tertiary text-xl flex items-center'
+                        className='mr-1 text-septenary text-xl flex items-center'
                     >
                         { icon }
                     </div>

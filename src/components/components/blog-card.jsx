@@ -32,7 +32,7 @@ const BlogCard = ({
                                     text-text-mini tracking-wide'
                         >
                             <h3
-                                className='border-l-2 border-tertiary pl-2'
+                                className='border-l-2 border-septenary pl-2'
                             >
                                 { date }
                             </h3>
@@ -61,8 +61,9 @@ const BlogCard = ({
                         </p>
                         <div>
                             <a
-                                className='rounded-md bg-tertiary text-sm
-                                        text-white px-4 py-2 mt-4 inline-block' 
+                                className='rounded-md bg-septenary text-sm
+                                        text-white px-4 py-2 mt-4 inline-block
+                                        font-semibold' 
                                 href={ link }
                             >
                                 Read more &#8594;

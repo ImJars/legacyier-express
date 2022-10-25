@@ -44,7 +44,7 @@ const Menu = ({
                     <div>
                         <a
                             href="#Menu"
-                            className='bg-tertiary flex justify-center
+                            className='bg-septenary flex justify-center
                                      m-5 py-1.5 rounded-full content-center
                                      text-xl font-semibold'    
                         >
