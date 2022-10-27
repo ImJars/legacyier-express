@@ -1,4 +1,5 @@
 import React from 'react';
+import ImgHome from '../images/legacyierHome.png'
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
 const Home = ({ refHome }) => {
@@ -8,66 +9,75 @@ const Home = ({ refHome }) => {
                 ref={ refHome}
                 id='Home'
                 className='w-full h-screen bg-secondary text-white
-                        font-sans flex justify-center items-center'
+                        font-roboto tracking-wider flex justify-center items-center static'
             >
                 <div
-                    className='max-w-250 h-screen flex'
+                    className='relative h-full w-full flex justify-end'
+                >
+                <   img 
+                        src={ ImgHome } alt="" 
+                        className='opacity-5 hover:opacity-50 h-full
+                                    transition duration-500 ease-in-out mx-52 py-10'
+                    />
+                </div>
+                <div
+                    className='absolute max-w-250 h-screen flex'
                 >
                     <div
-                        className='w-1/2 grid grid-cols-1 content-between my-8'
+                        className='grid grid-cols-1 content-between my-8'
                     >
                         <div
                             className='flex justify-start items-center space-x-5'
                         >
                             <a href="https://twitter.com/Im_Jars">
                                 <FaFacebookF 
-                                    className='text-lg hover:text-septenary
+                                    className='text-xl hover:text-septenary
                                             transition duration-500 ease-in-out'
                                 />
                             </a>
                             <a href="https://twitter.com/Im_Jars">
                                 <FaTwitter 
-                                    className='text-lg hover:text-septenary
+                                    className='text-xl hover:text-septenary
                                             transition duration-500 ease-in-out'
                                 />
                             </a>
                             <a href="https://twitter.com/Im_Jars">
                                 <FaInstagram 
-                                    className='text-lg hover:text-septenary
+                                    className='text-xl hover:text-septenary
                                             transition duration-500 ease-in-out'
                                 />
                             </a>
                             <a href="https://twitter.com/Im_Jars">
                                 <FaLinkedinIn 
-                                    className='text-lg hover:text-septenary
+                                    className='text-xl hover:text-septenary
                                             transition duration-500 ease-in-out'
                                 />
                             </a>
                             <a href="https://twitter.com/Im_Jars">
                                 <FaGithub 
-                                    className='text-lg hover:text-septenary
+                                    className='text-xl hover:text-septenary
                                             transition duration-500 ease-in-out'
                                 />
                             </a>
                         </div>
                         <div>
                             <h1
-                                className='text-xs tracking-widest'
+                                className='text-sm tracking-widest'
                             >
                                 Hi everyone,
                             </h1>
                             <h2
-                                className='text-4xl font-bold'
+                                className='text-5xl font-bold'
                             >
                                 I'm Software Developer
                             </h2>
                             <h3
-                                className='text-lg text-septenary'
+                                className='text-xl text-septenary'
                             >
                                 I build things for the web.
                             </h3>
                             <p
-                                className='text-sm mt-2 text-text-mini tracking-wide'
+                                className='w-1/2 text-sm mt-2 text-text-mini tracking-wider'
                             >
                                 I'm a software developer specializing in creating exceptional 
                                 products and digital experiences. I am currently focused on 
@@ -115,13 +125,7 @@ const Home = ({ refHome }) => {
                             </div>
                         </div>
                         </div>
-                    <div
-                        className='w-1/2'
-                    >
-                        <img src="#" alt="" />
-                    </div>
                 </div>
-                
             </section>
         </>
      );

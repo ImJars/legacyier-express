@@ -9,7 +9,7 @@ const Services = ({ refServices }) => {
                 ref= { refServices }
                 id='Services'
                 className="w-full h-screen bg-primary text-white
-                        font-sans flex justify-center items-center"
+                        font-poppins flex justify-center items-center"
             >
                 <div
                     className='max-w-250 flex flex-col'

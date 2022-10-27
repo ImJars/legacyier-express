@@ -19,6 +19,8 @@ module.exports = {
       },
       fontFamily:{
         'sans': ['Open Sans', 'sans-serif'],
+        'poppins': ['Poppins', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif'],
       },
       maxWidth: {
         250: '70rem',
