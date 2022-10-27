@@ -16,15 +16,20 @@ const Home = ({ refHome }) => {
                 >
                 <   img 
                         src={ ImgHome } alt="" 
-                        className='opacity-5 hover:opacity-50 h-full
-                                    transition duration-500 ease-in-out mx-52 py-10'
+                        className='relative opacity-5 mx-10 py-20 blur-md'
                     />
+                    <h1
+                        className='absolute text-xs text-text-mini bottom-24 
+                                   opacity-10 right-20'
+                    >
+                        Coming soon Legacyier...
+                    </h1>
                 </div>
                 <div
                     className='absolute max-w-250 h-screen flex'
                 >
                     <div
-                        className='grid grid-cols-1 content-between my-8'
+                        className='grid grid-cols-1 content-between py-10'
                     >
                         <div
                             className='flex justify-start items-center space-x-5'
