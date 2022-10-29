@@ -1,5 +1,5 @@
 import React from 'react';
-import Img from '../images/gatsby-icon.png';
+import Img from '../images/me.jpg';
 import AboutCard from './components/about-card';
 import Data from './components/data';
 import { FaProjectDiagram } from 'react-icons/fa';
@@ -15,7 +15,7 @@ const AboutMe = ({ refAbout }) => {
                 ref={ refAbout }
                 id='About'
                 className="w-full h-screen bg-primary text-white
-                    font-poppins flex justify-center items-center"
+                    font-roboto flex justify-center items-center"
             >
                 <div
                     className='max-w-250 flex flex-col'
@@ -29,23 +29,29 @@ const AboutMe = ({ refAbout }) => {
                         className='flex mt-14'
                     >
                         <div>
-                            <img src={ Img } alt="" className='w-img'/>
+                            <img
+                                src={ Img } 
+                                alt="" 
+                                className='w-img filter grayscale'
+                            />
                         </div>
                         <div
                             className='ml-10 mt-10'
                         >
                             <h1
-                                className='text-lg font-bold'
+                                className='text-xl font-normal tracking-wide'
                             >
-                                Hello my name is Angel Ramirez, based in Mexico
+                                Hello my name is <font className="font-semibold">Angel Ramirez</font>, based in Mexico
                             </h1>
                             <p
-                                className='text-sm mt-2 text-text-mini'
+                                className='text-sm font-roboto mt-2 text-text-mini tracking-wide'
                             >
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                Ex dolor adipisci omnis nam debitis, dignissimos reiciendis 
-                                quo laborum aspernatur quasi explicabo eligendi sint quidem 
-                                optio possimus, quas voluptatum libero blanditiis!
+                                <font className="font-extrabold">Hello!</font> My name is <font className="font-extrabold">Ángel</font> and I like technology, I enjoy 
+                                creating web applications and developing software. I started 
+                                programming in 2014 during high school, in 2017 I started with 
+                                web development during professional projects at university, 
+                                I liked it so much that I continue to implement new technologies 
+                                in my developments. 
                             </p>
                             <div 
                                 className='flex mt-6 space-x-24'
@@ -64,25 +70,32 @@ const AboutMe = ({ refAbout }) => {
                                         children={ 'Mexican' }
                                     />
                                     <Data 
-                                        data='Work status:'
-                                        children={ 'Software Developer' }
+                                        data='Address:'
+                                        children={ 'Hidalgo, Mex' }
                                     />
                                 </div>
                                 <div>
                                     <Data 
                                         data='Phone:'
                                         children={ '+52 773-151-1761' }
+                                        link={'https://wa.link/01hnrf'}
+                                        classNames={'text-septenary'}
                                     />
                                     <Data 
                                         data='Email:'
                                         children={ 'hi.legacyier@gmail.com' }
+                                        link={'mailto:hi.legacyier@gmail.com'}
+                                        classNames={'text-septenary'}
                                     />
                                     <Data 
-                                        data='Address:'
-                                        children={ 'Tula Hidalgo, Mex' }
+                                        data='Work status:'
+                                        children={ 'Software Developer' }
+                                        link={'https://www.linkedin.com/in/angel-ramirez-08468212b/'}
+                                        classNames={'text-septenary'}
                                     />
                                     <Data 
                                         data='Freelancer:'
+                                        classNames={ 'animate-pulse text-green-700' }
                                         children={ 'Available' }
                                     />
                                 </div>
@@ -106,13 +119,13 @@ const AboutMe = ({ refAbout }) => {
                     >
                         <AboutCard
                             icon={ <FaProjectDiagram /> }
-                            description={ '130 projects completed' }
+                            description={ '100% projects completed' }
                         >
                             
                         </AboutCard>
                         <AboutCard
                             icon={ <MdGroups /> }
-                            description={ '400 satisfied clients' }
+                            description={ '100% satisfied clients' }
                         >
                             
                         </AboutCard>
@@ -124,13 +137,13 @@ const AboutMe = ({ refAbout }) => {
                         </AboutCard>
                         <AboutCard
                             icon={ <BsFillEmojiSmileFill /> }
-                            description={ '10 years of experience' }
+                            description={ '2 years of experience' }
                         >
                             
                         </AboutCard>
                         <AboutCard
                             icon={ <BiCodeAlt /> }
-                            description={ '2000+ lines of code' }
+                            description={ '4000+ lines of code' }
                         >
                             
                         </AboutCard>

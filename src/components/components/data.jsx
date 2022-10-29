@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Data = ({ data, children }) => {
+const Data = ({ data, children, classNames, link }) => {
     return ( 
         <>
             <div className='flex text-sm font-sans mb-2'>
@@ -9,11 +9,14 @@ const Data = ({ data, children }) => {
                 >
                     { data }
                 </h1>
-                <h2
-                    className='ml-2 text-text-mini'
+                <a
+                    className={`${ classNames } ml-2 text-text-mini tracking-wider`}
+                    href={ link }
+                    target="_blank"
+                    rel="noreferrer"
                 >
                     { children }
-                </h2>
+                </a>
             </div>
         </>
      );
