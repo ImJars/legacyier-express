@@ -7,6 +7,9 @@ const Data = ({ data, children, classNames, link }) => {
                 <h1
                     className='font-semibold'
                 >
+                    <font className="text-septenary">
+                        &#x25B8;&nbsp;
+                    </font>
                     { data }
                 </h1>
                 <a

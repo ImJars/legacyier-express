@@ -1,5 +1,4 @@
 import React from 'react';
-import Img from '../images/me.jpg';
 import AboutCard from './components/about-card';
 import Data from './components/data';
 import { FaProjectDiagram } from 'react-icons/fa';
@@ -30,13 +29,13 @@ const AboutMe = ({ refAbout }) => {
                     >
                         <div>
                             <img
-                                src={ Img } 
-                                alt="" 
+                                src={ 'me.jpg' } 
+                                alt="profile-picture" 
                                 className='w-img filter grayscale'
                             />
                         </div>
                         <div
-                            className='ml-10 mt-10'
+                            className='ml-10'
                         >
                             <h1
                                 className='text-xl font-normal tracking-wide'
@@ -101,12 +100,17 @@ const AboutMe = ({ refAbout }) => {
                                 </div>
                             </div>
                             <div
-                                className='mt-4'
+                                className='mt-8'
                             >
                                 <a 
-                                    href="https://github.com/ImJars"
+                                    href={'cv.pdf'}
+                                    target="_blank"
+                                    rel="noreferrer"
                                     className='bg-septenary text-white px-4 py-2 
-                                                mt-6 rounded-md text-sm font-semibold'
+                                                mt-6 rounded-md text-sm font-semibold
+                                                hover:bg-primary border border-septenary 
+                                                hover:border-septenary transition
+                                                duration-500 ease-in-out'
                                 >
                                     Download my CV
                                 </a>
