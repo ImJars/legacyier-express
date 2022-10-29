@@ -1,12 +1,13 @@
 import React from 'react';
 import ImgHome from '../images/legacyierHome.png'
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FiGithub } from 'react-icons/fi';
 
 const Home = ({ refHome }) => {
     return ( 
         <>
             <section
-                ref={ refHome}
+                ref={ refHome }
                 id='Home'
                 className='w-full h-screen bg-secondary text-white
                         font-roboto tracking-wider flex justify-center items-center static'
@@ -32,35 +33,55 @@ const Home = ({ refHome }) => {
                         className='grid grid-cols-1 content-between py-10'
                     >
                         <div
-                            className='flex justify-start items-center space-x-5'
+                            className='flex justify-start items-center space-x-6'
                         >
-                            <a href="https://twitter.com/Im_Jars">
-                                <FaFacebookF 
-                                    className='text-xl hover:text-septenary
-                                            transition duration-500 ease-in-out'
-                                />
-                            </a>
-                            <a href="https://twitter.com/Im_Jars">
-                                <FaTwitter 
-                                    className='text-xl hover:text-septenary
-                                            transition duration-500 ease-in-out'
-                                />
-                            </a>
-                            <a href="https://twitter.com/Im_Jars">
-                                <FaInstagram 
-                                    className='text-xl hover:text-septenary
-                                            transition duration-500 ease-in-out'
-                                />
-                            </a>
-                            <a href="https://twitter.com/Im_Jars">
+                            <a
+                                href="https://www.linkedin.com/in/angel-ramirez-08468212b/"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
                                 <FaLinkedinIn 
-                                    className='text-xl hover:text-septenary
+                                    className='text-xl text-text-mini hover:text-septenary
                                             transition duration-500 ease-in-out'
                                 />
                             </a>
-                            <a href="https://twitter.com/Im_Jars">
-                                <FaGithub 
-                                    className='text-xl hover:text-septenary
+                            <a 
+                                href="https://github.com/ImJars"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FiGithub 
+                                    className='text-xl text-text-mini hover:text-septenary
+                                            transition duration-500 ease-in-out'
+                                />
+                            </a>
+                            <a 
+                                href="https://twitter.com/Im_Jars"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FaTwitter 
+                                    className='text-xl text-text-mini hover:text-septenary
+                                            transition duration-500 ease-in-out'
+                                />
+                            </a>
+                            <a 
+                                href="https://www.instagram.com/legacyier_official/"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FaInstagram 
+                                    className='text-xl text-text-mini hover:text-septenary
+                                            transition duration-500 ease-in-out'
+                                />
+                            </a>
+                            <a 
+                                href="https://es-es.facebook.com/legacyierOfficial"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <FaFacebookF 
+                                    className='text-xl text-text-mini hover:text-septenary
                                             transition duration-500 ease-in-out'
                                 />
                             </a>
@@ -98,11 +119,13 @@ const Home = ({ refHome }) => {
                                 >
                                     Email
                                 </h1>
-                                <h2
-                                    className='text-xs text-text-mini tracking-widest mt-1'
+                                <a
+                                    href="mailto:hi.legacyier@gmail.com"
+                                    className='text-xs text-text-mini tracking-widest mt-1
+                                                hover:text-septenary transition duration-500 ease-in-out'
                                 >
                                     hi.legacyier@gmail.com
-                                </h2>
+                                </a>
                             </div>
                             <div>
                                 <h1
@@ -110,11 +133,15 @@ const Home = ({ refHome }) => {
                                 >
                                     WhatsApp
                                 </h1>
-                                <h2
-                                    className='text-xs text-text-mini tracking-widest mt-1'
+                                <a
+                                    href="https://wa.link/01hnrf"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className='text-xs text-text-mini tracking-widest mt-1
+                                                hover:text-septenary transition duration-500 ease-in-out'
                                 >
                                     +52 773-151-1761
-                                </h2>
+                                </a>
                             </div>
                             <div>
                                 <h1
