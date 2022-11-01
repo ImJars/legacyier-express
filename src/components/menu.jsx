@@ -15,7 +15,7 @@ const Menu = ({
         <>
          <div
             className='fixed w-20 h-screen bg-primary 
-                    text-white font-sans z-50 transform top-0 left-0'
+                    text-white font-roboto tracking-wider z-50 transform top-0 left-0'
          >
             <div
                 className='h-screen grid content-between'
@@ -23,6 +23,7 @@ const Menu = ({
                 <div>
                     <div>
                         <a
+                            onClick={ e => console.log(e, 'Menu profile') }
                             href="#Menu"
                             className='bg-septenary flex justify-center
                                      m-5 py-1.5 rounded-full content-center

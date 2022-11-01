@@ -86,7 +86,7 @@ const Navigation = () => {
         }
         if (inViewAbout) {
             animateIndicator.start({
-                top : "22.5%",
+                top : "23%",
                 transition: {
                     type: "spring", duration: 0,
                 },
@@ -112,7 +112,7 @@ const Navigation = () => {
         }
         if (inViewServices) {
             animateIndicator.start({
-                top : "41.5%",
+                top : "42%",
                 transition: {
                     type: "spring", duration: 0,
                 },
@@ -138,7 +138,7 @@ const Navigation = () => {
         }
         if (inViewWork) {
             animateIndicator.start({
-                top : "60.5%",
+                top : "61%",
                 transition: {
                     type: "spring", duration: 0,
                 },
@@ -164,7 +164,7 @@ const Navigation = () => {
         }
         if (inViewBlog) {
             animateIndicator.start({
-                top : "79%",
+                top : "79.5%",
                 transition: {
                     type: "spring", duration: 0,
                 },
@@ -190,7 +190,7 @@ const Navigation = () => {
         }
         if (inViewContact) {
             animateIndicator.start({
-                top : "97.5%",
+                top : "98%",
                 transition: {
                     type: "spring", duration: 0,
                 },
