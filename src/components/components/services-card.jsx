@@ -4,9 +4,10 @@ const ServicesCard = ({ number, title, children}) => {
     return ( 
         <>
             <div
-                className='bg-secondary px-8 py-10 rounded-md flex 
+                className='bg-secondary px-4 py-10 rounded-lg flex 
                             flex-col justify-center text-center
-                            font-sans items-center'
+                            font-roboto items-center hover:scale-105
+                            transition duration-200 ease-in-out'
             >
                 <div
                     className='flex justify-center items-center'
@@ -20,7 +21,7 @@ const ServicesCard = ({ number, title, children}) => {
                     </h1>
                 </div>
                 <h1
-                    className='text-md font-bold mb-2 tracking-wide'
+                    className='text-lg font-bold mb-2 tracking-wide'
                 >
                     { title }
                 </h1>

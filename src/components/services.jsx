@@ -9,59 +9,57 @@ const Services = ({ refServices }) => {
                 ref= { refServices }
                 id='Services'
                 className="w-full h-screen bg-primary text-white
-                        font-poppins flex justify-center items-center"
+                        font-roboto flex justify-center items-center"
             >
                 <div
                     className='max-w-250 flex flex-col'
                 >
                     <Title 
                         title='My Services'
-                        subtitle='I have worked with a number of clients'
+                        subtitle='My work with several clients'
                     />
                     <div
-                        className='grid grid-cols-3 gap-10 mt-14'
+                        className='grid grid-cols-3 gap-8 mt-14'
                     >
                         <ServicesCard 
                             number='01'
                             title='Web Development'
-                            children='Lorem ipsum dolor sit amet consectetur 
-                                    adipisicing elit. Quisquam, services and
-                                    more. Lorem ipsum dolor sit amet'
+                            children='We professionally design, redesign and 
+                                    continuously support customer-facing and 
+                                    enterprise web apps to achieve high conversion 
+                                    and adoption rates.'
                         />
                         <ServicesCard 
                             number='02'
-                            title='Blockchain Developer'
-                            children='Lorem ipsum dolor sit amet consectetur 
-                                    adipisicing elit. Quisquam, services and
-                                    more. Lorem ipsum dolor sit amet'
+                            title='Mobile Development'
+                            children='We help global brands design and create digital 
+                                    products, enabling seamless user experiences on all 
+                                    modern devices.'
                         />
                         <ServicesCard 
                             number='03'
-                            title='Software Developer'
-                            children='Lorem ipsum dolor sit amet consectetur 
-                                    adipisicing elit. Quisquam, services and
-                                    more. Lorem ipsum dolor sit amet'
-                        />
-                        <ServicesCard 
-                            number='04'
-                            title='Designer professional'
-                            children='Lorem ipsum dolor sit amet consectetur 
-                                    adipisicing elit. Quisquam, services and
-                                    more. Lorem ipsum dolor sit amet'
+                            title='Blockchain Development'
+                            children='We develop applications based on blockchain. 
+                                    Develop a new blockchain project or upgrade your project
+                                    with our help.'
                         />
                         <ServicesCard 
                             number='05'
-                            title='Marketing'
-                            children='Lorem ipsum dolor sit amet consectetur 
-                                    adipisicing elit. Quisquam, services and
-                                    more. Lorem ipsum dolor sit amet'
+                            title='Python Development '
+                            children='We provide bespoke Python development services that 
+                                    target unique business needs and problems.'
+                        />
+                        <ServicesCard 
+                            number='04'
+                            title='Digital Marketing'
+                            children='We plan, implement, evaluate the control of digital 
+                                    marketing strategies that will allow and meet the 
+                                    objectives and sales of your company.'
                         />
                         <ServicesCard 
                             number='06'
-                            title='Data Analyst'
-                            children='Lorem ipsum dolor sit amet consectetur 
-                                    adipisicing elit. Quisquam, services and
-                                    more. Lorem ipsum dolor sit amet'
+                            title='Designer professional'
+                            children='Custom Designer Interfaces to Meet Your Specific Requirements'
                         />
                     </div>
                 </div>
