@@ -1,9 +1,235 @@
-import React from 'react';
-import ImgHome from '../images/legacyierHome.png'
+import React, { useEffect } from 'react';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { FiGithub } from 'react-icons/fi';
+import { useAnimation, motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const Home = ({ refHome }) => {
+
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+        triggerOnce: true
+    });
+    const iconAnimate1 = useAnimation();
+    const iconAnimate2 = useAnimation();
+    const iconAnimate3 = useAnimation();
+    const iconAnimate4 = useAnimation();
+    const iconAnimate5 = useAnimation();
+    const animateImg = useAnimation();
+    const animateText1 = useAnimation();
+    const animateText2 = useAnimation();
+    const animateText3 = useAnimation();
+    const animateText4 = useAnimation();
+    const animateSubtitle1 = useAnimation();
+    const animateSubtitle2 = useAnimation();
+    const animateSubtitle3 = useAnimation();
+
+    useEffect(() => {
+        if (inView) {
+            iconAnimate1.start({
+                opacity: 1,
+                x: 0,
+                transition: {
+                    type: 'spring', duration: 2, delay: 2
+                }
+            });
+        }
+        if (inView) {
+            iconAnimate2.start({
+                opacity: 1,
+                x: 0,
+                transition: {
+                    type: 'spring', duration: 2, delay: 2.3
+                }
+            });
+        }
+        if (inView) {
+            iconAnimate3.start({
+                opacity: 1,
+                x: 0,
+                transition: {
+                    type: 'spring', duration: 2, delay: 2.5
+                }
+            });
+        }
+        if (inView) {
+            iconAnimate4.start({
+                opacity: 1,
+                x: 0,
+                transition: {
+                    type: 'spring', duration: 2, delay: 2.7
+                }
+            });
+        }
+        if (inView) {
+            iconAnimate5.start({
+                opacity: 1,
+                x: 0,
+                transition: {
+                    type: 'spring', duration: 2, delay: 2.9
+                }
+            });
+        }
+        if (inView) {
+            animateImg.start({
+                opacity: 1,
+                transition: {
+                     duration: 2, delay: 0.8
+                }
+            });
+        }
+
+        if (!inView) {
+            iconAnimate1.start({
+                opacity: 0,
+                x: '-5vw',
+            });
+        }
+        if (!inView) {
+            iconAnimate2.start({
+                opacity: 0,
+                x: '-5vw',
+            });
+        }
+        if (!inView) {
+            iconAnimate3.start({
+                opacity: 0,
+                x: '-5vw',
+            });
+        }
+        if (!inView) {
+            iconAnimate4.start({
+                opacity: 0,
+                x: '-5vw',
+            });
+        }
+        if (!inView) {
+            iconAnimate5.start({
+                opacity: 0,
+                x: '-5vw',
+            });
+        }
+        if (!inView) {
+            animateImg.start({
+                opacity: 0,
+            });
+        }
+    }, [inView, iconAnimate1, iconAnimate2, iconAnimate3, iconAnimate4, iconAnimate5, animateImg]);
+    
+    useEffect(() => {
+      if (inView) {
+        animateText1.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            type: 'spring', duration: 2, delay: 3
+          }
+        });
+      }
+      if (inView) {
+        animateText2.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            type: 'spring', duration: 2, delay: 3.2
+          }
+        });
+      }
+      if (inView) {
+        animateText3.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            type: 'spring', duration: 2, delay: 3.4
+          }
+        });
+      }
+      if (inView) {
+        animateText4.start({
+          opacity: 1,
+          y: 0,
+          transition: {
+            type: 'spring', duration: 2, delay: 3.6
+          }
+        });
+      }
+        if (!inView) {
+            animateText1.start({
+                opacity: 0,
+                y: '5vw',
+            });
+        }
+        if (!inView) {
+            animateText2.start({
+                opacity: 0,
+                y: '5vw',
+            });
+        }
+        if (!inView) {
+            animateText3.start({
+                opacity: 0,
+                y: '5vw',
+            });
+        }
+        if (!inView) {
+            animateText4.start({
+                opacity: 0,
+                y: '5vw',
+            });
+        }
+    }, [inView, animateText1, animateText2, animateText3, animateText4]);
+    
+    useEffect(() => {
+        if (inView) {
+            animateSubtitle1.start({
+              opacity: 1,
+              x: 0,
+              transition: {
+                type: 'spring', duration: 2, delay: 2
+              }
+            });
+        }
+        if (inView) {
+            animateSubtitle2.start({
+              opacity: 1,
+              x: 0,
+              transition: {
+                type: 'spring', duration: 2, delay: 2.3
+              }
+            });
+        }
+        if (inView) {
+            animateSubtitle3.start({
+              opacity: 1,
+              x: 0,
+              transition: {
+                type: 'spring', duration: 2, delay: 2.5
+              }
+            });
+        }
+        
+        if (!inView) {
+            animateSubtitle1.start({
+                opacity: 0,
+                x: '-5vw',
+            });
+        }
+        if (!inView) {
+            animateSubtitle2.start({
+                opacity: 0,
+                x: '-5vw',
+            });
+        }
+        if (!inView) {
+            animateSubtitle3.start({
+                opacity: 0,
+                x: '-5vw',
+            });
+        }
+
+    }, [inView, animateSubtitle1, animateSubtitle2, animateSubtitle3]);
+    
+
     return ( 
         <>
             <section
@@ -12,11 +238,13 @@ const Home = ({ refHome }) => {
                 className='w-full h-screen bg-secondary text-white
                         font-roboto tracking-wider flex justify-center items-center static'
             >
-                <div
-                    className='relative h-full w-full flex justify-end'
+                <motion.div
+                    animate={ animateImg }
+                    ref={ ref }
+                    className='opacity-0 relative h-full w-full flex justify-end'
                 >
                 <   img 
-                        src={ ImgHome } alt="" 
+                        src={ 'legacyierWeb.webp' } alt="" 
                         className='relative opacity-5 mx-10 py-20 blur-md'
                     />
                     <h1
@@ -25,7 +253,7 @@ const Home = ({ refHome }) => {
                     >
                         Coming soon Legacyier...
                     </h1>
-                </div>
+                </motion.div>
                 <div
                     className='absolute max-w-250 h-screen flex'
                 >
@@ -35,85 +263,102 @@ const Home = ({ refHome }) => {
                         <div
                             className='flex justify-start items-center space-x-6'
                         >
-                            <a
+                            <motion.a
+                                animate= { iconAnimate5 }
                                 href="https://www.linkedin.com/in/angel-ramirez-08468212b/"
                                 target="_blank"
                                 rel="noreferrer"
+                                className='opacity-0'
                             >
                                 <FaLinkedinIn 
                                     className='text-xl text-text-mini hover:text-septenary
                                             transition duration-500 ease-in-out'
                                 />
-                            </a>
-                            <a 
+                            </motion.a>
+                            <motion.a
+                                animate= { iconAnimate4 }
                                 href="https://github.com/ImJars"
                                 target="_blank"
                                 rel="noreferrer"
+                                className='opacity-0'
                             >
                                 <FiGithub 
                                     className='text-xl text-text-mini hover:text-septenary
                                             transition duration-500 ease-in-out'
                                 />
-                            </a>
-                            <a 
+                            </motion.a>
+                            <motion.a
+                                animate= { iconAnimate3 }
                                 href="https://twitter.com/Im_Jars"
                                 target="_blank"
                                 rel="noreferrer"
+                                className='opacity-0'
                             >
                                 <FaTwitter 
                                     className='text-xl text-text-mini hover:text-septenary
                                             transition duration-500 ease-in-out'
                                 />
-                            </a>
-                            <a 
+                            </motion.a>
+                            <motion.a
+                                animate= { iconAnimate2 }
                                 href="https://www.instagram.com/legacyier_official/"
                                 target="_blank"
                                 rel="noreferrer"
+                                className='opacity-0'
                             >
                                 <FaInstagram 
                                     className='text-xl text-text-mini hover:text-septenary
                                             transition duration-500 ease-in-out'
                                 />
-                            </a>
-                            <a 
+                            </motion.a>
+                            <motion.a 
+                                animate= { iconAnimate1 }
                                 href="https://es-es.facebook.com/legacyierOfficial"
                                 target="_blank"
                                 rel="noreferrer"
+                                className='opacity-0'
                             >
                                 <FaFacebookF 
                                     className='text-xl text-text-mini hover:text-septenary
                                             transition duration-500 ease-in-out'
                                 />
-                            </a>
+                            </motion.a>
                         </div>
                         <div>
-                            <h1
-                                className='text-sm tracking-widest'
+                            <motion.h1
+                                animate= { animateText1 }
+                                className='opacity-0 text-sm tracking-widest'
                             >
                                 Hi everyone,
-                            </h1>
-                            <h2
-                                className='text-5xl font-bold'
+                            </motion.h1>
+                            <motion.h2
+                                animate= { animateText2 }
+                                className='opacity-0 text-5xl font-bold'
                             >
                                 I'm Software Developer
-                            </h2>
-                            <h3
-                                className='text-xl text-septenary'
+                            </motion.h2>
+                            <motion.h3
+                                animate= { animateText3 }
+                                className='opacity-0 text-xl text-septenary'
                             >
                                 I build things for the web.
-                            </h3>
-                            <p
-                                className='w-1/2 text-sm mt-2 text-text-mini tracking-wider'
+                            </motion.h3>
+                            <motion.p
+                                animate= { animateText4 }
+                                className='opacity-0 w-1/2 text-sm mt-2 text-text-mini tracking-wider'
                             >
                                 I'm a software developer specializing in creating exceptional 
                                 products and digital experiences. I am currently focused on 
                                 creating <font className='text-septenary'>Web3</font> technology products.
-                            </p>
+                            </motion.p>
                         </div>
                         <div
                             className='flex space-x-10'
                         >
-                            <div>
+                            <motion.div
+                                animate= { animateSubtitle3 }
+                                className='opacity-0'
+                            >
                                 <h1
                                     className='text-sm font-semibold'
                                 >
@@ -126,8 +371,11 @@ const Home = ({ refHome }) => {
                                 >
                                     hi.legacyier@gmail.com
                                 </a>
-                            </div>
-                            <div>
+                            </motion.div>
+                            <motion.div
+                                animate= { animateSubtitle2 }
+                                className='opacity-0'
+                            >
                                 <h1
                                     className='text-sm font-semibold'
                                 >
@@ -142,8 +390,11 @@ const Home = ({ refHome }) => {
                                 >
                                     +52 773-151-1761
                                 </a>
-                            </div>
-                            <div>
+                            </motion.div>
+                            <motion.div
+                                animate= { animateSubtitle1 }
+                                className='opacity-0'
+                            >
                                 <h1
                                     className='text-sm font-semibold'
                                 >
@@ -154,7 +405,7 @@ const Home = ({ refHome }) => {
                                 >
                                     Hidalgo, Mex
                                 </h2>
-                            </div>
+                            </motion.div>
                         </div>
                         </div>
                 </div>

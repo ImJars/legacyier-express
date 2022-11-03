@@ -1,7 +1,6 @@
 import React from 'react'
 import Title from './components/title';
 import WorkCard from './components/works-card';
-import Img from '../images/gatsby-icon.png';
 import { FiExternalLink } from 'react-icons/fi';
 
 const Work = ({ refWork }) => {
