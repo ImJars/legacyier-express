@@ -11,7 +11,7 @@ const Work = ({ refWork }) => {
                 ref={ refWork }
                 id='Works'
                 className="w-full h-full bg-primary text-white
-                font-sans flex justify-center items-center pt-20 pb-40"
+                font-roboto flex justify-center items-center pt-20 pb-40"
             >
                 <div
                     className='max-w-250 flex flex-col'
@@ -24,37 +24,37 @@ const Work = ({ refWork }) => {
                         className='grid grid-cols-3 gap-10 mt-14'
                     >
                         <WorkCard 
-                            nameImg={ Img }
+                            nameImg={ 'img-1.webp' }
                             title={'Graphic Design'}
                             link={'#'}
                             icon={<FiExternalLink />}
                         />
                         <WorkCard 
-                            nameImg={ Img }
+                            nameImg={ 'img-2.webp' }
                             title={'Mobile Application'}
                             link={'#'}
                             icon={<FiExternalLink />}
                         />
                         <WorkCard 
-                            nameImg={ Img }
+                            nameImg={ 'img-3.webp' }
                             title={'Blockchain Application'}
                             link={'#'}
                             icon={<FiExternalLink />}
                         />
                         <WorkCard 
-                            nameImg={ Img }
+                            nameImg={ 'img-4.webp' }
                             title={'Web Design'}
                             link={'#'}
                             icon={<FiExternalLink />}
                         />
                         <WorkCard 
-                            nameImg={ Img }
+                            nameImg={ 'img-5.webp' }
                             title={'Legacyier Website'}
                             link={'#'}
                             icon={<FiExternalLink />}
                         />
                         <WorkCard 
-                            nameImg={ Img }
+                            nameImg={ 'img-6.webp' }
                             title={'Project CMO'}
                             link={'#'}
                             icon={<FiExternalLink />}

@@ -4,10 +4,10 @@ const WorkCard = ({ nameImg, title, link, icon}) => {
     return ( 
         <>
             <div
-                className='rounded-2xl font-sans'
+                className='rounded-2xl font-roboto'
             >
                 <img
-                    className='p-5 w-card-img' 
+                    className='rounded-lg' 
                     src={ nameImg } 
                     alt="" 
                 />
