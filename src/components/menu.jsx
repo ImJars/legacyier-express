@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { BiGitBranch } from 'react-icons/bi';
-import { motion, useAnimation } from 'framer-motion';
+import { motion, useAnimation, useCycle } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const Menu = ({ 
@@ -35,12 +35,18 @@ const Menu = ({
                 opacity: 0,
             });
         }
-    }, [inView])
+    }, [inView, animateMenu]);
+
+    const [visibleMenu, setVisibleMenu] = useCycle(false, true);
+
+    function handleMenu() {
+        setVisibleMenu();
+    }
     
     return ( 
         <>
          <motion.div
-            ref={ ref}
+            ref={ ref }
             animate= { animateMenu }
             className='opacity-0 fixed w-20 h-screen bg-primary 
                     text-white font-roboto tracking-wider z-50 transform top-0 left-0'
@@ -51,7 +57,7 @@ const Menu = ({
                 <div>
                     <div>
                         <a
-                            onClick={ e => console.log(e, 'Menu profile') }
+                            onClick={ e => handleMenu() }
                             href="#Menu"
                             className='bg-septenary flex justify-center
                                      m-5 py-1.5 rounded-full content-center
@@ -59,6 +65,11 @@ const Menu = ({
                         >
                             A
                         </a>
+                        <h1
+                            className={ visibleMenu ? 'opacity-100 transition duration-700 ease-out transform translate-x-20' : 'opacity-0 transition duration-700 ease-out transform -translate-x-20' }
+                        >
+                            Esto es una Menu
+                        </h1>
                     </div>
                 </div>
                     <div
