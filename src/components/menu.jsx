@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BiGitBranch } from 'react-icons/bi';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const Menu = ({ 
     animationHome, 
@@ -11,10 +12,37 @@ const Menu = ({
     animationBlog,
     animationContact
 }) => {
+
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+        triggerOnce: true
+    })
+
+    const animateMenu = useAnimation();
+
+    useEffect(() => {
+        if (inView) {
+            animateMenu.start({
+                opacity: 1,
+                transition: {
+                    type: 'spring', duration: 2, delay: 4
+                }
+            });
+        }
+
+        if (!inView) {
+            animateMenu.start({
+                opacity: 0,
+            });
+        }
+    }, [inView])
+    
     return ( 
         <>
-         <div
-            className='fixed w-20 h-screen bg-primary 
+         <motion.div
+            ref={ ref}
+            animate= { animateMenu }
+            className='opacity-0 fixed w-20 h-screen bg-primary 
                     text-white font-roboto tracking-wider z-50 transform top-0 left-0'
          >
             <div
@@ -114,7 +142,7 @@ const Menu = ({
                     </a>
                 </div>
             </div>
-         </div>
+         </motion.div>
         </>
      );
 }
