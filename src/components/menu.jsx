@@ -2,7 +2,30 @@ import React, { useEffect } from 'react';
 import { BiGitBranch } from 'react-icons/bi';
 import { motion, useAnimation, useCycle } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import styled from 'styled-components';
+import { AiOutlineTwitter, AiFillInstagram } from 'react-icons/ai';
+import { FaFacebookF } from 'react-icons/fa';
+import { IoLogoWhatsapp } from 'react-icons/io';
+import { DiGitBranch } from 'react-icons/di';
 
+const MenuProfile = styled.div`
+    position: absolute;
+    width: 425px;
+    height: 150px;
+    color: #000;
+    &.inactive{
+        transform: translateX(-100px) translateY(-50px);
+        visibility: hidden;
+        transition: all 0.5s ease-in-out;
+        opacity: 0;
+    }
+    &.active{
+        transform: translateX(100px) translateY(-50px);
+        visibility: visible;
+        transition: all 0.5s ease-in-out;
+        opacity: 1;
+    }
+`
 const Menu = ({ 
     animationHome, 
     animationAbout, 
@@ -65,11 +88,51 @@ const Menu = ({
                         >
                             A
                         </a>
-                        <h1
-                            className={ visibleMenu ? 'opacity-100 transition duration-700 ease-out transform translate-x-20' : 'opacity-0 transition duration-700 ease-out transform -translate-x-20' }
+                        <MenuProfile
+                            className={ visibleMenu ? 'active' : 'inactive' }
                         >
-                            Esto es una Menu
-                        </h1>
+                            <div
+                                className='bg-secondary rounded-xl h-full grid content-center'
+                            >
+                                <div
+                                    className='bg-secondary flex flex-col justify-center items-center p-5 rounded-xl'
+                                >
+                                    <div
+                                        className='flex justify-center items-center'
+                                    >
+                                        <img
+                                            src={'me.jpg'}
+                                            alt="profile image"
+                                            className='rounded-full w-20 h-16 filter grayscale' 
+                                        />
+                                        <h1
+                                            className='text-text-mini font-roboto tracking-wider text-xs ml-4'
+                                        >
+                                            'A person with a new idea is a crank until that idea succeeds.'
+                                        </h1>
+                                    </div>
+                                    <div
+                                        className='text-text-mini text-lg flex justify-end w-full space-x-2'
+                                    >
+                                        <a href="#">
+                                            <IoLogoWhatsapp />
+                                        </a>
+                                        <a href="#">
+                                            <AiOutlineTwitter />
+                                        </a>
+                                        <a href="#">
+                                            <AiFillInstagram />
+                                        </a>
+                                        <a href="#">
+                                            <FaFacebookF />
+                                        </a>
+                                        <a href="#">
+                                            <DiGitBranch />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </MenuProfile>
                     </div>
                 </div>
                     <div
