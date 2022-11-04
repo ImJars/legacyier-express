@@ -29,6 +29,9 @@ module.exports = {
         'img': '600px',
         'card-img': '300px',
       },
+      fontSize: {
+        mini: '0.6rem',
+      },
     },
   },
   plugins: [],

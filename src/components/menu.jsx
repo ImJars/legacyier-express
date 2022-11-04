@@ -14,7 +14,7 @@ const MenuProfile = styled.div`
     height: 150px;
     color: #000;
     &.inactive{
-        transform: translateX(-100px) translateY(-50px);
+        transform: translateX(0px) translateY(-50px);
         visibility: hidden;
         transition: all 0.5s ease-in-out;
         opacity: 0;
@@ -84,9 +84,11 @@ const Menu = ({
                             href="#Menu"
                             className='bg-septenary flex justify-center
                                      m-5 py-1.5 rounded-full content-center
-                                     text-xl font-semibold'    
+                                     text-xl font-semibold hover:scale-110
+                                     transition duration-200 ease-in-out
+                                     '    
                         >
-                            A
+                            J
                         </a>
                         <MenuProfile
                             className={ visibleMenu ? 'active' : 'inactive' }
@@ -101,9 +103,9 @@ const Menu = ({
                                         className='flex justify-center items-center'
                                     >
                                         <img
-                                            src={'me.jpg'}
+                                            src={'profile.webp'}
                                             alt="profile image"
-                                            className='rounded-full w-20 h-16 filter grayscale' 
+                                            className='rounded-full w-20 h-16' 
                                         />
                                         <h1
                                             className='text-text-mini font-roboto tracking-wider text-xs ml-4'
@@ -114,19 +116,34 @@ const Menu = ({
                                     <div
                                         className='text-text-mini text-lg flex justify-end w-full space-x-2'
                                     >
-                                        <a href="#">
+                                        <a 
+                                            className='hover:text-septenary transition duration-500 ease-in-out'
+                                            href="#"
+                                        >
                                             <IoLogoWhatsapp />
                                         </a>
-                                        <a href="#">
+                                        <a 
+                                            className='hover:text-septenary transition duration-500 ease-in-out'
+                                            href="#"
+                                        >
                                             <AiOutlineTwitter />
                                         </a>
-                                        <a href="#">
+                                        <a 
+                                            className='hover:text-septenary transition duration-500 ease-in-out'
+                                            href="#"
+                                        >
                                             <AiFillInstagram />
                                         </a>
-                                        <a href="#">
+                                        <a 
+                                            className='hover:text-septenary transition duration-500 ease-in-out'
+                                            href="#"
+                                        >
                                             <FaFacebookF />
                                         </a>
-                                        <a href="#">
+                                        <a 
+                                            className='hover:text-septenary transition duration-500 ease-in-out'
+                                            href="#"
+                                        >
                                             <DiGitBranch />
                                         </a>
                                     </div>
