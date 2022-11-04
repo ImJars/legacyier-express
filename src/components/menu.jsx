@@ -4,9 +4,9 @@ import { motion, useAnimation, useCycle } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import styled from 'styled-components';
 import { AiOutlineTwitter, AiFillInstagram } from 'react-icons/ai';
-import { FaFacebookF } from 'react-icons/fa';
 import { IoLogoWhatsapp } from 'react-icons/io';
 import { DiGitBranch } from 'react-icons/di';
+import { SiGmail } from 'react-icons/si';
 
 const MenuProfile = styled.div`
     position: absolute;
@@ -118,31 +118,41 @@ const Menu = ({
                                     >
                                         <a 
                                             className='hover:text-septenary transition duration-500 ease-in-out'
-                                            href="#"
+                                            href="https://wa.link/01hnrf"
+                                            target="_blank"
+                                            rel="noreferrer"
                                         >
                                             <IoLogoWhatsapp />
                                         </a>
                                         <a 
                                             className='hover:text-septenary transition duration-500 ease-in-out'
-                                            href="#"
+                                            href="https://twitter.com/Im_Jars"
+                                            target="_blank"
+                                            rel="noreferrer"
                                         >
                                             <AiOutlineTwitter />
                                         </a>
                                         <a 
                                             className='hover:text-septenary transition duration-500 ease-in-out'
-                                            href="#"
+                                            href="https://www.instagram.com/jars.little/"
+                                            target="_blank"
+                                            rel="noreferrer"
                                         >
                                             <AiFillInstagram />
                                         </a>
                                         <a 
                                             className='hover:text-septenary transition duration-500 ease-in-out'
-                                            href="#"
+                                            href="mailto:hi.legacyier@gmail.com"
+                                            target="_blank"
+                                            rel="noreferrer"
                                         >
-                                            <FaFacebookF />
+                                            <SiGmail />
                                         </a>
                                         <a 
                                             className='hover:text-septenary transition duration-500 ease-in-out'
-                                            href="#"
+                                            href="https://github.com/ImJars"
+                                            target="_blank"
+                                            rel="noreferrer"
                                         >
                                             <DiGitBranch />
                                         </a>
