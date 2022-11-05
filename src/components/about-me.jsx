@@ -33,16 +33,12 @@ const AboutMe = ({ refAbout }) => {
                     type: 'spring' ,duration: 2, delay: 0.2
                 }
             });
-        }
-        if (inView) {
             animationAbout.start({
                 opacity: 1,
                 transition: {
                     type: 'spring' ,duration: 2, delay: 1.2
                 }
             });
-        }
-        if (inView) {
             animateElement_1.start({
                 opacity: 1,
                 y: 0,
@@ -50,8 +46,6 @@ const AboutMe = ({ refAbout }) => {
                     type: 'spring' ,duration: 2, delay: 1.6
                 }
             });
-        }
-        if (inView) {
             animateElement_2.start({
                 opacity: 1,
                 y: 0,
@@ -59,8 +53,6 @@ const AboutMe = ({ refAbout }) => {
                     type: 'spring' ,duration: 2, delay: 1.8
                 }
             });
-        }
-        if (inView) {
             animateElement_3.start({
                 opacity: 1,
                 y: 0,
@@ -68,8 +60,6 @@ const AboutMe = ({ refAbout }) => {
                     type: 'spring' ,duration: 2, delay: 2
                 }
             });
-        }
-        if (inView) {
             animateElement_4.start({
                 opacity: 1,
                 y: 0,
@@ -77,8 +67,6 @@ const AboutMe = ({ refAbout }) => {
                     type: 'spring' ,duration: 2, delay: 2.2
                 }
             });
-        }
-        if (inView) {
             animateElement_5.start({
                 opacity: 1,
                 y: 0,
@@ -86,8 +74,6 @@ const AboutMe = ({ refAbout }) => {
                     type: 'spring' ,duration: 2, delay: 2.4
                 }
             });
-        }
-        if (inView) {
             animateElement_6.start({
                 opacity: 1,
                 y: 0,
@@ -102,49 +88,34 @@ const AboutMe = ({ refAbout }) => {
                 opacity: 0,
                 x: '-5vw'
             });
-        }
-        if (!inView) {
             animationAbout.start({
                 opacity: 0,
             });
-        }
-        if (!inView) {
             animateElement_1.start({
                 opacity: 0,
                 y: '5vw'
             });
-        }
-        if (!inView) {
             animateElement_2.start({
                 opacity: 0,
                 y: '5vw'
             });
-        }
-        if (!inView) {
             animateElement_3.start({
                 opacity: 0,
                 y: '5vw'
             });
-        }
-        if (!inView) {
             animateElement_4.start({
                 opacity: 0,
                 y: '5vw'
             });
-        }
-        if (!inView) {
             animateElement_5.start({
                 opacity: 0,
                 y: '5vw'
             });
-        }
-        if (!inView) {
             animateElement_6.start({
                 opacity: 0,
                 y: '5vw'
             });
-        }
-            
+        }      
     }, [inView, animationAboutTitle, animationAbout, animateElement_1, animateElement_2, animateElement_3, animateElement_4, animateElement_5, animateElement_6]);
     
     
