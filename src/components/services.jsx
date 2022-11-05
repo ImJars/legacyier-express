@@ -27,48 +27,36 @@ const Services = ({ refServices }) => {
                     type: 'spring' ,duration: 2, delay: 0.2
                 }
             });
-        }
-        if (inView) {
             animateCard_1.start({
                 opacity: 1,
                 transition: {
                     type: 'spring' ,duration: 1, delay: 1
                 }
             });
-        }
-        if (inView) {
             animateCard_2.start({
                 opacity: 1,
                 transition: {
                     type: 'spring' ,duration: 1, delay: 1.2
                 }
             });
-        }
-        if (inView) {
             animateCard_3.start({
                 opacity: 1,
                 transition: {
                     type: 'spring' ,duration: 1, delay: 1.4
                 }
             });
-        }
-        if (inView) {
             animateCard_4.start({
                 opacity: 1,
                 transition: {
                     type: 'spring' ,duration: 1, delay: 1.6
                 }
             });
-        }
-        if (inView) {
             animateCard_5.start({
                 opacity: 1,
                 transition: {
                     type: 'spring' ,duration: 1, delay: 1.8
                 }
             });
-        }
-        if (inView) {
             animateCard_6.start({
                 opacity: 1,
                 transition: {
@@ -82,33 +70,21 @@ const Services = ({ refServices }) => {
                 opacity: 0,
                 x: '-5vw'
             });
-        }
-        if (!inView) {
             animateCard_1.start({
                 opacity: 0,
             });
-        }
-        if (!inView) {
             animateCard_2.start({
                 opacity: 0,
             });
-        }
-        if (!inView) {
             animateCard_3.start({
                 opacity: 0,
             });
-        }
-        if (!inView) {
             animateCard_4.start({
                 opacity: 0,
             });
-        }
-        if (!inView) {
             animateCard_5.start({
                 opacity: 0,
             });
-        }
-        if (!inView) {
             animateCard_6.start({
                 opacity: 0,
             });
