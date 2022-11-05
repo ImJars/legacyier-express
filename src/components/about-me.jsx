@@ -107,44 +107,44 @@ const AboutMe = ({ refAbout }) => {
             animationAbout.start({
                 opacity: 0,
             });
-            if (!inView) {
-                animateElement_1.start({
-                    opacity: 0,
-                    y: '5vw'
-                });
-            }
-            if (!inView) {
-                animateElement_2.start({
-                    opacity: 0,
-                    y: '5vw'
-                });
-            }
-            if (!inView) {
-                animateElement_3.start({
-                    opacity: 0,
-                    y: '5vw'
-                });
-            }
-            if (!inView) {
-                animateElement_4.start({
-                    opacity: 0,
-                    y: '5vw'
-                });
-            }
-            if (!inView) {
-                animateElement_5.start({
-                    opacity: 0,
-                    y: '5vw'
-                });
-            }
-            if (!inView) {
-                animateElement_6.start({
-                    opacity: 0,
-                    y: '5vw'
-                });
-            }
-            
         }
+        if (!inView) {
+            animateElement_1.start({
+                opacity: 0,
+                y: '5vw'
+            });
+        }
+        if (!inView) {
+            animateElement_2.start({
+                opacity: 0,
+                y: '5vw'
+            });
+        }
+        if (!inView) {
+            animateElement_3.start({
+                opacity: 0,
+                y: '5vw'
+            });
+        }
+        if (!inView) {
+            animateElement_4.start({
+                opacity: 0,
+                y: '5vw'
+            });
+        }
+        if (!inView) {
+            animateElement_5.start({
+                opacity: 0,
+                y: '5vw'
+            });
+        }
+        if (!inView) {
+            animateElement_6.start({
+                opacity: 0,
+                y: '5vw'
+            });
+        }
+            
     }, [inView, animationAboutTitle, animationAbout, animateElement_1, animateElement_2, animateElement_3, animateElement_4, animateElement_5, animateElement_6]);
     
     

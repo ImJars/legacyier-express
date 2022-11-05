@@ -1,8 +1,55 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ServicesCard from './components/services-card';
 import Title from './components/title';
+import { useInView } from 'react-intersection-observer';
+import { useAnimation } from 'framer-motion';
 
 const Services = ({ refServices }) => {
+
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+        triggerOnce: false
+    });
+    const animateServicesTitle = useAnimation();
+    const animateCard_1 = useAnimation();
+    const animateCard_2 = useAnimation();
+    const animateCard_3 = useAnimation();
+    const animateCard_4 = useAnimation();
+    const animateCard_5 = useAnimation();
+    const animateCard_6 = useAnimation();
+
+    useEffect(() => {
+        if (inView) {
+            animateServicesTitle.start({
+                opacity: 1,
+                x: 0,
+                transition: {
+                    type: 'spring' ,duration: 2, delay: 0.2
+                }
+            });
+        }
+        if (inView) {
+            animateCard_1.start({
+                opacity: 1,
+                transition: {
+                    type: 'spring' ,duration: 1, delay: .5
+                }
+            });
+        }
+
+        if (!inView) {
+            animateServicesTitle.start({
+                opacity: 0,
+                x: '-5vw'
+            });
+        }
+        if (!inView) {
+            animateCard_1.start({
+                opacity: 0,
+            });
+        }
+    }, [inView, animateServicesTitle]);
+    
     return ( 
         <>
             <section
@@ -12,16 +59,19 @@ const Services = ({ refServices }) => {
                         font-roboto flex justify-center items-center"
             >
                 <div
+                    ref={ ref }
                     className='max-w-250 flex flex-col'
                 >
-                    <Title 
+                    <Title
+                        animateTitle={ animateServicesTitle }
                         title='My Services'
                         subtitle='My work with several clients'
                     />
                     <div
                         className='grid grid-cols-3 gap-8 mt-14'
                     >
-                        <ServicesCard 
+                        <ServicesCard
+                            animateCardServices={ animateCard_1 }
                             number='01'
                             title='Web Development'
                             children='We professionally design, redesign and 
@@ -29,34 +79,39 @@ const Services = ({ refServices }) => {
                                     enterprise web apps to achieve high conversion 
                                     and adoption rates.'
                         />
-                        <ServicesCard 
+                        <ServicesCard
+                            animateCardServices={ animateCard_2 }
                             number='02'
                             title='Mobile Development'
                             children='We help global brands design and create digital 
                                     products, enabling seamless user experiences on all 
                                     modern devices.'
                         />
-                        <ServicesCard 
+                        <ServicesCard
+                            animateCardServices={ animateCard_3 }
                             number='03'
                             title='Blockchain Development'
                             children='We develop applications based on blockchain. 
                                     Develop a new blockchain project or upgrade your project
                                     with our help.'
                         />
-                        <ServicesCard 
+                        <ServicesCard
+                            animateCardServices={ animateCard_4 }
                             number='05'
                             title='Python Development '
                             children='We provide bespoke Python development services that 
                                     target unique business needs and problems.'
                         />
-                        <ServicesCard 
+                        <ServicesCard
+                            animateCardServices={ animateCard_5 }
                             number='04'
                             title='Digital Marketing'
                             children='We plan, implement, evaluate the control of digital 
                                     marketing strategies that will allow and meet the 
                                     objectives and sales of your company.'
                         />
-                        <ServicesCard 
+                        <ServicesCard
+                            animateCardServices={ animateCard_6 }
                             number='06'
                             title='Designer professional'
                             children='Custom Designer Interfaces to Meet Your Specific Requirements'

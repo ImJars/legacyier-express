@@ -1,13 +1,15 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
-const ServicesCard = ({ number, title, children}) => {
+const ServicesCard = ({ animateCardServices, number, title, children}) => {
     return ( 
         <>
-            <div
+            <motion.div
+                animate={ animateCardServices }
                 className='bg-secondary px-4 py-10 rounded-lg flex 
                             flex-col justify-center text-center
                             font-roboto items-center hover:scale-105
-                            transition duration-200 ease-in-out'
+                            hover:transition hover:duration-200 hover:ease-in-out'
             >
                 <div
                     className='flex justify-center items-center'
@@ -30,7 +32,7 @@ const ServicesCard = ({ number, title, children}) => {
                 >
                     { children }
                 </p>
-            </div>
+            </motion.div>
         </>
      );
 }
