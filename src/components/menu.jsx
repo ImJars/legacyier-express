@@ -103,8 +103,8 @@ const Menu = ({
                                         className='flex justify-center items-center'
                                     >
                                         <img
-                                            src={'profile.webp'}
-                                            alt="profile image"
+                                            src='profile.webp'
+                                            alt="profileImage"
                                             className='rounded-full w-20 h-16' 
                                         />
                                         <h1

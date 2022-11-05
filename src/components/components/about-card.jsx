@@ -1,9 +1,11 @@
 import React from 'react'
+import { motion } from 'framer-motion';
 
-const AboutCard = ({ icon, description }) => {
+const AboutCard = ({ icon, description, animateElement }) => {
     return ( 
         <>
-            <div
+            <motion.div
+                animate={ animateElement }
                 className='rounded-lg px-4 py-10
                         bg-secondary text-white'
             >
@@ -18,7 +20,7 @@ const AboutCard = ({ icon, description }) => {
                 >
                     { description }
                 </h1>
-            </div>
+            </motion.div>
         </>
      );
 }

@@ -1,9 +1,11 @@
 import React from 'react'
+import { motion } from 'framer-motion';
 
-const Title = ({ title, subtitle}) => {
+const Title = ({ animateTitle, title, subtitle}) => {
     return ( 
         <>
-            <div
+            <motion.div
+                animate={ animateTitle }
                 className='font-roboto tracking-wider border-l-4 border-septenary pl-4'
             >
                 <h1
@@ -16,7 +18,7 @@ const Title = ({ title, subtitle}) => {
                 >
                     { subtitle }
                 </h2>
-            </div>
+            </motion.div>
         </>
      );
 }
