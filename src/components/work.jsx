@@ -5,23 +5,60 @@ import 'react-alice-carousel/lib/alice-carousel.css';
 import Seccion from './components/seccion-carousel';
 
 const items = [
-    <Seccion 
+    <Seccion
+        date={'January 2022 - Present'}
         business={'Legacyier'}
-        worked={'CEO'}
+        worked={'Chief Executive Officer'}
         title={'Legacyier Web'}
-        description={' Legacyier web by JARS'}
+        description={
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.'
+        }
     />,
-    <Seccion 
+    <Seccion
+        date={'January 2021 - December 2021'}
         business={'Bliss DDM'}
-        worked={'CEO'}
-        title={'Legacyier Web'}
-        description={' Legacyier web by JARS'}
+        worked={'Web Developer'}
+        title={'Personal Web Daniel Rocha'}
+        description={
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.'
+        }
+    />,
+    <Seccion
+        date={'January 2020 - December 2020'}
+        business={'SQDesarrollo & Holcim Mexico'}
+        worked={'Software Developer'}
+        title={'Labor calculation software'}
+        description={
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.'
+        }
+    />,
+    <Seccion
+        date={'January 2019 - December 2019'}
+        business={'SQDesarrollo & Bonafont'}
+        worked={'Software Developer'}
+        title={'Redesign of software and calculation of inputs'}
+        description={
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.'
+        }
     />,
     <Seccion 
-        business={'SQDesarrollo'}
-        worked={'CEO'}
-        title={'Legacyier Web'}
-        description={' Legacyier web by JARS'}
+        date={'January 2018 - December 2018'}
+        business={'UAEH'}
+        worked={'Software Developer'}
+        title={'Project management software'}
+        description={
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.'
+        }
     />,
 ]
 
@@ -31,18 +68,18 @@ const Work = ({ refWork }) => {
             <section
                 ref={ refWork }
                 id='Works'
-                className="w-full h-full bg-primary text-white
+                className="w-full h-screen bg-primary text-white
                 font-roboto flex justify-center items-center pt-20 pb-40"
             >
                 <div
                     className='max-w-250 flex flex-col'
                 >
                     <Title 
-                        title={'My Work'}
+                        title={'Where I’ve Worked'}
                         subtitle={'A latest creative works in design and web'}
                     />
                     <div
-                        className='mt-14'
+                        className='mt-40 mb-40'
                     >
                         <AliceCarousel
                             animationType="fadeout" 
@@ -53,6 +90,9 @@ const Work = ({ refWork }) => {
                             mouseTracking
                             autoWidth
                         />
+                    </div>
+                    <div>
+                        <input type="range" />
                     </div>
                 </div>
             </section>

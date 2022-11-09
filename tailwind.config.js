@@ -32,6 +32,7 @@ module.exports = {
         'img': '600px',
         'card-img': '300px',
         '250': '70rem',
+        'text': '700px',
       },
     },
   },
