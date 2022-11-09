@@ -1,7 +1,29 @@
 import React from 'react'
 import Title from './components/title';
-import WorkCard from './components/works-card';
-import { FiExternalLink } from 'react-icons/fi';
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
+import Seccion from './components/seccion-carousel';
+
+const items = [
+    <Seccion 
+        business={'Legacyier'}
+        worked={'CEO'}
+        title={'Legacyier Web'}
+        description={' Legacyier web by JARS'}
+    />,
+    <Seccion 
+        business={'Bliss DDM'}
+        worked={'CEO'}
+        title={'Legacyier Web'}
+        description={' Legacyier web by JARS'}
+    />,
+    <Seccion 
+        business={'SQDesarrollo'}
+        worked={'CEO'}
+        title={'Legacyier Web'}
+        description={' Legacyier web by JARS'}
+    />,
+]
 
 const Work = ({ refWork }) => {
     return ( 
@@ -20,43 +42,16 @@ const Work = ({ refWork }) => {
                         subtitle={'A latest creative works in design and web'}
                     />
                     <div
-                        className='grid grid-cols-3 gap-10 mt-14'
+                        className='mt-14'
                     >
-                        <WorkCard 
-                            nameImg={ 'img-1.webp' }
-                            title={'Graphic Design'}
-                            link={'#'}
-                            icon={<FiExternalLink />}
-                        />
-                        <WorkCard 
-                            nameImg={ 'img-2.webp' }
-                            title={'Mobile Application'}
-                            link={'#'}
-                            icon={<FiExternalLink />}
-                        />
-                        <WorkCard 
-                            nameImg={ 'img-3.webp' }
-                            title={'Blockchain Application'}
-                            link={'#'}
-                            icon={<FiExternalLink />}
-                        />
-                        <WorkCard 
-                            nameImg={ 'img-4.webp' }
-                            title={'Web Design'}
-                            link={'#'}
-                            icon={<FiExternalLink />}
-                        />
-                        <WorkCard 
-                            nameImg={ 'img-5.webp' }
-                            title={'Legacyier Website'}
-                            link={'#'}
-                            icon={<FiExternalLink />}
-                        />
-                        <WorkCard 
-                            nameImg={ 'img-6.webp' }
-                            title={'Project CMO'}
-                            link={'#'}
-                            icon={<FiExternalLink />}
+                        <AliceCarousel
+                            animationType="fadeout" 
+                            animationDuration={800}
+                            disableDotsControls
+                            disableButtonsControls
+                            items={items}
+                            mouseTracking
+                            autoWidth
                         />
                     </div>
                 </div>
