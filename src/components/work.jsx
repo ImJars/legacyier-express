@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Title from './components/title';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import Seccion from './components/seccion-carousel';
+import SliderComponet from './components/slider-component';
 
 const items = [
     <Seccion
@@ -63,6 +64,16 @@ const items = [
 ]
 
 const Work = ({ refWork }) => {
+
+    const [value, setvalue] = useState(0)
+    const [valueCarousel, setvalueCarousel] = useState(0)
+ 
+
+    const handleChange = (e) => {
+        setvalue(setvalueCarousel(e.target.value)) 
+    }
+
+
     return ( 
         <>
             <section
@@ -87,12 +98,23 @@ const Work = ({ refWork }) => {
                             disableDotsControls
                             disableButtonsControls
                             items={items}
-                            mouseTracking
                             autoWidth
+                            mouseTracking
+                            activeIndex={valueCarousel}
+                                                        
                         />
                     </div>
-                    <div>
-                        <input type="range" />
+                    <div
+                        className='w-full flex justify-center'
+                    >
+                        <SliderComponet
+                            value={ value }
+                            min={ 0 }
+                            max={ 5 }
+                            step={ 1 }
+                            handleChange={ handleChange }
+                        />
+                        {console.log(value)}
                     </div>
                 </div>
             </section>
