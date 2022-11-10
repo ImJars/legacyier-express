@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Seccion = ({ date, business, worked, title, description }) => {
+const Seccion = ({ ref, date, business, worked, title, description }) => {
     return ( 
         <>
             <div
+                ref={ ref }
                 className='w-250 h-full no-seleccionable flex 
                         justify-center font-roboto'
             >

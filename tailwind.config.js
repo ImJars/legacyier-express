@@ -34,6 +34,9 @@ module.exports = {
         '250': '70rem',
         'text': '700px',
       },
+      height: {
+        '1px': '1px',
+      },
     },
   },
   plugins: [],
