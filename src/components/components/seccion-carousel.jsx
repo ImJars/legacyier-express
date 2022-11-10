@@ -33,7 +33,7 @@ const Seccion = ({ ref, date, business, worked, title, description }) => {
                         { title }
                     </h3>
                     <p
-                        className='w-text text-sm tracking-wider flex justify-center'
+                        className='w-text text-sm tracking-wider flex text-center'
                     >
                         { description }
                     </p>

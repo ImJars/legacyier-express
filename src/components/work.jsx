@@ -59,7 +59,7 @@ const Work = ({ refWork }) => {
                 ref={ refWork }
                 id='Works'
                 className="w-full h-screen bg-primary text-white
-                font-roboto flex justify-center items-center pt-20 pb-40"
+                font-roboto flex justify-center items-center pb-20"
             >
                 <div
                     className='w-250 flex flex-col'
@@ -69,7 +69,7 @@ const Work = ({ refWork }) => {
                         subtitle={'A latest creative works in design and web'}
                     />
                     <div
-                        className='w-full flex justify-center mt-40'
+                        className='w-full flex justify-center mt-20'
                     >
                         <TabContent
                             className={tab === 1 ? 'active': 'inactive'}
@@ -148,10 +148,10 @@ const Work = ({ refWork }) => {
                         </TabContent>
                     </div>
                     <div
-                        className='mt-20 flex justify-center mx-20'
+                        className='mt-20 flex justify-center mx-80 sm:mx-40'
                     >
                         <div
-                            className='w-full h-1px bg-white justify-between grid grid-cols-5 content-center'
+                            className='w-full h-1px bg-septenary justify-between grid grid-cols-5 content-center'
                         >
                             <Button
                                 onClick={() => changeTab(1)}
@@ -163,46 +163,46 @@ const Work = ({ refWork }) => {
                                     2022
                                 </div>
                             </Button>
-                            <button
+                            <Button
                                 onClick={() => changeTab(2)}
-                                className='w-2 h-2 bg-white rounded-full cursor-pointer'
+                                className={tab === 2 ? 'activeButton': 'inactiveButton'}
                             >
                                 <div
-                                    className='transform rotate-90 translate-y-4'
+                                    className={tab === 2 ? 'activeText': 'inactiveText'}
                                 >
                                     2021
                                 </div>
-                            </button>
-                            <button
+                            </Button>
+                            <Button
                                 onClick={() => changeTab(3)}
-                                className='w-2 h-2 bg-white rounded-full cursor-pointer'
+                                className={tab === 3 ? 'activeButton': 'inactiveButton'}
                             >
                                 <div
-                                    className='transform rotate-90 translate-y-4'
+                                    className={tab === 3 ? 'activeText': 'inactiveText'}
                                 >
                                     2020
                                 </div>
-                            </button>
-                            <button
+                            </Button>
+                            <Button
                                 onClick={() => changeTab(4)}
-                                className='w-2 h-2 bg-white rounded-full cursor-pointer'
+                                className={tab === 4 ? 'activeButton': 'inactiveButton'}
                             >
                                 <div
-                                    className='transform rotate-90 translate-y-4'
+                                    className={tab === 4 ? 'activeText': 'inactiveText'}
                                 >
                                     2019
                                 </div>
-                            </button>
-                            <button
+                            </Button>
+                            <Button
                                 onClick={() => changeTab(5)}
-                                className='w-2 h-2 bg-white rounded-full cursor-pointer'
+                                className={tab === 5 ? 'activeButton': 'inactiveButton'}
                             >
                                 <div
-                                    className='transform rotate-90 translate-y-4'
+                                    className={tab === 5 ? 'activeText': 'inactiveText'}
                                 >
                                     2018
                                 </div>
-                            </button>
+                            </Button>
                         </div>
                     </div>
                 </div>
