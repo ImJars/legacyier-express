@@ -23,7 +23,7 @@ const Seccion = ({ ref, date, business, worked, title, description }) => {
                     </h1>
                     <h2
                         className='text-lg text-septenary tracking-wider
-                                    font-medium mb-6'
+                                    font-medium mb-4'
                     >
                         &#60; { worked } &#47; &#62;
                     </h2>

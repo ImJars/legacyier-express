@@ -20,13 +20,15 @@ const Button = styled.button`
         height: 0.5rem;
         background-color: #7B90FB;
         border-radius: 50%;
+        border: 1px solid #7B90FB;
         transition: all 500ms ease-in-out;
     }
     &.inactiveButton{
         width: 0.5rem;
         height: 0.5rem;
-        background-color: #7B90FB;
+        background-color: #ffff;
         border-radius: 50%;
+        border: 1px solid #ffff;
         transition: all 500ms ease-in-out;
     }
     .activeText{
@@ -34,14 +36,14 @@ const Button = styled.button`
         font-weight: 700;
         color: #7B90FB;
         font-size: 15px;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         transition: all 500ms ease-in-out;
     }
     .inactiveText{
         transform: rotate(90deg) translateX(20px);
-        color: #7B90FB;
+        color: #ffff;
         font-size: 10px;
-        letter-spacing: 2.5px;
+        letter-spacing: 1px;
         transition: all 500ms ease-in-out;
     }
 `
@@ -59,7 +61,7 @@ const Work = ({ refWork }) => {
                 ref={ refWork }
                 id='Works'
                 className="w-full h-screen bg-primary text-white
-                font-roboto flex justify-center items-center pb-20"
+                font-roboto flex justify-center items-center pb-40"
             >
                 <div
                     className='w-250 flex flex-col'
@@ -148,7 +150,7 @@ const Work = ({ refWork }) => {
                         </TabContent>
                     </div>
                     <div
-                        className='mt-20 flex justify-center mx-80 sm:mx-40'
+                        className='mt-16 flex justify-center mx-80 sm:mx-40'
                     >
                         <div
                             className='w-full h-1px bg-septenary justify-between grid grid-cols-5 content-center'
