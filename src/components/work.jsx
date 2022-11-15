@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Title from './components/title';
 import Seccion from './components/seccion-carousel';
 import styled from 'styled-components';
+import { useAnimation, motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const TabContent = styled.div`
     &.inactive{
@@ -18,7 +20,7 @@ const Button = styled.button`
     &.activeButton{
         width: 0.5rem;
         height: 0.5rem;
-        padding: 4px;
+        padding: 1px;
         background-color: #7B90FB;
         border-radius: 50%;
         border: 1px solid #7B90FB;
@@ -27,7 +29,7 @@ const Button = styled.button`
     &.inactiveButton{
         width: 0.5rem;
         height: 0.5rem;
-        padding: 4px;
+        padding: 1px;
         background-color: #ffff;
         border-radius: 50%;
         border: 1px solid #ffff;
@@ -66,6 +68,52 @@ const Work = ({ refWork }) => {
     function changeTab( index ){
         setTab(index);
     }
+
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+        triggerOnce: true,
+    });
+    const animateTitle = useAnimation();
+    const animateSection = useAnimation();
+    const animateSection2 = useAnimation();
+
+    useEffect(() => {
+        if(inView){
+            animateTitle.start({
+                x: 0,
+                opacity: 1,
+                transition: {
+                    type: 'spring', duration: 2, delay: 0.5
+                }
+            })
+            animateSection.start({
+                opacity: 1,
+                transition: {
+                    type: 'spring', duration: 2, delay: 1
+                }
+            })
+            animateSection2.start({
+                opacity: 1,
+                transition: {
+                    type: 'spring', duration: 2, delay: 1
+                }
+            })
+        }
+
+        if(!inView){
+            animateTitle.start({
+                x: -100,
+                opacity: 0,
+            })
+            animateSection.start({
+                opacity: 0,
+            })
+            animateSection2.start({
+                opacity: 0,
+            })
+        }
+    }, [inView, animateTitle, animateSection, animateSection2])
+    
     return ( 
         <>
             <section
@@ -75,14 +123,17 @@ const Work = ({ refWork }) => {
                 font-roboto flex justify-center items-center pb-40"
             >
                 <div
+                    ref={ ref }
                     className='w-250 flex flex-col'
                 >
                     <Title 
+                        animateTitle={ animateTitle }
                         title={'Where I’ve Worked'}
                         subtitle={'A latest creative works in design and web'}
                     />
-                    <div
-                        className='w-full flex justify-center mt-20'
+                    <motion.div
+                        animate={ animateSection }
+                        className='w-full flex justify-center mt-20 opacity-0'
                     >
                         <TabContent
                             className={tab === 1 ? 'active': 'inactive'}
@@ -159,8 +210,9 @@ const Work = ({ refWork }) => {
                                 }
                             />
                         </TabContent>
-                    </div>
-                    <div
+                    </motion.div>
+                    <motion.div
+                        animate={ animateSection2 }
                         className='mt-16 flex justify-center mx-80 sm:mx-40'
                     >
                         <div
@@ -217,7 +269,7 @@ const Work = ({ refWork }) => {
                                 </div>
                             </Button>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </section>
         </>
