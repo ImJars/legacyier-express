@@ -1,6 +1,13 @@
 import React from 'react'
 
-const Seccion = ({ ref, date, business, worked, title, description }) => {
+const Seccion = ({ 
+    ref, 
+    date, 
+    business, 
+    worked, 
+    title, 
+    description,
+}) => {
     return ( 
         <>
             <div
@@ -28,7 +35,7 @@ const Seccion = ({ ref, date, business, worked, title, description }) => {
                         &#60; { worked } &#47; &#62;
                     </h2>
                     <h3
-                        className='font-medium tracking-wide mb-2'
+                        className='font-bold tracking-wide mb-2'
                     >
                         { title }
                     </h3>

@@ -18,6 +18,7 @@ const Button = styled.button`
     &.activeButton{
         width: 0.5rem;
         height: 0.5rem;
+        padding: 4px;
         background-color: #7B90FB;
         border-radius: 50%;
         border: 1px solid #7B90FB;
@@ -26,25 +27,35 @@ const Button = styled.button`
     &.inactiveButton{
         width: 0.5rem;
         height: 0.5rem;
+        padding: 4px;
         background-color: #ffff;
         border-radius: 50%;
         border: 1px solid #ffff;
         transition: all 500ms ease-in-out;
+        :hover{
+            background-color: #7B90FB;
+            border: 1px solid #7B90FB;
+            transition: all 200ms ease-in-out;
+        }
     }
     .activeText{
-        transform: rotate(90deg) translateX(20px);
+        transform: rotate(90deg) translateX(10px) translateY(.5px);
         font-weight: 700;
         color: #7B90FB;
-        font-size: 15px;
+        font-size: 12px;
         letter-spacing: 1px;
         transition: all 500ms ease-in-out;
     }
     .inactiveText{
-        transform: rotate(90deg) translateX(20px);
+        transform: rotate(90deg) translateX(5px) translateY(.5px);
         color: #ffff;
         font-size: 10px;
         letter-spacing: 1px;
         transition: all 500ms ease-in-out;
+        :hover{
+            color: #7B90FB;
+            transition: all 200ms ease-in-out;
+        }
     }
 `
 
