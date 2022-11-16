@@ -24,6 +24,7 @@ module.exports = {
       },
       maxWidth: {
         250: '70rem',
+        pantalla: '1000px',
       },
       minHeight:{
         250: '8rem',
@@ -33,9 +34,11 @@ module.exports = {
         'card-img': '300px',
         '250': '70rem',
         'text': '700px',
+        'card-img': '350px',
       },
       height: {
         '1px': '1px',
+        'card-img': '300px',
       },
     },
   },
