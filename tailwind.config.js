@@ -28,6 +28,7 @@ module.exports = {
       },
       minHeight:{
         250: '8rem',
+        pantalla: '363px',
       },
       width: {
         'img': '600px',
@@ -35,6 +36,8 @@ module.exports = {
         '250': '70rem',
         'text': '700px',
         'card-img': '350px',
+        'project-img': '580px',
+        'project-card': '495px',
       },
       height: {
         '1px': '1px',

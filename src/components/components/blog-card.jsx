@@ -13,68 +13,34 @@ const BlogCard = ({
     return ( 
         <>
             <div
-                className='static font-sans pb-40 flex'
+                className='max-w-pantalla min-h-pantalla static'
             >
                 <div
-                    className='relative w-1/2'
+                    className='relative h-full w-full flex'
                 >
-                    <div>
-                        <img 
-                            src={ img } 
-                            alt="blog" 
-                            className='rounded-smrelative'
+                    <div className='static'>
+                        <img
+                            className='z-0 relative w-project-img' 
+                            src="img-1.webp" 
+                            alt="" 
                         />
                         <div
-                            className='absolute w-full h-full top-0 bg-septenary rounded-sm opacity-50'
+                            className='absolute bg-septenary z-10 
+                                     h-full top-0 opacity-30'
                         />
                     </div>
-                </div>
-                <div
-                        className='relative w-1/2 grid justify-center items-center'
+                    <div
+                        className='relative w-project-card'
                     >
-                            <div
-                                className='absolute w-3/4 bg-secondary rounded-sm'
-                            >
-                                <h3
-                                    className='border-l-2 border-septenary pl-2'
-                                >
-                                    { date }
-                                </h3>
-                                <font>
-                                    &#8226;
-                                </font>
-                                <h2>
-                                    { hastag01}
-                                </h2>
-                                <h2>
-                                    { hastag02 }
-                                </h2>
-                                <h2>
-                                    { hastag03 }
-                                </h2>
-                                <h1
-                                    className='text-base font-semibold mt-2'
-                                >
-                                    { title }
-                                </h1>
-                                <p
-                                    className='text-xs mt-2 text-text-mini'
-                                >
-                                    { description }
-                                </p>
-                                <div>
-                                    <a
-                                        className='rounded-md bg-septenary text-sm
-                                                text-white px-4 py-2 mt-4 inline-block
-                                                font-semibold' 
-                                        href={ link }
-                                    >
-                                        Read more &#8594;
-                                    </a>
-                                </div>
-                            </div>
-                        
+                        <div
+                            className='absolute z-20 top-0 left-0 w-full h-full flex flex-col justify-center items-center'
+                        >
+                            <h1>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores consequuntur pariatur quaerat hic numquam eos provident obcaecati ex, doloremque deleniti quibusdam dignissimos et animi? Deleniti exercitationem similique officia rem! Sed.
+                            </h1>
+                        </div>
                     </div>
+                </div>
             </div>
         </>
      );
