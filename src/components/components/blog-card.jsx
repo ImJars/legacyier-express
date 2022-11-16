@@ -16,24 +16,26 @@ const BlogCard = ({
                 className='max-w-pantalla min-h-pantalla static'
             >
                 <div
-                    className='relative h-full w-full flex'
+                    className='flex'
                 >
-                    <div className='static'>
+                    <div className='relative'>
                         <img
-                            className='z-0 relative w-project-img' 
+                            className='z-0 w-project-img' 
                             src="img-1.webp" 
                             alt="" 
                         />
                         <div
-                            className='absolute bg-septenary z-10 
-                                     h-full top-0 opacity-30'
+                            className='absolute top-0 w-full h-full 
+                                    bg-septenary bg-opacity-70 hover:bg-inherit
+                                    transition duration-500 ease-in-out'
                         />
                     </div>
                     <div
-                        className='relative w-project-card'
+                        className='w-project-card grid content-center'
                     >
                         <div
-                            className='absolute z-20 top-0 left-0 w-full h-full flex flex-col justify-center items-center'
+                            className='bg-secondary transform -translate-x-10
+                                        p-5'
                         >
                             <h1>
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores consequuntur pariatur quaerat hic numquam eos provident obcaecati ex, doloremque deleniti quibusdam dignissimos et animi? Deleniti exercitationem similique officia rem! Sed.
