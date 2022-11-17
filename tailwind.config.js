@@ -37,7 +37,7 @@ module.exports = {
         'text': '700px',
         'card-img': '350px',
         'project-img': '580px',
-        'project-card': '495px',
+        'project-card': '600px',
       },
       height: {
         '1px': '1px',
