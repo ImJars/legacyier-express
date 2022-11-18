@@ -2,6 +2,7 @@ import React from 'react';
 import BlogCard from './components/blog-card';
 import Title from './components/title';
 import Img01 from '../images/designer-01.webp';
+import BlogCardDouble from './components/blog-card-doble';
 
 export const Blog = ({ refBlog }) => {
     return ( 
@@ -34,7 +35,7 @@ export const Blog = ({ refBlog }) => {
                             }
                             link={'https://github.com/ImJars'}
                         />
-                        
+                        <BlogCardDouble />
                     </div>
                 </div>
             </section>
