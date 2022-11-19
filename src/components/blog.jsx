@@ -35,7 +35,21 @@ export const Blog = ({ refBlog }) => {
                             }
                             link={'https://github.com/ImJars'}
                         />
-                        <BlogCardDouble />
+                        <BlogCardDouble 
+                            imgProject={ 'img-2.webp' }
+                            statusProject={ 'Latest Project' }
+                            titleProject={ 'Legacyier Express' }
+                            descriptionProject={
+                                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos vitae officiis quae aut eligendi eveniet, ducimus autem nulla iure officia debitis saepe laudantium laborum tempore fuga incidunt? Praesentium, rem consequuntur.'
+                            }
+                            tecnologiesProject={ 'ReactJS' }
+                            tecnologiesProject2={ 'TailwindCSS' }
+                            tecnologiesProject3={ 'Styled Components' }
+                            tecnologiesProject4={ 'VS Code' }
+                            tecnologiesProject5={ 'Github' }
+                            urlGithubRepo={ 'https://github.com/ImJars' }
+                            urlProject={ 'https://github.com/ImJars' }
+                        />
                     </div>
                 </div>
             </section>

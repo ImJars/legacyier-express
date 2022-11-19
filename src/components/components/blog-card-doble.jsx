@@ -1,7 +1,19 @@
 import React from 'react';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
 
-const BlogCardDouble = () => {
+const BlogCardDouble = ({
+    statusProject,
+    titleProject,
+    descriptionProject,
+    tecnologiesProject,
+    tecnologiesProject2,
+    tecnologiesProject3,
+    tecnologiesProject4,
+    tecnologiesProject5,
+    urlGithubRepo,
+    urlProject,
+    imgProject
+}) => {
     return ( 
         <>
             <div
@@ -20,18 +32,18 @@ const BlogCardDouble = () => {
                             <h1
                                 className='text-sm text-septenary'
                             >
-                                Featured Project
+                                { statusProject }
                             </h1>
                             <h2
-                                className='text-2xl font-bold'
+                                className='text-2xl font-bold mb-2'
                             >
-                                Legacyier Expert
+                                { titleProject }
                             </h2>
                             <div
                                 className='bg-secondary py-6 px-8 rounded-md text-sm'
                             >
                                 <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos vitae officiis quae aut eligendi eveniet, ducimus autem nulla iure officia debitis saepe laudantium laborum tempore fuga incidunt? Praesentium, rem consequuntur.
+                                    { descriptionProject }
                                 </p>
                             </div>
                             <ol
@@ -39,19 +51,19 @@ const BlogCardDouble = () => {
                                             tracking-wide mt-2'
                             >
                                 <li>
-                                    VS Code
+                                    { tecnologiesProject }
                                 </li>
                                 <li>
-                                    React
+                                    { tecnologiesProject2 }
                                 </li>
                                 <li>
-                                    TailwindCSS
+                                    { tecnologiesProject3 }
                                 </li>
                                 <li>
-                                    GitHub
+                                    { tecnologiesProject4 }
                                 </li>
                                 <li>
-                                    Styled Components
+                                    { tecnologiesProject5 }
                                 </li>
                             </ol>
                             <div
@@ -59,13 +71,17 @@ const BlogCardDouble = () => {
                                             text-xl'
                             >
                                 <a
-                                    href="#"
+                                    href={ urlGithubRepo }
+                                    target='_blank'
+                                    rel='noreferrer'
                                     className='hover:text-septenary transition duration-300 ease-in-out'
                                 >
                                     <FiGithub />
                                 </a>
                                 <a
-                                    href="#"
+                                    href={ urlProject }
+                                    target='_blank'
+                                    rel='noreferrer'
                                     className='hover:text-septenary transition duration-300 ease-in-out'
                                 >
                                     <FiExternalLink />
@@ -76,7 +92,7 @@ const BlogCardDouble = () => {
                     <div className='relative cursor-pointer z-0'>
                         <img
                             className='z-0 w-project-img ' 
-                            src="img-1.webp" 
+                            src={ imgProject }
                             alt="" 
                         />
                         <div
