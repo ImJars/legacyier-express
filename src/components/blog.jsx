@@ -1,7 +1,6 @@
 import React from 'react';
 import BlogCard from './components/blog-card';
 import Title from './components/title';
-import Img01 from '../images/designer-01.webp';
 import BlogCardDouble from './components/blog-card-doble';
 
 export const Blog = ({ refBlog }) => {
@@ -48,6 +47,21 @@ export const Blog = ({ refBlog }) => {
                             tecnologiesProject={ 'ReactJS' }
                             tecnologiesProject2={ 'TailwindCSS' }
                             tecnologiesProject3={ 'Styled Components' }
+                            tecnologiesProject4={ 'VS Code' }
+                            tecnologiesProject5={ 'Github' }
+                            urlGithubRepo={ 'https://github.com/ImJars' }
+                            urlProject={ 'https://github.com/ImJars' }
+                        />
+                        <BlogCard 
+                            imgProject={ 'img-5.webp' }
+                            statusProject={ 'Latest Project' }
+                            titleProject={ 'Legacyier Express' }
+                            descriptionProject={
+                                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos vitae officiis quae aut eligendi eveniet, ducimus autem nulla iure officia debitis saepe laudantium laborum tempore fuga incidunt? Praesentium, rem consequuntur.'
+                            }
+                            tecnologiesProject={ 'GatsbyJS' }
+                            tecnologiesProject2={ 'TailwindCSS' }
+                            tecnologiesProject3={ 'Framer Motion' }
                             tecnologiesProject4={ 'VS Code' }
                             tecnologiesProject5={ 'Github' }
                             urlGithubRepo={ 'https://github.com/ImJars' }

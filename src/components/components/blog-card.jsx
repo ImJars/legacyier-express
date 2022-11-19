@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
+import { useAnimation, motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const BlogCard = ({
     imgProject,
@@ -14,9 +16,35 @@ const BlogCard = ({
     urlGithubRepo,
     urlProject,
 }) => {
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+        triggerOnce: true
+    });
+    const animateSection = useAnimation();
+
+    useEffect(() => {
+        if (inView) {
+            animateSection.start({
+                opacity: 1,
+                y: 0,
+                transition: {
+                    type: 'spring', duration: 2
+                }
+            });
+        }
+        if (!inView) {
+            animateSection.start({
+                opacity: 0,
+                y: '5vw'
+            });
+        }
+    }, [inView, animateSection]);
+    
     return ( 
         <>
-            <div
+            <motion.div
+                ref={ ref }
+                animate={ animateSection}
                 className='max-w-pantalla min-h-pantalla static font-roboto'
             >
                 <div
@@ -102,7 +130,7 @@ const BlogCard = ({
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </>
      );
 }
