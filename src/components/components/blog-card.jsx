@@ -44,7 +44,7 @@ const BlogCard = ({
         <>
             <motion.div
                 ref={ ref }
-                animate={ animateSection}
+                animate={ animateSection }
                 className='max-w-pantalla min-h-pantalla static font-roboto'
             >
                 <div
