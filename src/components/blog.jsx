@@ -17,8 +17,8 @@ export const Blog = ({ refBlog }) => {
                     className='max-w-pantalla flex flex-col'
                 >
                     <Title 
-                        title={'My Blog'}
-                        subtitle={'The last posts about graphic design and web design'}
+                        title={'Some Things I’ve Built'}
+                        subtitle={'Some of my projects over the years'}
                     />
                     <div
                         className='grid grid-cols-1 gap-10 mt-14'
