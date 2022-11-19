@@ -24,21 +24,24 @@ export const Blog = ({ refBlog }) => {
                         className='grid grid-cols-1 gap-10 mt-14'
                     >
                         <BlogCard 
-                            img={ Img01 }
-                            date={'09 March 2020'}
-                            hastag01= { '#design' }
-                            hastag02={ '#web' }
-                            hastag03={ '#graphic' }
-                            title={'Whats the difference between graphic design and web design?'}
-                            description={
-                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+                            imgProject={ 'img-3.webp' }
+                            statusProject={ 'Latest Project' }
+                            titleProject={ 'Legacyier Express' }
+                            descriptionProject={
+                                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos vitae officiis quae aut eligendi eveniet, ducimus autem nulla iure officia debitis saepe laudantium laborum tempore fuga incidunt? Praesentium, rem consequuntur.'
                             }
-                            link={'https://github.com/ImJars'}
+                            tecnologiesProject={ 'GatsbyJS' }
+                            tecnologiesProject2={ 'TailwindCSS' }
+                            tecnologiesProject3={ 'Framer Motion' }
+                            tecnologiesProject4={ 'VS Code' }
+                            tecnologiesProject5={ 'Github' }
+                            urlGithubRepo={ 'https://github.com/ImJars' }
+                            urlProject={ 'https://github.com/ImJars' }
                         />
                         <BlogCardDouble 
                             imgProject={ 'img-2.webp' }
                             statusProject={ 'Latest Project' }
-                            titleProject={ 'Legacyier Express' }
+                            titleProject={ 'Legacyier Expert' }
                             descriptionProject={
                                 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos vitae officiis quae aut eligendi eveniet, ducimus autem nulla iure officia debitis saepe laudantium laborum tempore fuga incidunt? Praesentium, rem consequuntur.'
                             }
