@@ -71,15 +71,20 @@ export const Blog = ({ refBlog }) => {
                     </div>
                 </div>
                 <div
-                    className='max-w-pantalla flex flex-col'
+                    className='max-w-pantalla flex flex-col mt-28'
                 >
                     <Title 
                         title={'Other Noteworthy Projects'}
                         subtitle={'Some of my projects over the years'}
                     />
                     <div
-                        className='grid grid-cols-3 gap-10 mt-14'
+                        className='grid grid-cols-3 gap-4 mt-14'
                     >
+                        <WorkCard />
+                        <WorkCard />
+                        <WorkCard />
+                        <WorkCard />
+                        <WorkCard />
                         <WorkCard />
                     </div>
                 </div>

@@ -18,8 +18,6 @@ module.exports = {
         'text-mini': '#AFADB5',
       },
       fontFamily:{
-        'sans': ['Open Sans', 'sans-serif'],
-        'poppins': ['Poppins', 'sans-serif'],
         'roboto': ['Roboto', 'sans-serif'],
       },
       maxWidth: {
