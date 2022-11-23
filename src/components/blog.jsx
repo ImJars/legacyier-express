@@ -2,6 +2,7 @@ import React from 'react';
 import BlogCard from './components/blog-card';
 import Title from './components/title';
 import BlogCardDouble from './components/blog-card-doble';
+import WorkCard from './components/work-card';
 
 export const Blog = ({ refBlog }) => {
     return ( 
@@ -10,7 +11,7 @@ export const Blog = ({ refBlog }) => {
                 ref={ refBlog }
                 id='Blog'
                 className="w-full h-sfull bg-primary text-white
-                font-sans flex justify-center items-center py-20"
+                font-sans flex flex-col justify-center items-center py-20"
             >   
                 <div
                     className='max-w-pantalla flex flex-col'
@@ -67,6 +68,17 @@ export const Blog = ({ refBlog }) => {
                             urlGithubRepo={ 'https://github.com/ImJars' }
                             urlProject={ 'https://github.com/ImJars' }
                         />
+                    </div>
+                </div>
+                <div
+                    className='max-w-pantalla flex flex-col'
+                >
+                    <Title 
+                        title={'Other Noteworthy Projects'}
+                        subtitle={'Some of my projects over the years'}
+                    />
+                    <div>
+                        <WorkCard />
                     </div>
                 </div>
             </section>
