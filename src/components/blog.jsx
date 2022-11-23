@@ -77,7 +77,9 @@ export const Blog = ({ refBlog }) => {
                         title={'Other Noteworthy Projects'}
                         subtitle={'Some of my projects over the years'}
                     />
-                    <div>
+                    <div
+                        className='grid grid-cols-3 gap-10 mt-14'
+                    >
                         <WorkCard />
                     </div>
                 </div>
