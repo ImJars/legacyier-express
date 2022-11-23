@@ -2,7 +2,16 @@ import React from 'react';
 import { AiOutlineFolder } from 'react-icons/ai';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
 
-const WorkCard = () => {
+const WorkCard = ({
+    classNamesGit,
+    classNamesLink,
+    title,
+    description,
+    tecnologies,
+    tecnologies2,
+    tecnologies3,
+    tecnologies4,
+}) => {
     return ( 
         <>
             <div
@@ -25,7 +34,7 @@ const WorkCard = () => {
                             href="https://github.com/ImJars"
                             target="_blank"
                             rel="noreferrer"
-                            className='hover:text-septenary transition duration-300 ease-in-out'
+                            className={ `${ classNamesGit } hover:text-septenary transition duration-300 ease-in-out`}
                         >
                             <FiGithub />
                         </a>
@@ -33,7 +42,7 @@ const WorkCard = () => {
                             href="https://github.com/ImJars"
                             target="_blank"
                             rel="noreferrer"
-                            className='hover:text-septenary transition duration-300 ease-in-out'
+                            className={ `${ classNamesLink } hover:text-septenary transition duration-300 ease-in-out`}
                         >
                             <FiExternalLink />
                         </a>
@@ -42,25 +51,27 @@ const WorkCard = () => {
                 <h1
                     className='text-xl font-bold mt-8 flex'
                 >
-                    Legacyier Express
+                    { title }
                 </h1> 
                 <h2
                     className='text-sm mt-4 flex'
                 >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    { description }
                 </h2>
                 <ol
                     className='flex space-x-2 mt-8 text-xs text-text-mini'
                 >
                     <li>
-                        GatsbyJS
+                        { tecnologies }
                     </li>
                     <li>
-                        TailwindCSS
+                        { tecnologies2 }
                     </li>
                     <li>
-                        Framer Motion
+                        { tecnologies3 }
+                    </li>
+                    <li>
+                        { tecnologies4 }
                     </li>
                 </ol>
             </div>

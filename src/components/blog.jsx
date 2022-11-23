@@ -80,12 +80,56 @@ export const Blog = ({ refBlog }) => {
                     <div
                         className='grid grid-cols-3 gap-4 mt-14'
                     >
-                        <WorkCard />
-                        <WorkCard />
-                        <WorkCard />
-                        <WorkCard />
-                        <WorkCard />
-                        <WorkCard />
+                        <WorkCard 
+                            title={'Legacyier Express'}
+                            description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
+                            tecnologies={'GatsbyJS'}
+                            tecnologies2={'TailwindCSS'}
+                            tecnologies3={'Framer Motion'}
+                            tecnologies4={'VS Code'}
+                        />
+                        <WorkCard 
+                            classNamesLink={'hidden'}
+                            title={'Legacyier Expert'}
+                            description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
+                            tecnologies={'ReactJS'}
+                            tecnologies2={'TailwindCSS'}
+                            tecnologies3={'Styled Components'}
+                        />
+                        <WorkCard 
+                            classNamesGit={'hidden'}
+                            title={'Proyecto CMO'}
+                            description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
+                            tecnologies={'.NET'}
+                            tecnologies2={'MySQL'}
+                            tecnologies3={'Visual Studio'}
+                        />
+                        <WorkCard 
+                            title={'Calculo mano de obra'}
+                            description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
+                            tecnologies={'.NET'}
+                            tecnologies2={'MySQL'}
+                            tecnologies3={'Visual Studio'}
+                            tecnologies4={'Excel'}
+                        />
+                        <WorkCard 
+                            classNamesLink={'hidden'}
+                            title={'Gestion de proyectos'}
+                            description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
+                            tecnologies={'.NET'}
+                            tecnologies2={'MySQL'}
+                            tecnologies3={'Visual Studio'}
+                            tecnologies4={'Excel'}
+                        />
+                        <WorkCard 
+                            classNamesGit={'hidden'}
+                            title={'Proyecto Bonafont'}
+                            description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
+                            tecnologies={'Excel'}
+                            tecnologies2={'Power BI'}
+                            tecnologies3={'Visual Basic'}
+                            tecnologies4={'SQL Server'}
+                        />
                     </div>
                 </div>
             </section>
