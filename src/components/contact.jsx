@@ -1,8 +1,4 @@
 import React from 'react';
-import ContactInfo from './components/contact-info';
-import Title from './components/title';
-import { AiTwotonePhone, AiOutlineTwitter } from 'react-icons/ai';
-import { MdEmail, MdLocationOn } from 'react-icons/md';
 
 const Contact = ({ refContact }) => {
     return ( 
@@ -10,118 +6,34 @@ const Contact = ({ refContact }) => {
             <section
                 ref={ refContact }
                 id='Contact'
-                className="w-full h-screen bg-primary text-white
-                font-sans flex justify-center items-center"
+                className="w-full h-screen bg-primary text-white font-sans"
             >
                 <div
-                    className='max-w-250 flex flex-col'
+                    className="flex justify-center text-center items-center h-full"
                 >
-                    <Title 
-                        title='Contact Me'
-                        subtitle='Feel free to contact me any time'
-                    />
-                    <div
-                        className='grid grid-cols-2 mt-14'
-                    >
-                        <div
-                            className='bg-secondary p-6 rounded-xl'
+                    <div>
+                        <h1
+                            className='text-5xl font-bold'
                         >
-                            <form 
-                                action=""
-                                className='flex flex-col gap-6'
-                            >
-                                <div
-                                    className='flex flex-col'
-                                >
-                                    <input 
-                                        id='name' 
-                                        type="text" 
-                                        placeholder="Name" 
-                                        className='bg-transparent p-1 border rounded-md border-primary outline-none 
-                                                focus:border-septenary text-sm tracking-wider transition-all duration-500 ease-in-out'
-                                    />
-                                </div>
-                                <div
-                                    className='flex flex-col'
-                                >
-                                    <input 
-                                        id='email' 
-                                        type="text" 
-                                        placeholder="Email" 
-                                        className='bg-transparent p-1 border rounded-md border-primary outline-none 
-                                                focus:border-septenary text-sm tracking-wider transition-all duration-500 ease-in-out'
-                                    />
-                                </div>
-                                <div
-                                    className='flex flex-col'
-                                >
-                                    <input 
-                                        id='subject' 
-                                        type="text" 
-                                        placeholder="Subject" 
-                                        className='bg-transparent p-1 border rounded-md border-primary outline-none 
-                                                focus:border-septenary text-sm tracking-wider transition-all duration-500 ease-in-out'
-                                    />
-                                </div>
-                                <div
-                                    className='flex flex-col'
-                                >
-                                    <textarea 
-                                        id='messaje' 
-                                        rows='8' 
-                                        type="text" 
-                                        placeholder="Message" 
-                                        className='bg-transparent p-1 border rounded-md border-primary outline-none 
-                                                focus:border-septenary text-sm tracking-wider transition-all duration-500 ease-in-out'    
-                                    />
-                                </div>
-                                <a
-                                    className='bg-septenary text-sm text-white mt-2 py-1 px-8 rounded-md font-semibold
-                                                w-24 flex justify-center items-center' 
-                                    href="https://github.com/ImJars"
-                                >
-                                    Send
-                                </a>
-                            </form>
-                        </div>
-                        <div
-                            className='py-4 pl-5'
+                            Get In Touch
+                        </h1>
+                        <h2
+                            className='w-1/2 mx-auto mt-8 mb-8 text-text-mini tracking-wide'
                         >
-                            <h1
-                                className='text-xl font-semibold'
+                            Although I’m not currently looking for any new 
+                            opportunities, my inbox is always open. Whether 
+                            you have a question or just want to say hi, I’ll 
+                            try my best to get back to you!
+                        </h2>
+                        <a href="mailto:hi.legacyier@gmail.com">
+                            <button
+                               className='border bg-primary py-4 px-8 mt-5
+                                        rounded-md hover:bg-septenary hover:bg-opacity-25
+                                        hover:transition hover:duration-300 hover:ease-in-out' 
                             >
-                                Lets talk about your everything
-                            </h1>
-                            <p
-                                className='mt-4 text-sm text-text-mini'
-                            >
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Quisquam, quae. Quisquam, quae. Quisquam, quae. Quisquam, quae.
-                                Quisquam, quae. Quisquam, quae. Quisquam, quae. Quisquam, quae.
-                            </p>
-                            <div>
-                                <ContactInfo 
-                                    title={'Phone:'}
-                                    icon={<AiTwotonePhone />}
-                                    children={'+52 773-151-1761'}
-                                />
-                                <ContactInfo 
-                                    title={'Email:'}
-                                    icon={<MdEmail />}
-                                    children={'hi.legacyier@gmail.com'}
-                                />
-                                <ContactInfo 
-                                    title={'Adress:'}
-                                    icon={<MdLocationOn />}
-                                    children={'Hidalgo, Mexico'}
-                                />
-                                <ContactInfo 
-                                    title={'Social media:'}
-                                    icon={<AiOutlineTwitter />}
-                                    children={'@Im_Jars'}
-                                />
-                            </div>
-                        </div>
+                                Say Hello
+                            </button>
+                        </a>
                     </div>
                 </div>
             </section>
