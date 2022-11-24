@@ -1,8 +1,10 @@
 import React from 'react';
 import { AiOutlineFolder } from 'react-icons/ai';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
+import { motion } from 'framer-motion';
 
 const WorkCard = ({
+    animateCard,
     classNamesGit,
     classNamesLink,
     title,
@@ -14,7 +16,8 @@ const WorkCard = ({
 }) => {
     return ( 
         <>
-            <div
+            <motion.div
+                animate={ animateCard }
                 className='w-full h-full font-roboto bg-secondary cursor-pointer 
                             flex flex-col px-6 py-10 hover:transform hover:-translate-y-2
                             hover:transition hover:duration-300 hover:ease-in-out'
@@ -74,7 +77,7 @@ const WorkCard = ({
                         { tecnologies4 }
                     </li>
                 </ol>
-            </div>
+            </motion.div>
         </>
      );
 }

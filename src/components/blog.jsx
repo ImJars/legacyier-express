@@ -16,9 +16,20 @@ export const Blog = ({ refBlog }) => {
         threshold: 0,
         triggerOnce: true
     });
+    const { ref: sectionCard, inView: inViewCard } = useInView({
+        threshold: 0.5,
+        triggerOnce: true
+    });
 
     const animateWorkTitle = useAnimation();
     const animateWorkTitleTwo = useAnimation();
+
+    const animateCard = useAnimation();
+    const animateCard2 = useAnimation();
+    const animateCard3 = useAnimation();
+    const animateCard4 = useAnimation();
+    const animateCard5 = useAnimation();
+    const animateCard6 = useAnimation();
 
     useEffect(() => {
         if (inView) {
@@ -56,6 +67,66 @@ export const Blog = ({ refBlog }) => {
       } 
     }, [ inViewRef, animateWorkTitleTwo ]);
     
+    useEffect(() => {
+        if (inViewCard) {
+            animateCard.start({
+                opacity: 1,
+                transition: {
+                    type: 'spring' ,duration: 2, delay: 0.2
+                }
+            });
+            animateCard2.start({
+                opacity: 1,
+                transition: {
+                    type: 'spring' ,duration: 2, delay: 0.4
+                }
+            });
+            animateCard3.start({
+                opacity: 1,
+                transition: {
+                    type: 'spring' ,duration: 2, delay: 0.6
+                }
+            });
+            animateCard4.start({
+                opacity: 1,
+                transition: {
+                    type: 'spring' ,duration: 2, delay: 0.8
+                }
+            });
+            animateCard5.start({
+                opacity: 1,
+                transition: {
+                    type: 'spring' ,duration: 2, delay: 1
+                }
+            });
+            animateCard6.start({
+                opacity: 1,
+                transition: {
+                    type: 'spring' ,duration: 2, delay: 1.2
+                }
+            });
+        }
+        if (!inViewCard) {
+            animateCard.start({
+                opacity: 0,
+            });
+            animateCard2.start({
+                opacity: 0,
+            });
+            animateCard3.start({
+                opacity: 0,
+            });
+            animateCard4.start({
+                opacity: 0,
+            });
+            animateCard5.start({
+                opacity: 0,
+            });
+            animateCard6.start({
+                opacity: 0,
+            });
+      } 
+    }, [ inViewCard, animateCard ]);
     return ( 
         <>
             <section
@@ -133,9 +204,11 @@ export const Blog = ({ refBlog }) => {
                         subtitle={'Some of my projects over the years'}
                     />
                     <div
+                        ref={ sectionCard }
                         className='grid grid-cols-3 gap-4 mt-14'
                     >
-                        <WorkCard 
+                        <WorkCard
+                            animateCard={ animateCard }
                             title={'Legacyier Express'}
                             description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
                             tecnologies={'GatsbyJS'}
@@ -144,6 +217,7 @@ export const Blog = ({ refBlog }) => {
                             tecnologies4={'VS Code'}
                         />
                         <WorkCard 
+                            animateCard={ animateCard2 }
                             classNamesLink={'hidden'}
                             title={'Legacyier Expert'}
                             description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
@@ -152,6 +226,7 @@ export const Blog = ({ refBlog }) => {
                             tecnologies3={'Styled Components'}
                         />
                         <WorkCard 
+                            animateCard={ animateCard3 }
                             classNamesGit={'hidden'}
                             title={'Proyecto CMO'}
                             description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
@@ -160,6 +235,7 @@ export const Blog = ({ refBlog }) => {
                             tecnologies3={'Visual Studio'}
                         />
                         <WorkCard 
+                            animateCard={ animateCard4 }
                             title={'Calculo mano de obra'}
                             description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
                             tecnologies={'.NET'}
@@ -168,6 +244,7 @@ export const Blog = ({ refBlog }) => {
                             tecnologies4={'Excel'}
                         />
                         <WorkCard 
+                            animateCard={ animateCard5 }
                             classNamesLink={'hidden'}
                             title={'Gestion de proyectos'}
                             description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
@@ -177,6 +254,7 @@ export const Blog = ({ refBlog }) => {
                             tecnologies4={'Excel'}
                         />
                         <WorkCard 
+                            animateCard={ animateCard6 }
                             classNamesGit={'hidden'}
                             title={'Proyecto Bonafont'}
                             description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
