@@ -1,10 +1,61 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import BlogCard from './components/blog-card';
 import Title from './components/title';
 import BlogCardDouble from './components/blog-card-doble';
 import WorkCard from './components/work-card';
+import { useInView } from 'react-intersection-observer';
+import { useAnimation } from 'framer-motion';
 
 export const Blog = ({ refBlog }) => {
+
+    const { ref, inView } = useInView({
+        threshold: 0,
+        triggerOnce: true
+    });
+    const { ref: sectionRef, inView: inViewRef } = useInView({
+        threshold: 0,
+        triggerOnce: true
+    });
+
+    const animateWorkTitle = useAnimation();
+    const animateWorkTitleTwo = useAnimation();
+
+    useEffect(() => {
+        if (inView) {
+            animateWorkTitle.start({
+                opacity: 1,
+                x: 0,
+                transition: {
+                    type: 'spring' ,duration: 2, delay: 0.2
+                }
+            });
+        }
+        if (!inView) {
+            animateWorkTitle.start({
+                opacity: 0,
+                x: '-5vw'
+            });
+      } 
+    }, [ inView, animateWorkTitle ]);
+    
+    useEffect(() => {
+        if (inViewRef) {
+            animateWorkTitleTwo.start({
+                opacity: 1,
+                x: 0,
+                transition: {
+                    type: 'spring' ,duration: 2, delay: 0.2
+                }
+            });
+        }
+        if (!inViewRef) {
+            animateWorkTitleTwo.start({
+                opacity: 0,
+                x: '-5vw'
+            });
+      } 
+    }, [ inViewRef, animateWorkTitleTwo ]);
+    
     return ( 
         <>
             <section
@@ -14,9 +65,11 @@ export const Blog = ({ refBlog }) => {
                 font-sans flex flex-col justify-center items-center py-20"
             >   
                 <div
+                    ref={ ref }
                     className='max-w-pantalla flex flex-col'
                 >
-                    <Title 
+                    <Title
+                        animateTitle={ animateWorkTitle }
                         title={'Some Things I’ve Built'}
                         subtitle={'Some of my projects over the years'}
                     />
@@ -71,9 +124,11 @@ export const Blog = ({ refBlog }) => {
                     </div>
                 </div>
                 <div
+                    ref={ sectionRef }
                     className='max-w-pantalla flex flex-col mt-28'
                 >
-                    <Title 
+                    <Title
+                        animateTitle={ animateWorkTitleTwo }
                         title={'Other Noteworthy Projects'}
                         subtitle={'Some of my projects over the years'}
                     />
