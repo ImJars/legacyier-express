@@ -61,7 +61,7 @@ const Navigation = () => {
         }
         if (inViewHome) {
             animateIndicator.start({
-                top : "4%",
+                top : "0%",
                 transition: {
                     type: "spring", duration: 0,
                 },
@@ -86,7 +86,7 @@ const Navigation = () => {
         }
         if (inViewAbout) {
             animateIndicator.start({
-                top : "23%",
+                top : "19%",
                 transition: {
                     type: "spring", duration: 0,
                 },
@@ -112,7 +112,7 @@ const Navigation = () => {
         }
         if (inViewServices) {
             animateIndicator.start({
-                top : "42%",
+                top : "38%",
                 transition: {
                     type: "spring", duration: 0,
                 },
@@ -138,7 +138,7 @@ const Navigation = () => {
         }
         if (inViewWork) {
             animateIndicator.start({
-                top : "61%",
+                top : "57%",
                 transition: {
                     type: "spring", duration: 0,
                 },
@@ -164,7 +164,7 @@ const Navigation = () => {
         }
         if (inViewBlog) {
             animateIndicator.start({
-                top : "79.5%",
+                top : "76%",
                 transition: {
                     type: "spring", duration: 0,
                 },
@@ -190,7 +190,7 @@ const Navigation = () => {
         }
         if (inViewContact) {
             animateIndicator.start({
-                top : "98%",
+                top : "95%",
                 transition: {
                     type: "spring", duration: 0,
                 },

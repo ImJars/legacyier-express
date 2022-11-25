@@ -163,7 +163,7 @@ const Menu = ({
                     </div>
                 </div>
                     <div
-                        className='list-none transform space-y-12 text-sm'
+                        className='list-none transform space-y-16 text-sm'
                     >
                         <li
                             className='-rotate-90 text-center'
@@ -207,7 +207,7 @@ const Menu = ({
                                 href="#Works"
                                 className={ 'transition duration-500 ease-in-out' }
                             >
-                                Works
+                               Experience
                             </motion.a>
                         </li>
                         <li
@@ -218,7 +218,7 @@ const Menu = ({
                                 href="#Blog"
                                 className={ 'transition duration-500 ease-in-out' } 
                             >
-                                Blog
+                                Work
                             </motion.a>
                         </li>
                         <li
