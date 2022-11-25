@@ -1,6 +1,58 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useAnimation, motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const Contact = ({ refContact }) => {
+
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+        triggerOnce: true
+    });
+    const animateText = useAnimation();
+    const animateDescription = useAnimation();
+    const animateButton = useAnimation();
+
+    useEffect(() => {
+        if (inView) {
+            animateText.start({
+                opacity: 1,
+                y: 0,
+                transition: {
+                    type: 'spring', duration: 2, delay: 0.4
+                }
+            });
+            animateDescription.start({
+                opacity: 1,
+                y: 0,
+                transition: {
+                    type: 'spring', duration: 2, delay: 0.6
+                }
+            });
+            animateButton.start({
+                opacity: 1,
+                y: 0,
+                transition: {
+                    type: 'spring', duration: 2, delay: 1
+                }
+            });
+        }
+
+        if (!inView) {
+            animateText.start({
+                opacity: 0,
+                y: '5vw'
+            });
+            animateDescription.start({
+                opacity: 0,
+                y: '5vw'
+            });
+            animateButton.start({
+                opacity: 0,
+                y: '5vw'
+            });
+        }
+    }, [inView, animateText, animateDescription, animateButton]);
+    
     return ( 
         <>
             <section
@@ -9,24 +61,30 @@ const Contact = ({ refContact }) => {
                 className="static w-full h-screen bg-primary text-white font-sans"
             >
                 <div
+                    ref={ ref }
                     className="relative flex justify-center text-center items-center h-full"
                 >
                     <div
                     >
-                        <h1
+                        <motion.h1
+                            animate={ animateText }
                             className='text-5xl font-bold'
                         >
                             Get In Touch
-                        </h1>
-                        <h2
+                        </motion.h1>
+                        <motion.h2
+                            animate={ animateDescription }
                             className='w-1/2 mx-auto mt-8 mb-8 text-text-mini tracking-wide'
                         >
                             Although I’m not currently looking for any new 
                             opportunities, my inbox is always open. Whether 
                             you have a question or just want to say hi, I’ll 
                             try my best to get back to you!
-                        </h2>
-                        <a href="mailto:hi.legacyier@gmail.com">
+                        </motion.h2>
+                        <motion.a
+                            href="mailto:hi.legacyier@gmail.com"
+                            animate={ animateButton }
+                        >
                             <button
                                className='border-septenary border text-septenary 
                                       bg-primary py-4 px-8 mt-5 rounded-md hover:bg-septenary 
@@ -35,7 +93,7 @@ const Contact = ({ refContact }) => {
                             >
                                 Say Hello
                             </button>
-                        </a>
+                        </motion.a>
                     </div>
                     <footer
                         className='absolute w-full h-14 bg-primary bottom-0'
@@ -55,7 +113,7 @@ const Contact = ({ refContact }) => {
                                     Designed & Built by Angel Ramirez
                                 </h1>
                                 <h2>
-                                    © 2021 ImJars
+                                    © 2022 ImJars
                                 </h2>
                             </a>
                         </div>

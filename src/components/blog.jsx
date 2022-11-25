@@ -126,7 +126,7 @@ export const Blog = ({ refBlog }) => {
                 opacity: 0,
             });
       } 
-    }, [ inViewCard, animateCard ]);
+    }, [ inViewCard, animateCard, animateCard2, animateCard3, animateCard4, animateCard5, animateCard6 ]);
     return ( 
         <>
             <section
