@@ -124,13 +124,13 @@ const AboutMe = ({ refAbout }) => {
             <section
                 ref={ refAbout }
                 id='About'
-                className="w-full h-screen bg-primary text-white
+                className="w-full h-full sm:h-screen bg-primary text-white
                     font-roboto flex justify-center items-center"
             >
                 <div
                     
                     ref={ ref }
-                    className='max-w-250 flex flex-col'
+                    className='max-w-250 flex flex-col py-40 sm:py-0 mx-4 sm:mx-0'
                 >
                     <Title
                         animateTitle={ animationAboutTitle }
@@ -140,25 +140,30 @@ const AboutMe = ({ refAbout }) => {
                     />
                     <motion.div
                         animate={ animationAbout }
-                        className='flex mt-14'
+                        className='sm:flex grid grid-cols-1 mt-14'
                     >
-                        <div>
+                        <div
+                            className='flex justify-center items-center'
+                        >
                             <img
                                 src={ 'me.jpg' } 
                                 alt="" 
-                                className='w-img filter grayscale'
+                                className='w-40 sm:w-img filter grayscale
+                                            rounded-t-md sm:rounded-none'
                             />
                         </div>
                         <div
-                            className='ml-10'
+                            className='sm:ml-10 mx-4 mt-4 sm:mt-0'
                         >
                             <h1
-                                className='text-xl font-normal tracking-wide'
+                                className='text-lg sm:text-xl font-normal tracking-wide
+                                            text-center sm:text-left'
                             >
                                 Hello my name is <font className="font-semibold">Angel Ramirez</font>, based in Mexico
                             </h1>
                             <p
-                                className='text-sm font-roboto mt-2 text-text-mini tracking-wide'
+                                className='text-sm font-roboto mt-2 text-text-mini tracking-wide
+                                            text-center sm:text-left'
                             >
                                 <font className="font-extrabold">Hello!</font> My name is <font className="font-extrabold">Ángel</font> and I like technology, I enjoy 
                                 creating web applications and developing software. I started 
@@ -168,7 +173,7 @@ const AboutMe = ({ refAbout }) => {
                                 in my developments. 
                             </p>
                             <div 
-                                className='flex mt-6 space-x-24'
+                                className='flex justify-between sm:justify-start mt-6 sm:space-x-24 space-x-5'
                             >
                                 <div>
                                     <Data 
@@ -215,7 +220,7 @@ const AboutMe = ({ refAbout }) => {
                                 </div>
                             </div>
                             <div
-                                className='mt-8'
+                                className='flex justify-center sm:justify-start'
                             >
                                 <a 
                                     href={'cv.pdf'}
@@ -233,8 +238,8 @@ const AboutMe = ({ refAbout }) => {
                         </div>
                     </motion.div>
                     <div
-                        className='flex mt-20 justify-between 
-                                   font-sans text-sm'
+                        className='sm:flex mt-10 sm:mt-20 justify-between 
+                                   font-sans text-sm grid grid-cols-3 gap-4 sm:gap-0'
                     >
                         <AboutCard
                             animateElement={ animateElement_1 }
@@ -260,7 +265,7 @@ const AboutMe = ({ refAbout }) => {
                         <AboutCard
                             animateElement={ animateElement_4 }
                             icon={ <BsFillEmojiSmileFill /> }
-                            description={ '2 years of experience' }
+                            description={ '4 years of experience' }
                         >
                             
                         </AboutCard>
