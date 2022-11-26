@@ -130,7 +130,7 @@ const AboutMe = ({ refAbout }) => {
                 <div
                     
                     ref={ ref }
-                    className='max-w-250 flex flex-col py-40 sm:py-0 mx-4 sm:mx-0'
+                    className='max-w-250 flex flex-col py-20 sm:py-0 mx-4 sm:mx-0'
                 >
                     <Title
                         animateTitle={ animationAboutTitle }

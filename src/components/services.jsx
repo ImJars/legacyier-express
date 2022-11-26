@@ -96,12 +96,12 @@ const Services = ({ refServices }) => {
             <section
                 ref= { refServices }
                 id='Services'
-                className="w-full h-screen bg-primary text-white
+                className="w-full h-full sm:h-screen bg-primary text-white
                         font-roboto flex justify-center items-center"
             >
                 <div
                     ref={ ref }
-                    className='max-w-250 flex flex-col'
+                    className='max-w-250 flex flex-col my-20 sm:my-0 mx-4 sm:mx-0'
                 >
                     <Title
                         animateTitle={ animateServicesTitle }
@@ -109,7 +109,8 @@ const Services = ({ refServices }) => {
                         subtitle='My work with several clients'
                     />
                     <div
-                        className='grid grid-cols-3 gap-8 mt-14'
+                        className='grid grid-cols-2 sm:grid-cols-3 gap-4 
+                                sm:gap-8 mt-14'
                     >
                         <ServicesCard
                             animateCardServices={ animateCard_1 }
@@ -155,7 +156,7 @@ const Services = ({ refServices }) => {
                             animateCardServices={ animateCard_6 }
                             number='06'
                             title='Designer professional'
-                            children='Custom Designer Interfaces to Meet Your Specific Requirements'
+                            children='Custom designer interfaces to meet your specific requirements, professional layout and design on your favorite technology.'
                         />
                     </div>
                 </div>

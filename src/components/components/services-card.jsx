@@ -6,7 +6,7 @@ const ServicesCard = ({ animateCardServices, number, title, children}) => {
         <>
             <motion.div
                 animate={ animateCardServices }
-                className='bg-secondary px-4 py-10 rounded-lg flex 
+                className='bg-secondary px-4 py-8 sm:py-10 rounded-lg flex 
                             flex-col justify-center text-center
                             font-roboto items-center hover:scale-105
                             hover:transition hover:duration-200 hover:ease-in-out'
@@ -23,12 +23,12 @@ const ServicesCard = ({ animateCardServices, number, title, children}) => {
                     </h1>
                 </div>
                 <h1
-                    className='text-lg font-bold mb-2 tracking-wide'
+                    className='text-base sm:text-lg font-bold mb-2 tracking-wide'
                 >
                     { title }
                 </h1>
                 <p
-                    className='text-sm text-text-mini'
+                    className='text-xs sm:text-sm text-text-mini'
                 >
                     { children }
                 </p>
