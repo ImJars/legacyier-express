@@ -3,7 +3,6 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/f
 import { FiGithub } from 'react-icons/fi';
 import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import ButtonScroll from './components/button-scroll';
 
 const Home = ({ refHome }) => {
 
@@ -239,7 +238,6 @@ const Home = ({ refHome }) => {
                 className='w-full h-screen bg-secondary text-white
                         font-roboto flex justify-center items-center static'
             >
-                <ButtonScroll />
                 <motion.div
                     animate={ animateImg }
                     ref={ ref }

@@ -9,6 +9,7 @@ import Contact from "../components/contact"
 
 import { useAnimation } from "framer-motion"
 import { useInView } from "react-intersection-observer"
+import ButtonScroll from './components/button-scroll'
 
 const Navigation = () => {
     const { ref: refHome, inView: inViewHome } = useInView({
@@ -41,6 +42,10 @@ const Navigation = () => {
         triggerOnce: false,
         rootMargin: "-50px 0px"
     })
+    const { ref: refButton, inView: inViewButton } = useInView({
+        threshold: 0.01,
+        triggerOnce: false,
+    })
 
     const animationHome = useAnimation()
     const animationAbout = useAnimation()
@@ -49,6 +54,8 @@ const Navigation = () => {
     const animationWorks = useAnimation()
     const animationBlog = useAnimation()
     const animationContact = useAnimation()
+    const animateButton = useAnimation()
+
 
     useEffect(() => {
         if (inViewHome) {
@@ -205,6 +212,28 @@ const Navigation = () => {
         
     }, [ inViewContact, animationContact, animateIndicator ])
 
+    useEffect(() => {
+      if (inViewButton) {
+        animateButton.start({
+          opacity: 1,
+          x: 0,
+          transition: {
+            type: "spring", duration: 1, delay: .1
+          }
+        })
+      }
+      if (!inViewButton) {
+        animateButton.start({
+          opacity: 0,
+          x: '5vw',
+          transition: {
+            type: "spring", duration: 1,
+          }
+        })
+      }
+    }, [inViewButton, animateButton])
+    
+
 
     return ( 
         <>
@@ -220,21 +249,29 @@ const Navigation = () => {
             <Home 
                 refHome={ refHome }
             />
-            <AboutMe
-                refAbout={ refAbout }
+            <ButtonScroll 
+                animateButton={ animateButton }
+                classNames={ 'opacity-0' }
             />
-            <Services 
-                refServices={ refServices }
-            />
-            <Work 
-                refWork={ refWork }
-            />
-            <Blog 
-                refBlog={ refBlog }
-            />
-            <Contact 
-                refContact={ refContact }
-            />
+            <div
+                ref={ refButton }
+            >
+                <AboutMe
+                    refAbout={ refAbout }
+                />
+                <Services 
+                    refServices={ refServices }
+                />
+                <Work 
+                    refWork={ refWork }
+                />
+                <Blog 
+                    refBlog={ refBlog }
+                />
+                <Contact 
+                    refContact={ refContact }
+                />
+            </div>
         </>
      );
 }
