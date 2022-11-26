@@ -236,19 +236,19 @@ const Home = ({ refHome }) => {
                 ref={ refHome }
                 id='Home'
                 className='w-full h-screen bg-secondary text-white
-                        font-roboto tracking-wider flex justify-center items-center static'
+                        font-roboto flex justify-center items-center static'
             >
                 <motion.div
                     animate={ animateImg }
                     ref={ ref }
-                    className='opacity-0 relative h-full w-full flex justify-end'
+                    className='opacity-0 relative sm:h-full sm:w-full flex justify-end'
                 >
                 <   img 
                         src={ 'legacyierWeb.webp' } alt="" 
-                        className='relative opacity-5 mx-10 py-20 blur-md'
+                        className='relative opacity-5 sm:mx-10 sm:py-20 blur-md'
                     />
                     <h1
-                        className='absolute text-xs text-text-mini bottom-24 
+                        className='hidden sm:block absolute text-xs text-text-mini bottom-24 
                                    opacity-10 right-20'
                     >
                         Coming soon Legacyier...
@@ -261,7 +261,8 @@ const Home = ({ refHome }) => {
                         className='grid grid-cols-1 content-between py-10'
                     >
                         <div
-                            className='flex justify-start items-center space-x-6'
+                            className='flex justify-start items-center 
+                                    sm:space-x-6 space-x-3 mx-2 sm:mx-0'
                         >
                             <motion.a
                                 animate= { iconAnimate5 }
@@ -271,7 +272,7 @@ const Home = ({ refHome }) => {
                                 className='opacity-0'
                             >
                                 <FaLinkedinIn 
-                                    className='text-xl text-text-mini hover:text-septenary
+                                    className='text-lg sm:text-xl text-text-mini hover:text-septenary
                                             transition duration-500 ease-in-out'
                                 />
                             </motion.a>
@@ -283,7 +284,7 @@ const Home = ({ refHome }) => {
                                 className='opacity-0'
                             >
                                 <FiGithub 
-                                    className='text-xl text-text-mini hover:text-septenary
+                                    className='text-lg sm:text-xl text-text-mini hover:text-septenary
                                             transition duration-500 ease-in-out'
                                 />
                             </motion.a>
@@ -295,7 +296,7 @@ const Home = ({ refHome }) => {
                                 className='opacity-0'
                             >
                                 <FaTwitter 
-                                    className='text-xl text-text-mini hover:text-septenary
+                                    className='text-lg sm:text-xl text-text-mini hover:text-septenary
                                             transition duration-500 ease-in-out'
                                 />
                             </motion.a>
@@ -307,7 +308,7 @@ const Home = ({ refHome }) => {
                                 className='opacity-0'
                             >
                                 <FaInstagram 
-                                    className='text-xl text-text-mini hover:text-septenary
+                                    className='text-lg sm:text-xl text-text-mini hover:text-septenary
                                             transition duration-500 ease-in-out'
                                 />
                             </motion.a>
@@ -319,12 +320,14 @@ const Home = ({ refHome }) => {
                                 className='opacity-0'
                             >
                                 <FaFacebookF 
-                                    className='text-xl text-text-mini hover:text-septenary
+                                    className='text-lg sm:text-xl text-text-mini hover:text-septenary
                                             transition duration-500 ease-in-out'
                                 />
                             </motion.a>
                         </div>
-                        <div>
+                        <div
+                            className='mx-2 sm:mx-0'
+                        >
                             <motion.h1
                                 animate= { animateText1 }
                                 className='opacity-0 text-sm tracking-widest'
@@ -333,7 +336,7 @@ const Home = ({ refHome }) => {
                             </motion.h1>
                             <motion.h2
                                 animate= { animateText2 }
-                                className='opacity-0 text-5xl font-bold'
+                                className='opacity-0 text-3xl sm:text-5xl font-bold'
                             >
                                 I'm Software Developer
                             </motion.h2>
@@ -345,7 +348,7 @@ const Home = ({ refHome }) => {
                             </motion.h3>
                             <motion.p
                                 animate= { animateText4 }
-                                className='opacity-0 w-1/2 text-sm mt-2 text-text-mini tracking-wider'
+                                className='opacity-0 sm:w-1/2 text-sm mt-2 text-text-mini sm:tracking-wider'
                             >
                                 I'm a software developer specializing in creating exceptional 
                                 products and digital experiences. I am currently focused on 
@@ -353,7 +356,7 @@ const Home = ({ refHome }) => {
                             </motion.p>
                         </div>
                         <div
-                            className='flex space-x-10'
+                            className='flex mx-2 sm:mx-0 sm:space-x-10 space-x-5'
                         >
                             <motion.div
                                 animate= { animateSubtitle3 }
@@ -374,7 +377,7 @@ const Home = ({ refHome }) => {
                             </motion.div>
                             <motion.div
                                 animate= { animateSubtitle2 }
-                                className='opacity-0'
+                                className='opacity-0 hidden sm:block'
                             >
                                 <h1
                                     className='text-sm font-semibold'
@@ -388,7 +391,7 @@ const Home = ({ refHome }) => {
                                     className='text-xs text-text-mini tracking-widest mt-1
                                                 hover:text-septenary transition duration-500 ease-in-out'
                                 >
-                                    +52 773-151-1761
+                                    +52 55 2914 7674
                                 </a>
                             </motion.div>
                             <motion.div

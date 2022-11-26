@@ -71,7 +71,7 @@ const Menu = ({
          <motion.div
             ref={ ref }
             animate= { animateMenu }
-            className='opacity-0 fixed w-20 h-screen bg-primary 
+            className='hidden sm:block opacity-0 fixed w-20 h-screen bg-primary 
                     text-white font-roboto tracking-wider z-50 transform top-0 left-0'
          >
             <div
