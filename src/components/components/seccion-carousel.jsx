@@ -12,11 +12,10 @@ const Seccion = ({
         <>
             <div
                 ref={ ref }
-                className='w-250 h-full no-seleccionable flex 
-                        justify-center font-roboto'
+                className='no-seleccionable font-roboto p-20'
             >
                 <div
-                    className='text-center'
+                    className='max-w-250 text-center'
                 >
                     <h4
                         className='text-xs tracking-widest mb-2 text-text-mini'
@@ -39,11 +38,13 @@ const Seccion = ({
                     >
                         { title }
                     </h3>
-                    <p
-                        className='w-250 text-sm tracking-wider flex text-center'
-                    >
-                        { description }
-                    </p>
+                    <div>
+                        <p
+                            className='p-5 text-sm tracking-wider flex text-center'
+                        >
+                            { description }
+                        </p>
+                    </div>
                 </div>
             </div>
         </>
