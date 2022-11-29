@@ -40,7 +40,7 @@ const Seccion = ({
                         { title }
                     </h3>
                     <p
-                        className='w-text text-sm tracking-wider flex text-center'
+                        className='w-250 text-sm tracking-wider flex text-center'
                     >
                         { description }
                     </p>

@@ -124,7 +124,7 @@ const Work = ({ refWork }) => {
             >
                 <div
                     ref={ ref }
-                    className='w-250 flex flex-col'
+                    className='max-w-250 flex flex-col mx-4 sm:mx-0'
                 >
                     <Title 
                         animateTitle={ animateTitle }
@@ -213,7 +213,7 @@ const Work = ({ refWork }) => {
                     </motion.div>
                     <motion.div
                         animate={ animateSection2 }
-                        className='mt-16 flex justify-center mx-80 sm:mx-40'
+                        className='mt-16 flex justify-center'
                     >
                         <div
                             className='w-full h-1px bg-septenary justify-between grid grid-cols-5 content-center'
