@@ -4,8 +4,7 @@ import Seccion from './components/seccion-carousel';
 import styled from 'styled-components';
 
 const Tablas = styled.div`
-    display: flex;
-    justify-content: center;
+
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -17,32 +16,22 @@ const Tablas = styled.div`
 
     .tabs {
         position: relative;
-        width: 770px;
+        display: flex;
+        flex-direction: column;
         height: 500px;
-        padding: 30px 20px;
         overflow: hidden;
-        .tab-header{
-            float: left;
-            width: 125px;
-            height: 100%;
-            border-right: 1px solid #bfa6ff;
-            @media (max-width: 640px) {
-                width: 100px;
-            }
-        }
+        margin-top: 7rem;
+        
         .tab-header > div {
             margin-bottom: 15px;
             height: 50px;
-            font-size: 16px;
-            font-weight: 600;
-            color: #A4A4A4;
             cursor: pointer;
             padding-left: 0px;
             display: grid;
-            align-items: center;
+            align-content: center;
+
             @media (max-width: 640px) {
                 font-size: 14px;
-                font-weight: 600;
             }
         }
         .tab-header > div:hover,
@@ -59,10 +48,11 @@ const Tablas = styled.div`
         .tab-content > div {
             position: absolute;
             text-align: center;
-            padding:10px 0px 0px 20px;
             opacity: 0;
             text-align: start;
             transition: all 600ms ease-in-out;
+            align-content: center;
+            align-items: center;
         }
         .tab-content > div.active {
             opacity: 1;
@@ -71,15 +61,14 @@ const Tablas = styled.div`
         }
         .indicator {
             position: absolute;
-            width: 4px;
-            height: 50px;
+            width: 20px;
+            height: 4px;
             background: #8150FF;
-            left: 143px;
-            top: 30px;
-            border-radius: 10px 10px 10px 10px;
+            left: 2%;
+            top: 10%;
             transition: all 500ms ease-in-out;
             @media (max-width: 640px) {
-                left: 117.5px;
+                right: 117.5px;
 
             }
         }
@@ -90,15 +79,15 @@ const Work = ({ refWork }) => {
     function changeTab(index) {
         setTab(index);
         if ( index === 1 ) {
-            document.querySelector('.indicator').style.top = '30px';
+            document.querySelector('.indicator').style.left = '6%';
         } else if ( index === 2 ) {
-            document.querySelector('.indicator').style.top = '95px';
+            document.querySelector('.indicator').style.left = '27%';
         } else if ( index === 3 ) {
-            document.querySelector('.indicator').style.top = '160px';
+            document.querySelector('.indicator').style.left = '58%';
         } else if ( index === 4 ) {
-            document.querySelector('.indicator').style.top = '225px';
+            document.querySelector('.indicator').style.left = '225px';
         } else if ( index === 5 ) {
-            document.querySelector('.indicator').style.top = '290px';
+            document.querySelector('.indicator').style.left = '100%';
         }
     }
     return ( 
@@ -118,7 +107,10 @@ const Work = ({ refWork }) => {
                     />
                     <Tablas>
                         <div className="tabs font-open-sans">
-                            <div className="tab-header">
+                            <div 
+                                className="grid grid-cols-5 justify-between cursor-pointer 
+                                 text-xs sm:text-sm text-center gap-2 sm:gap-20 sm:mx-4 tab-header"
+                            >
                                 <div
                                     onClick={() => changeTab(1)}
                                     className={tab === 1 ? 'active' : ''}
@@ -141,13 +133,13 @@ const Work = ({ refWork }) => {
                                     onClick={() => changeTab(4)}
                                     className={tab === 4 ? 'active' : ''}
                                 >
-                                    SQDesarrollo & Holcim
+                                    SQD & Holcim
                                 </div>
                                 <div
                                     onClick={() => changeTab(5)}
                                     className={tab === 5 ? 'active' : ''}
                                 >
-                                    SQDesarrollo & Bonafont
+                                    SQD & Bonafont
                                 </div>
                             </div>
                             <div className="indicator">
@@ -165,7 +157,7 @@ const Work = ({ refWork }) => {
                                             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
                                             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.'
                                         }
-                                    />,
+                                    />
                                 </div>
                                 <div className={tab === 2 ? 'active': ''}>
                                     <Seccion
@@ -178,7 +170,7 @@ const Work = ({ refWork }) => {
                                             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
                                             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.'
                                         }
-                                    />,
+                                    />
                                 </div>
                                 <div className={tab === 3 ? 'active': ''}>
                                     <Seccion
@@ -191,7 +183,7 @@ const Work = ({ refWork }) => {
                                             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
                                             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.'
                                         }
-                                    />,
+                                    />
                                 </div>
                                 <div className={tab === 4 ? 'active': ''}>
                                     <Seccion
@@ -204,7 +196,7 @@ const Work = ({ refWork }) => {
                                             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
                                             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.'
                                         }
-                                    />,
+                                    />
                                 </div>
                                 <div className={tab === 5 ? 'active': ''}>
                                     <Seccion 

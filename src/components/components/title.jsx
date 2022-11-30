@@ -6,7 +6,7 @@ const Title = ({ animateTitle, title, subtitle}) => {
         <>
             <motion.div
                 animate={ animateTitle }
-                className='font-roboto tracking-wider border-l-4 border-septenary pl-4'
+                className='max-w-250 font-roboto tracking-wider border-l-4 border-septenary pl-4'
             >
                 <h1
                     className='text-2xl font-bold'

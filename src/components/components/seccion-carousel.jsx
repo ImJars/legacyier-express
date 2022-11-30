@@ -12,10 +12,10 @@ const Seccion = ({
         <>
             <div
                 ref={ ref }
-                className='no-seleccionable font-roboto p-20'
+                className='max-w-250 no-seleccionable font-roboto mt-20'
             >
                 <div
-                    className='max-w-250 text-center'
+                    className='text-center'
                 >
                     <h4
                         className='text-xs tracking-widest mb-2 text-text-mini'
