@@ -12,7 +12,7 @@ const Seccion = ({
         <>
             <div
                 ref={ ref }
-                className='max-w-250 no-seleccionable font-roboto mt-5'
+                className='max-w-250 no-seleccionable font-roboto mt-5 sm:mx-14'
             >
                 <div
                     className='text-center'
@@ -23,7 +23,7 @@ const Seccion = ({
                         { date }
                     </h4>
                     <h1
-                        className='text-3xl font-bold tracking-wide'
+                        className='text-2xl sm:text-3xl font-bold tracking-wide'
                     >
                         { business }
                     </h1>
@@ -34,13 +34,13 @@ const Seccion = ({
                         &#60; { worked } &#47; &#62;
                     </h2>
                     <h3
-                        className='font-bold tracking-wide'
+                        className='text-sm sm:text-base font-bold tracking-wide'
                     >
                         { title }
                     </h3>
                     <div>
                         <p
-                            className='p-2 sm:p-4 text-xs sm:text-sm tracking-wider flex text-center'
+                            className='px-2 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm tracking-wider flex text-center'
                         >
                             { description }
                         </p>
