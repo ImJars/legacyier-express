@@ -48,7 +48,7 @@ const BlogCard = ({
                 className='max-w-pantalla min-h-pantalla static font-roboto'
             >
                 <div
-                    className='flex'
+                    className='flex relative sm:static'
                 >
                     <div className='relative cursor-pointer'>
                         <img
@@ -63,10 +63,11 @@ const BlogCard = ({
                         />
                     </div>
                     <div
-                        className='w-project-card flex items-center'
+                        className='sm:w-project-card flex items-center h-full
+                                absolute sm:static bg-secondary sm:bg-inherit'
                     >
                         <div
-                            className='transform -translate-x-10
+                            className='sm:transform sm:-translate-x-10
                                         p-5 text-end'
                         >
                             <h1
