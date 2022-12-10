@@ -48,13 +48,14 @@ const BlogCardDouble = ({
                 className='max-w-pantalla min-h-pantalla static font-roboto'
             >
                 <div
-                    className='flex'
+                    className='flex relative sm:static'
                 >
                     <div
-                        className='w-project-card flex items-center z-10'
+                        className='sm:w-project-card flex items-center h-full
+                        absolute sm:static bg-secondary sm:bg-inherit z-10'
                     >
                         <div
-                            className='transform translate-x-10
+                            className='sm:transform sm:translate-x-10
                                         p-5 text-start'
                         >
                             <h1
