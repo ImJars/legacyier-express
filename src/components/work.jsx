@@ -4,7 +4,8 @@ import Seccion from './components/seccion-carousel';
 import styled from 'styled-components';
 
 const Tablas = styled.div`
-
+    display: flex;
+    justify-content: center;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -13,29 +14,38 @@ const Tablas = styled.div`
 @media screen and (max-width: 900px) {
     overflow: hidden;
 }
-
     .tabs {
         position: relative;
-        display: flex;
-        flex-direction: column;
+        width: 770px;
         height: 500px;
+        padding: 30px 20px;
         overflow: hidden;
-        margin-top: 7rem;
-        
-        .tab-header > div {
+        .tab-header{
+            float: left;
+            width: 125px;
+            height: 100%;
+            border-right: 1px solid #bfa6ff;
+            @media (max-width: 640px) {
+                width: 100px;
+            }
+        }
+        .tab-header > button {
             margin-bottom: 15px;
             height: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #A4A4A4;
             cursor: pointer;
             padding-left: 0px;
             display: grid;
-            align-content: center;
-
+            align-items: center;
             @media (max-width: 640px) {
-                font-size: 14px;
+                font-size: 12px;
+                font-weight: 600;
             }
         }
-        .tab-header > div:hover,
-        .tab-header > div.active {
+        .tab-header > button:hover,
+        .tab-header > button.active {
             transition: all 500ms ease-in-out;
             color: #8150FF;
         }
@@ -49,26 +59,25 @@ const Tablas = styled.div`
             position: absolute;
             text-align: center;
             opacity: 0;
+            visibility: hidden;
             text-align: start;
             transition: all 600ms ease-in-out;
-            align-content: center;
-            align-items: center;
         }
         .tab-content > div.active {
             opacity: 1;
             visibility: visible;
-            overflow-y: auto;
         }
         .indicator {
             position: absolute;
-            width: 20px;
-            height: 4px;
+            width: 4px;
+            height: 50px;
             background: #8150FF;
-            left: 2%;
-            top: 10%;
+            left: 143px;
+            top: 30px;
+            border-radius: 10px 10px 10px 10px;
             transition: all 500ms ease-in-out;
             @media (max-width: 640px) {
-                right: 117.5px;
+                left: 117.5px;
 
             }
         }
@@ -79,15 +88,15 @@ const Work = ({ refWork }) => {
     function changeTab(index) {
         setTab(index);
         if ( index === 1 ) {
-            document.querySelector('.indicator').style.left = '6%';
+            document.querySelector('.indicator').style.top = '30px';
         } else if ( index === 2 ) {
-            document.querySelector('.indicator').style.left = '27%';
+            document.querySelector('.indicator').style.top = '95px';
         } else if ( index === 3 ) {
-            document.querySelector('.indicator').style.left = '58%';
+            document.querySelector('.indicator').style.top = '160px';
         } else if ( index === 4 ) {
-            document.querySelector('.indicator').style.left = '225px';
+            document.querySelector('.indicator').style.top = '225px';
         } else if ( index === 5 ) {
-            document.querySelector('.indicator').style.left = '100%';
+            document.querySelector('.indicator').style.top = '290px';
         }
     }
     return ( 
@@ -107,43 +116,39 @@ const Work = ({ refWork }) => {
                     />
                     <Tablas>
                         <div className="tabs font-open-sans">
-                            <div 
-                                className="grid grid-cols-5 justify-between cursor-pointer 
-                                 text-xs sm:text-sm text-center gap-2 sm:gap-20 sm:mx-4 tab-header"
-                            >
-                                <div
+                            <div className="tab-header">
+                                <button
                                     onClick={() => changeTab(1)}
                                     className={tab === 1 ? 'active' : ''}
                                 >
                                     Legacyier
-                                </div>
-                                <div
+                                </button>
+                                <button
                                     onClick={() => changeTab(2)}
                                     className={tab === 2 ? 'active' : ''}
                                 >
                                     Bliss DDM
-                                </div>
-                                <div
+                                </button>
+                                <button
                                     onClick={() => changeTab(3)}
                                     className={tab === 3 ? 'active' : ''}
                                 >
                                     UAEH
-                                </div>
-                                <div
+                                </button>
+                                <button
                                     onClick={() => changeTab(4)}
                                     className={tab === 4 ? 'active' : ''}
                                 >
                                     SQD & Holcim
-                                </div>
-                                <div
+                                </button>
+                                <button
                                     onClick={() => changeTab(5)}
                                     className={tab === 5 ? 'active' : ''}
                                 >
                                     SQD & Bonafont
-                                </div>
+                                </button>
                             </div>
                             <div className="indicator">
-
                             </div>
                             <div className="tab-content">
                                 <div className={tab === 1 ? 'active': ''}>
