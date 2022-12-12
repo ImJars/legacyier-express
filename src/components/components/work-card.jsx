@@ -1,6 +1,5 @@
 import React from 'react';
-import { AiOutlineFolder } from 'react-icons/ai';
-import { FiGithub, FiExternalLink } from 'react-icons/fi';
+import { FiGithub, FiExternalLink, FiFolder } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 
 const WorkCard = ({
@@ -19,7 +18,7 @@ const WorkCard = ({
             <motion.div
                 animate={ animateCard }
                 className='w-full h-full font-roboto bg-secondary cursor-pointer 
-                            flex flex-col px-6 py-10 hover:transform hover:-translate-y-2
+                            flex flex-col px-12 sm:px-6 py-8 sm:py-10 hover:transform hover:-translate-y-2
                             hover:transition hover:duration-300 hover:ease-in-out'
             >
                 <div
@@ -28,7 +27,7 @@ const WorkCard = ({
                     <div
                         className='flex items-center text-4xl text-septenary'
                     >
-                        <AiOutlineFolder />
+                        <FiFolder />
                     </div>
                     <div
                         className='flex gap-4 items-center'
@@ -62,7 +61,7 @@ const WorkCard = ({
                     { description }
                 </h2>
                 <ol
-                    className='flex space-x-2 mt-8 text-xs text-text-mini'
+                    className='font-mono flex space-x-4 sm:space-x-2 mt-8 text-xs text-text-mini'
                 >
                     <li>
                         { tecnologies }
