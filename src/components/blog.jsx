@@ -196,7 +196,7 @@ export const Blog = ({ refBlog }) => {
                 </div>
                 <div
                     ref={ sectionRef }
-                    className='max-w-pantalla flex flex-col mt-28'
+                    className='max-w-pantalla flex flex-col my-20 sm:my-0 mx-4 sm:mx-0'
                 >
                     <Title
                         animateTitle={ animateWorkTitleTwo }
@@ -205,7 +205,7 @@ export const Blog = ({ refBlog }) => {
                     />
                     <div
                         ref={ sectionCard }
-                        className='grid grid-cols-3 gap-4 mt-14'
+                        className='grid grid-cols-1 sm:grid-cols-3 gap-4 mt-14 mx-10 sm:mx-0'
                     >
                         <WorkCard
                             animateCard={ animateCard }
