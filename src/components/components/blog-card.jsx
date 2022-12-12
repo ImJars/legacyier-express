@@ -81,14 +81,14 @@ const BlogCard = ({
                                 { titleProject }
                             </h2>
                             <div
-                                className='bg-secondary py-6 px-8 rounded-md text-sm'
+                                className='bg-secondary py-6 sm:px-8 rounded-md text-sm'
                             >
                                 <p>
                                     { descriptionProject }
                                 </p>
                             </div>
                             <ol
-                                className='flex justify-end text-xs space-x-4 text-text-mini
+                                className='font-mono flex justify-end text-xs space-x-4 text-text-mini
                                             tracking-wide mt-2'
                             >
                                 <li>
