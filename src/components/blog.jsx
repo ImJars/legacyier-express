@@ -17,7 +17,7 @@ export const Blog = ({ refBlog }) => {
         triggerOnce: true
     });
     const { ref: sectionCard, inView: inViewCard } = useInView({
-        threshold: 0.5,
+        threshold: 0.1,
         triggerOnce: true
     });
 
@@ -137,7 +137,7 @@ export const Blog = ({ refBlog }) => {
             >   
                 <div
                     ref={ ref }
-                    className='max-w-pantalla flex flex-col my-20 sm:my-0 mx-4 sm:mx-0'
+                    className='max-w-pantalla flex flex-col my-20 sm:my-20 mx-4 sm:mx-0'
                 >
                     <Title
                         animateTitle={ animateWorkTitle }
