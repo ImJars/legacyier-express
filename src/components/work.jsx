@@ -99,15 +99,15 @@ const Work = ({ refWork }) => {
     }
     const {ref: refTab, inView: inviewTab} = useInView({
         threshold: 0.5,
-        triggerOnce: true
+        triggerOnce: true,
     });
     
-    const animateTitle = useAnimation();
+    const animateSectionTitle = useAnimation();
     const animateTable = useAnimation();
 
     useEffect(() => {
       if (inviewTab) {
-        animateTitle.start({
+        animateSectionTitle.start({
             opacity: 1,
             x: 0,
             transition: {
@@ -117,21 +117,21 @@ const Work = ({ refWork }) => {
         animateTable.start({
             opacity: 1,
             transition: {
-                type: 'spring' ,duration: 1, delay: 1
+                type: 'spring' ,duration: 2, delay: 1
             }
         });
-        
-        if (!inviewTab) {
-            animateTitle.start({
-                opacity: 1,
-                x: '-5vw',
-            });
-            animateTable.start({
-                opacity: 0,
-            });
-        }
       }
-    }, [inviewTab, animateTitle, animateTable])
+
+      if (!inviewTab) {
+        animateSectionTitle.start({
+            opacity: 0,
+            x: '-5vw',
+        });
+        animateTable.start({
+            opacity: 0,
+        });
+    }
+    }, [inviewTab, animateSectionTitle, animateTable])
     
     return ( 
         <>
@@ -146,13 +146,13 @@ const Work = ({ refWork }) => {
                     className='max-w-250 grid grid-cols-1 my-20 sm:my-0 mx-4 sm:mx-0'
                 >
                     <Title
-                        animateTitle={ animateTitle } 
+                        animateTitle={ animateSectionTitle } 
                         title={'Where I’ve Worked'}
                         subtitle={'A latest creative works in design and web'}
                     />
-                    <motion.div animate = { animateTable } className='opacity-0'>
                         <Tablas>
-                            <div 
+                            <motion.div 
+                                animate = { animateTable }
                                 className="tabs my-20"
                             >
                                 <div className="tab-header">
@@ -256,9 +256,8 @@ const Work = ({ refWork }) => {
                                         />
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         </Tablas>
-                    </motion.div>
                 </div>
             </section>
         </>
