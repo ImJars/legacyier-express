@@ -1,15 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Title from './components/title';
 import Seccion from './components/seccion-carousel';
 import styled from 'styled-components';
+import { useInView } from 'react-intersection-observer';
+import { useAnimation, motion } from 'framer-motion';
 
 const Tablas = styled.div`
     display: flex;
     justify-content: center;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; 
 
 @media screen and (max-width: 900px) {
     overflow: hidden;
@@ -24,7 +22,7 @@ const Tablas = styled.div`
             float: left;
             width: 125px;
             height: 100%;
-            border-right: 1px solid #bfa6ff;
+            border-right: 1px solid #A4A4A4;
             @media (max-width: 640px) {
                 width: 100px;
             }
@@ -99,6 +97,42 @@ const Work = ({ refWork }) => {
             document.querySelector('.indicator').style.top = '290px';
         }
     }
+    const {ref: refTab, inView: inviewTab} = useInView({
+        threshold: 0.5,
+        triggerOnce: true
+    });
+    
+    const animateTitle = useAnimation();
+    const animateTable = useAnimation();
+
+    useEffect(() => {
+      if (inviewTab) {
+        animateTitle.start({
+            opacity: 1,
+            x: 0,
+            transition: {
+                type: 'spring' ,duration: 2, delay: 0.2
+            }
+        });
+        animateTable.start({
+            opacity: 1,
+            transition: {
+                type: 'spring' ,duration: 1, delay: 1
+            }
+        });
+        
+        if (!inviewTab) {
+            animateTitle.start({
+                opacity: 1,
+                x: '-5vw',
+            });
+            animateTable.start({
+                opacity: 0,
+            });
+        }
+      }
+    }, [inviewTab, animateTitle, animateTable])
+    
     return ( 
         <>
             <section
@@ -108,117 +142,123 @@ const Work = ({ refWork }) => {
                 font-roboto flex justify-center items-center"
             >
                 <div
+                    ref={ refTab }
                     className='max-w-250 grid grid-cols-1 my-20 sm:my-0 mx-4 sm:mx-0'
                 >
-                    <Title 
+                    <Title
+                        animateTitle={ animateTitle } 
                         title={'Where I’ve Worked'}
                         subtitle={'A latest creative works in design and web'}
                     />
-                    <Tablas>
-                        <div className="tabs my-20">
-                            <div className="tab-header">
-                                <button
-                                    onClick={() => changeTab(1)}
-                                    className={tab === 1 ? 'active' : ''}
-                                >
-                                    Legacyier
-                                </button>
-                                <button
-                                    onClick={() => changeTab(2)}
-                                    className={tab === 2 ? 'active' : ''}
-                                >
-                                    Bliss DDM
-                                </button>
-                                <button
-                                    onClick={() => changeTab(3)}
-                                    className={tab === 3 ? 'active' : ''}
-                                >
-                                    UAEH
-                                </button>
-                                <button
-                                    onClick={() => changeTab(4)}
-                                    className={tab === 4 ? 'active' : ''}
-                                >
-                                    SQD & Holcim
-                                </button>
-                                <button
-                                    onClick={() => changeTab(5)}
-                                    className={tab === 5 ? 'active' : ''}
-                                >
-                                    SQD & Bonafont
-                                </button>
+                    <motion.div animate = { animateTable } className='opacity-0'>
+                        <Tablas>
+                            <div 
+                                className="tabs my-20"
+                            >
+                                <div className="tab-header">
+                                    <button
+                                        onClick={() => changeTab(1)}
+                                        className={tab === 1 ? 'active' : ''}
+                                    >
+                                        Legacyier
+                                    </button>
+                                    <button
+                                        onClick={() => changeTab(2)}
+                                        className={tab === 2 ? 'active' : ''}
+                                    >
+                                        Bliss DDM
+                                    </button>
+                                    <button
+                                        onClick={() => changeTab(3)}
+                                        className={tab === 3 ? 'active' : ''}
+                                    >
+                                        UAEH
+                                    </button>
+                                    <button
+                                        onClick={() => changeTab(4)}
+                                        className={tab === 4 ? 'active' : ''}
+                                    >
+                                        SQD & Holcim
+                                    </button>
+                                    <button
+                                        onClick={() => changeTab(5)}
+                                        className={tab === 5 ? 'active' : ''}
+                                    >
+                                        SQD & Bonafont
+                                    </button>
+                                </div>
+                                <div className="indicator">
+                                </div>
+                                <div className="tab-content">
+                                    <div className={tab === 1 ? 'active': ''}>
+                                        <Seccion
+                                            date={'January 2022 - Present'}
+                                            business={'Legacyier'}
+                                            worked={'Chief Executive Officer'}
+                                            title={'Legacyier Web'}
+                                            description={
+                                                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
+                                                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
+                                                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.'
+                                            }
+                                        />
+                                    </div>
+                                    <div className={tab === 2 ? 'active': ''}>
+                                        <Seccion
+                                            date={'January 2021 - December 2021'}
+                                            business={'Bliss DDM'}
+                                            worked={'Web Developer'}
+                                            title={'Personal Web Daniel Rocha'}
+                                            description={
+                                                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
+                                                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
+                                                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.'
+                                            }
+                                        />
+                                    </div>
+                                    <div className={tab === 3 ? 'active': ''}>
+                                        <Seccion 
+                                            date={'January 2018 - December 2018'}
+                                            business={'UAEH'}
+                                            worked={'Software Developer'}
+                                            title={'Project management software'}
+                                            description={
+                                                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
+                                                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
+                                                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.'
+                                            }
+                                        />
+                                    </div>
+                                    <div className={tab === 4 ? 'active': ''}>
+                                        <Seccion
+                                            date={'January 2020 - December 2020'}
+                                            business={'SQDesarrollo & Holcim Mexico'}
+                                            worked={'Software Developer'}
+                                            title={'Labor calculation software'}
+                                            description={
+                                                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
+                                                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
+                                                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.'
+                                            }
+                                        />
+                                    </div>
+                                    <div className={tab === 5 ? 'active': ''}>
+                                        <Seccion
+                                            date={'January 2019 - December 2019'}
+                                            business={'SQDesarrollo & Bonafont'}
+                                            worked={'Software Developer'}
+                                            title={'Redesign of software and calculation of inputs'}
+                                            description={
+                                                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
+                                                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
+                                                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.'
+                                            }
+                                        />
+                                    </div>
+                                </div>
                             </div>
-                            <div className="indicator">
-                            </div>
-                            <div className="tab-content">
-                                <div className={tab === 1 ? 'active': ''}>
-                                    <Seccion
-                                        date={'January 2022 - Present'}
-                                        business={'Legacyier'}
-                                        worked={'Chief Executive Officer'}
-                                        title={'Legacyier Web'}
-                                        description={
-                                            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
-                                            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
-                                            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.'
-                                        }
-                                    />
-                                </div>
-                                <div className={tab === 2 ? 'active': ''}>
-                                    <Seccion
-                                        date={'January 2021 - December 2021'}
-                                        business={'Bliss DDM'}
-                                        worked={'Web Developer'}
-                                        title={'Personal Web Daniel Rocha'}
-                                        description={
-                                            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
-                                            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
-                                            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.'
-                                        }
-                                    />
-                                </div>
-                                <div className={tab === 3 ? 'active': ''}>
-                                    <Seccion 
-                                        date={'January 2018 - December 2018'}
-                                        business={'UAEH'}
-                                        worked={'Software Developer'}
-                                        title={'Project management software'}
-                                        description={
-                                            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
-                                            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
-                                            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.'
-                                        }
-                                    />
-                                </div>
-                                <div className={tab === 4 ? 'active': ''}>
-                                    <Seccion
-                                        date={'January 2020 - December 2020'}
-                                        business={'SQDesarrollo & Holcim Mexico'}
-                                        worked={'Software Developer'}
-                                        title={'Labor calculation software'}
-                                        description={
-                                            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
-                                            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
-                                            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.'
-                                        }
-                                    />
-                                </div>
-                                <div className={tab === 5 ? 'active': ''}>
-                                    <Seccion
-                                        date={'January 2019 - December 2019'}
-                                        business={'SQDesarrollo & Bonafont'}
-                                        worked={'Software Developer'}
-                                        title={'Redesign of software and calculation of inputs'}
-                                        description={
-                                            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
-                                            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.' +
-                                            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Quisquam, quod. Quisquam, quod. Quisquam, quod.'
-                                        }
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </Tablas>
+                        </Tablas>
+                    </motion.div>
                 </div>
             </section>
         </>
