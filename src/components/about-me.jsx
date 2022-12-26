@@ -130,7 +130,7 @@ const AboutMe = ({ refAbout }) => {
                 <div
                     
                     ref={ ref }
-                    className='max-w-250 flex flex-col py-20 sm:py-0 mx-4 sm:mx-0'
+                    className='max-w-250 flex flex-col py-20 sm:py-0 mx-4 xl:mx-0'
                 >
                     <Title
                         animateTitle={ animationAboutTitle }
@@ -153,7 +153,7 @@ const AboutMe = ({ refAbout }) => {
                             />
                         </div>
                         <div
-                            className='sm:ml-10 mx-4 mt-4 sm:mt-0'
+                            className='sm:ml-10 mt-4 sm:mt-0'
                         >
                             <h1
                                 className='text-lg sm:text-xl font-normal tracking-wide
@@ -173,7 +173,7 @@ const AboutMe = ({ refAbout }) => {
                                 in my developments. 
                             </p>
                             <div 
-                                className='flex justify-between sm:justify-start mt-6 sm:space-x-24 space-x-5'
+                                className='flex justify-between sm:justify-start mt-6 sm:space-x-5 xl:space-x-20'
                             >
                                 <div>
                                     <Data 
@@ -196,7 +196,7 @@ const AboutMe = ({ refAbout }) => {
                                 <div>
                                     <Data 
                                         data='Phone:'
-                                        children={ '+52 773-151-1761' }
+                                        children={ '+52 55-2914-7674' }
                                         link={'https://wa.link/01hnrf'}
                                         classNames={'text-septenary'}
                                     />

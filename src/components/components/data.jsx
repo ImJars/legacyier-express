@@ -3,7 +3,7 @@ import React from 'react'
 const Data = ({ data, children, classNames, link }) => {
     return ( 
         <>
-            <div className='flex text-sm font-sans mb-2'>
+            <div className='flex text-xs sm:text-sm font-sans mb-2'>
                 <h1
                     className='font-semibold'
                 >
@@ -13,12 +13,12 @@ const Data = ({ data, children, classNames, link }) => {
                     { data }
                 </h1>
                 <a
-                    className={`${ classNames } ml-2 text-text-mini tracking-wider`}
+                    className={`${ classNames } sm:ml-2 text-text-mini sm:tracking-wider`}
                     href={ link }
                     target="_blank"
                     rel="noreferrer"
                 >
-                    { children }
+                    &nbsp;{ children }
                 </a>
             </div>
         </>
