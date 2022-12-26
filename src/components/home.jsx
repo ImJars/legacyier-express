@@ -221,21 +221,21 @@ const Home = ({ refHome }) => {
                 <motion.div
                     animate={ animateImg }
                     ref={ ref }
-                    className='opacity-0 relative sm:h-full sm:w-full flex justify-end'
+                    className='opacity-0 relative md:h-full md:w-full flex justify-end'
                 >
                 <   img 
                         src={ 'legacyierWeb.webp' } alt="" 
-                        className='relative opacity-5 sm:mx-10 sm:py-20 blur-md'
+                        className='relative opacity-5 md:mx-10 md:py-20 blur-md'
                     />
                     <h1
-                        className='hidden sm:block absolute text-xs text-text-mini bottom-24 
+                        className='hidden md:block absolute text-xs text-text-mini bottom-24 
                                    opacity-10 right-20'
                     >
                         Coming soon Legacyier...
                     </h1>
                 </motion.div>
                 <div
-                    className='absolute max-w-250 h-screen flex'
+                    className='absolute max-w-250 h-screen flex mx-4 md:mx-0'
                 >
                     <div
                         className='grid grid-cols-1 content-between py-10'
@@ -328,7 +328,7 @@ const Home = ({ refHome }) => {
                             </motion.h3>
                             <motion.p
                                 animate= { animateText4 }
-                                className='opacity-0 sm:w-1/2 text-sm mt-2 text-text-mini sm:tracking-wider'
+                                className='opacity-0 md:w-1/2 text-sm mt-2 text-text-mini sm:tracking-wider'
                             >
                                 I'm a software developer specializing in creating exceptional 
                                 products and digital experiences. I am currently focused on 
