@@ -235,7 +235,7 @@ const Home = ({ refHome }) => {
                     </h1>
                 </motion.div>
                 <div
-                    className='absolute max-w-250 h-screen flex mx-4 md:mx-0'
+                    className='absolute max-w-250 h-screen flex mx-4 xl:mx-0'
                 >
                     <div
                         className='grid grid-cols-1 content-between py-10'
