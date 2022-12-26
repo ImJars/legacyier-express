@@ -33,8 +33,6 @@ const Home = ({ refHome }) => {
                     type: 'spring', duration: 2, delay: 2
                 }
             });
-        }
-        if (inView) {
             iconAnimate2.start({
                 opacity: 1,
                 x: 0,
@@ -42,8 +40,6 @@ const Home = ({ refHome }) => {
                     type: 'spring', duration: 2, delay: 2.3
                 }
             });
-        }
-        if (inView) {
             iconAnimate3.start({
                 opacity: 1,
                 x: 0,
@@ -51,8 +47,6 @@ const Home = ({ refHome }) => {
                     type: 'spring', duration: 2, delay: 2.5
                 }
             });
-        }
-        if (inView) {
             iconAnimate4.start({
                 opacity: 1,
                 x: 0,
@@ -60,8 +54,6 @@ const Home = ({ refHome }) => {
                     type: 'spring', duration: 2, delay: 2.7
                 }
             });
-        }
-        if (inView) {
             iconAnimate5.start({
                 opacity: 1,
                 x: 0,
@@ -69,8 +61,6 @@ const Home = ({ refHome }) => {
                     type: 'spring', duration: 2, delay: 2.9
                 }
             });
-        }
-        if (inView) {
             animateImg.start({
                 opacity: 1,
                 transition: {
@@ -84,40 +74,38 @@ const Home = ({ refHome }) => {
                 opacity: 0,
                 x: '-5vw',
             });
-        }
-        if (!inView) {
             iconAnimate2.start({
                 opacity: 0,
                 x: '-5vw',
             });
-        }
-        if (!inView) {
             iconAnimate3.start({
                 opacity: 0,
                 x: '-5vw',
             });
-        }
-        if (!inView) {
             iconAnimate4.start({
                 opacity: 0,
                 x: '-5vw',
             });
-        }
-        if (!inView) {
             iconAnimate5.start({
                 opacity: 0,
                 x: '-5vw',
             });
-        }
-        if (!inView) {
             animateImg.start({
                 opacity: 0,
             });
         }
-    }, [inView, iconAnimate1, iconAnimate2, iconAnimate3, iconAnimate4, iconAnimate5, animateImg]);
+    }, [
+        inView, 
+        iconAnimate1, 
+        iconAnimate2, 
+        iconAnimate3, 
+        iconAnimate4, 
+        iconAnimate5, 
+        animateImg
+    ]);
     
     useEffect(() => {
-      if (inView) {
+        if (inView) {
         animateText1.start({
           opacity: 1,
           y: 0,
@@ -125,59 +113,54 @@ const Home = ({ refHome }) => {
             type: 'spring', duration: 2, delay: 3
           }
         });
-      }
-      if (inView) {
         animateText2.start({
-          opacity: 1,
-          y: 0,
-          transition: {
-            type: 'spring', duration: 2, delay: 3.2
-          }
+            opacity: 1,
+            y: 0,
+            transition: {
+              type: 'spring', duration: 2, delay: 3.2
+            }
+          });
+          animateText3.start({
+            opacity: 1,
+            y: 0,
+            transition: {
+              type: 'spring', duration: 2, delay: 3.4
+            }
+          });
+          animateText4.start({
+            opacity: 1,
+            y: 0,
+            transition: {
+              type: 'spring', duration: 2, delay: 3.6
+            }
+          });
+        }
+
+        if (!inView) {
+        animateText1.start({
+            opacity: 0,
+            y: '5vw',
         });
-      }
-      if (inView) {
+        animateText2.start({
+            opacity: 0,
+            y: '5vw',
+        });
         animateText3.start({
-          opacity: 1,
-          y: 0,
-          transition: {
-            type: 'spring', duration: 2, delay: 3.4
-          }
+            opacity: 0,
+            y: '5vw',
         });
-      }
-      if (inView) {
         animateText4.start({
-          opacity: 1,
-          y: 0,
-          transition: {
-            type: 'spring', duration: 2, delay: 3.6
-          }
+            opacity: 0,
+            y: '5vw',
         });
-      }
-        if (!inView) {
-            animateText1.start({
-                opacity: 0,
-                y: '5vw',
-            });
         }
-        if (!inView) {
-            animateText2.start({
-                opacity: 0,
-                y: '5vw',
-            });
-        }
-        if (!inView) {
-            animateText3.start({
-                opacity: 0,
-                y: '5vw',
-            });
-        }
-        if (!inView) {
-            animateText4.start({
-                opacity: 0,
-                y: '5vw',
-            });
-        }
-    }, [inView, animateText1, animateText2, animateText3, animateText4]);
+    }, [
+        inView, 
+        animateText1, 
+        animateText2, 
+        animateText3, 
+        animateText4
+    ]);
     
     useEffect(() => {
         if (inView) {
@@ -188,24 +171,20 @@ const Home = ({ refHome }) => {
                 type: 'spring', duration: 2, delay: 2
               }
             });
-        }
-        if (inView) {
             animateSubtitle2.start({
-              opacity: 1,
-              x: 0,
-              transition: {
-                type: 'spring', duration: 2, delay: 2.3
-              }
-            });
-        }
-        if (inView) {
-            animateSubtitle3.start({
-              opacity: 1,
-              x: 0,
-              transition: {
-                type: 'spring', duration: 2, delay: 2.5
-              }
-            });
+                opacity: 1,
+                x: 0,
+                transition: {
+                  type: 'spring', duration: 2, delay: 2.3
+                }
+              });
+              animateSubtitle3.start({
+                opacity: 1,
+                x: 0,
+                transition: {
+                  type: 'spring', duration: 2, delay: 2.5
+                }
+              });
         }
         
         if (!inView) {
@@ -213,21 +192,22 @@ const Home = ({ refHome }) => {
                 opacity: 0,
                 x: '-5vw',
             });
-        }
-        if (!inView) {
             animateSubtitle2.start({
                 opacity: 0,
                 x: '-5vw',
             });
-        }
-        if (!inView) {
             animateSubtitle3.start({
                 opacity: 0,
                 x: '-5vw',
             });
         }
 
-    }, [inView, animateSubtitle1, animateSubtitle2, animateSubtitle3]);
+    }, [
+        inView, 
+        animateSubtitle1, 
+        animateSubtitle2, 
+        animateSubtitle3
+    ]);
     
 
     return ( 
