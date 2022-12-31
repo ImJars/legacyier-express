@@ -46,7 +46,7 @@ export const Blog = ({ refBlog }) => {
                 opacity: 0,
                 x: '-5vw'
             });
-      } 
+        } 
     }, [ inView, animateWorkTitle ]);
     
     useEffect(() => {
@@ -64,7 +64,7 @@ export const Blog = ({ refBlog }) => {
                 opacity: 0,
                 x: '-5vw'
             });
-      } 
+        } 
     }, [ inViewRef, animateWorkTitleTwo ]);
     
     useEffect(() => {
@@ -125,19 +125,20 @@ export const Blog = ({ refBlog }) => {
             animateCard6.start({
                 opacity: 0,
             });
-      } 
+        } 
     }, [ inViewCard, animateCard, animateCard2, animateCard3, animateCard4, animateCard5, animateCard6 ]);
+    
     return ( 
         <>
             <section
                 ref={ refBlog }
                 id='Blog'
                 className="w-full h-sfull bg-primary text-white
-                font-sans flex flex-col justify-center items-center py-20"
+                font-sans flex flex-col justify-center items-center"
             >   
                 <div
                     ref={ ref }
-                    className='max-w-pantalla flex flex-col my-20 sm:my-20 mx-4 sm:mx-0'
+                    className='max-w-pantalla flex flex-col py-20 mx-4 xl:mx-0'
                 >
                     <Title
                         animateTitle={ animateWorkTitle }
@@ -171,7 +172,7 @@ export const Blog = ({ refBlog }) => {
                             }
                             tecnologiesProject={ 'ReactJS' }
                             tecnologiesProject2={ 'TailwindCSS' }
-                            tecnologiesProject3={ 'Styled Components' }
+                            tecnologiesProject3={ 'Styled Compon.' }
                             tecnologiesProject4={ 'VS Code' }
                             tecnologiesProject5={ 'Github' }
                             urlGithubRepo={ 'https://github.com/ImJars' }

@@ -48,7 +48,7 @@ const BlogCard = ({
                 className='max-w-pantalla min-h-pantalla static font-roboto'
             >
                 <div
-                    className='flex relative sm:static'
+                    className='flex relative md:static'
                 >
                     <div className='relative cursor-pointer'>
                         <img
@@ -63,11 +63,11 @@ const BlogCard = ({
                         />
                     </div>
                     <div
-                        className='sm:w-project-card flex items-center h-full
-                                absolute sm:static bg-secondary sm:bg-inherit'
+                        className='md:w-project-card flex items-center h-full
+                                absolute md:static bg-secondary md:bg-inherit'
                     >
                         <div
-                            className='sm:transform sm:-translate-x-10
+                            className='md:transform md:-translate-x-10
                                         p-5 text-end'
                         >
                             <h1
@@ -81,15 +81,15 @@ const BlogCard = ({
                                 { titleProject }
                             </h2>
                             <div
-                                className='bg-secondary py-6 sm:px-8 rounded-md text-sm'
+                                className='bg-secondary py-4 md:px-8 rounded-md text-sm'
                             >
                                 <p>
                                     { descriptionProject }
                                 </p>
                             </div>
                             <ol
-                                className='font-mono flex justify-end text-xs space-x-4 text-text-mini
-                                            tracking-wide mt-2'
+                                className='font-mono flex justify-end text-xs md:space-x-4 space-x-2 text-text-mini
+                                            mt-2'
                             >
                                 <li>
                                     { tecnologiesProject }

@@ -48,14 +48,14 @@ const BlogCardDouble = ({
                 className='max-w-pantalla min-h-pantalla static font-roboto'
             >
                 <div
-                    className='flex relative sm:static'
+                    className='flex relative md:static'
                 >
                     <div
-                        className='sm:w-project-card flex items-center h-full
-                        absolute sm:static bg-secondary sm:bg-inherit z-10'
+                        className='md:w-project-card flex items-center h-full
+                        absolute md:static bg-secondary md:bg-inherit z-10'
                     >
                         <div
-                            className='sm:transform sm:translate-x-10
+                            className='md:transform md:translate-x-10
                                         p-5 text-start'
                         >
                             <h1
@@ -69,15 +69,15 @@ const BlogCardDouble = ({
                                 { titleProject }
                             </h2>
                             <div
-                                className='bg-secondary py-6 sm:px-8 rounded-md text-sm'
+                                className='bg-secondary py-4 md:px-8 rounded-md text-sm'
                             >
                                 <p>
                                     { descriptionProject }
                                 </p>
                             </div>
                             <ol
-                                className='font-mono flex justify-start text-xs space-x-4 text-text-mini
-                                            tracking-wide mt-2'
+                                className='font-mono flex justify-start text-xs md:space-x-4 space-x-2 
+                                        text-text-mini mt-2'
                             >
                                 <li>
                                     { tecnologiesProject }
