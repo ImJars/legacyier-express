@@ -124,13 +124,13 @@ const AboutMe = ({ refAbout }) => {
             <section
                 ref={ refAbout }
                 id='About'
-                className="w-full h-full sm:h-screen bg-primary text-white
+                className="w-full h-screen bg-primary text-white
                     font-roboto flex justify-center items-center"
             >
                 <div
                     
                     ref={ ref }
-                    className='max-w-250 flex flex-col py-20 sm:py-0 mx-4 xl:mx-0'
+                    className='max-w-250 flex flex-col py-20 sm:py-0 mx-4 my-20 xl:mx-0'
                 >
                     <Title
                         animateTitle={ animationAboutTitle }
@@ -181,7 +181,7 @@ const AboutMe = ({ refAbout }) => {
                                         children={ 'Angel Ramirez' }
                                     />
                                     <Data 
-                                        data='Date of birth:'
+                                        data='Date:'
                                         children={ '04-04-1999' }
                                     />
                                     <Data 
