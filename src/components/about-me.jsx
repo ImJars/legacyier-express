@@ -239,7 +239,7 @@ const AboutMe = ({ refAbout }) => {
                     </motion.div>
                     <div
                         className='lg:flex mt-10 sm:mt-20 justify-between 
-                                   font-sans text-sm grid grid-cols-3 gap-4 md:gap-10 lg:gap-0'
+                                    font-sans text-sm grid grid-cols-3 gap-4 md:gap-10 lg:gap-0'
                     >
                         <AboutCard
                             animateElement={ animateElement_1 }

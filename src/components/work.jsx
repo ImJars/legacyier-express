@@ -106,7 +106,7 @@ const Work = ({ refWork }) => {
     const animateTable = useAnimation();
 
     useEffect(() => {
-      if (inviewTab) {
+        if (inviewTab) {
         animateSectionTitle.start({
             opacity: 1,
             x: 0,
@@ -120,9 +120,9 @@ const Work = ({ refWork }) => {
                 type: 'spring' ,duration: 2, delay: 1
             }
         });
-      }
+        }
 
-      if (!inviewTab) {
+        if (!inviewTab) {
         animateSectionTitle.start({
             opacity: 0,
             x: '-5vw',
@@ -143,7 +143,7 @@ const Work = ({ refWork }) => {
             >
                 <div
                     ref={ refTab }
-                    className='max-w-250 grid grid-cols-1 my-20 sm:my-0 mx-4 sm:mx-0'
+                    className='max-w-250 grid grid-cols-1 py-20 mx-4 xl:mx-0'
                 >
                     <Title
                         animateTitle={ animateSectionTitle } 
