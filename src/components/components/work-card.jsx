@@ -17,8 +17,8 @@ const WorkCard = ({
         <>
             <motion.div
                 animate={ animateCard }
-                className='w-full h-full font-roboto bg-secondary cursor-pointer 
-                            flex flex-col px-12 sm:px-6 py-8 sm:py-10 hover:transform hover:-translate-y-2
+                className='max-w-250 h-full font-roboto bg-secondary cursor-pointer 
+                            flex flex-col px-6 sm:px-4 md:px-6 py-8 md:py-10 hover:transform hover:-translate-y-2
                             hover:transition hover:duration-300 hover:ease-in-out'
             >
                 <div
@@ -56,12 +56,12 @@ const WorkCard = ({
                     { title }
                 </h1> 
                 <h2
-                    className='text-sm mt-4 flex'
+                    className='text-sm mt-4 flex sm:text-xs md:text-sm'
                 >
                     { description }
                 </h2>
                 <ol
-                    className='font-mono flex space-x-4 sm:space-x-2 mt-8 text-xs text-text-mini'
+                    className='font-mono flex space-x-1 mt-8 text-xs text-text-mini'
                 >
                     <li>
                         { tecnologies }
@@ -78,7 +78,7 @@ const WorkCard = ({
                 </ol>
             </motion.div>
         </>
-     );
+    );
 }
- 
+
 export default WorkCard;

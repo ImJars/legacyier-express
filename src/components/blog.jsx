@@ -133,7 +133,7 @@ export const Blog = ({ refBlog }) => {
             <section
                 ref={ refBlog }
                 id='Blog'
-                className="w-full h-sfull bg-primary text-white
+                className="w-full h-full bg-primary text-white
                 font-sans flex flex-col justify-center items-center"
             >   
                 <div
@@ -197,73 +197,75 @@ export const Blog = ({ refBlog }) => {
                 </div>
                 <div
                     ref={ sectionRef }
-                    className='max-w-pantalla flex flex-col my-20 sm:my-0 mx-4 sm:mx-0'
+                    className='w-full h-full flex justify-center'
                 >
-                    <Title
-                        animateTitle={ animateWorkTitleTwo }
-                        title={'Other Noteworthy Projects'}
-                        subtitle={'Some of my projects over the years'}
-                    />
-                    <div
-                        ref={ sectionCard }
-                        className='grid grid-cols-1 sm:grid-cols-3 gap-4 mt-14 mx-10 sm:mx-0'
-                    >
-                        <WorkCard
-                            animateCard={ animateCard }
-                            title={'Legacyier Express'}
-                            description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
-                            tecnologies={'GatsbyJS'}
-                            tecnologies2={'TailwindCSS'}
-                            tecnologies3={'Framer Motion'}
-                            tecnologies4={'VS Code'}
+                    <div className='max-w-pantalla flex flex-col py-20 mx-4 xl:mx-0'>
+                        <Title
+                            animateTitle={ animateWorkTitleTwo }
+                            title={'Other Noteworthy Projects'}
+                            subtitle={'Some of my projects over the years'}
                         />
-                        <WorkCard 
-                            animateCard={ animateCard2 }
-                            classNamesLink={'hidden'}
-                            title={'Legacyier Expert'}
-                            description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
-                            tecnologies={'ReactJS'}
-                            tecnologies2={'TailwindCSS'}
-                            tecnologies3={'Styled Components'}
-                        />
-                        <WorkCard 
-                            animateCard={ animateCard3 }
-                            classNamesGit={'hidden'}
-                            title={'Proyecto CMO'}
-                            description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
-                            tecnologies={'.NET'}
-                            tecnologies2={'MySQL'}
-                            tecnologies3={'Visual Studio'}
-                        />
-                        <WorkCard 
-                            animateCard={ animateCard4 }
-                            title={'Calculo mano de obra'}
-                            description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
-                            tecnologies={'.NET'}
-                            tecnologies2={'MySQL'}
-                            tecnologies3={'Visual Studio'}
-                            tecnologies4={'Excel'}
-                        />
-                        <WorkCard 
-                            animateCard={ animateCard5 }
-                            classNamesLink={'hidden'}
-                            title={'Gestion de proyectos'}
-                            description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
-                            tecnologies={'.NET'}
-                            tecnologies2={'MySQL'}
-                            tecnologies3={'Visual Studio'}
-                            tecnologies4={'Excel'}
-                        />
-                        <WorkCard 
-                            animateCard={ animateCard6 }
-                            classNamesGit={'hidden'}
-                            title={'Proyecto Bonafont'}
-                            description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
-                            tecnologies={'Excel'}
-                            tecnologies2={'Power BI'}
-                            tecnologies3={'Visual Basic'}
-                            tecnologies4={'SQL Server'}
-                        />
+                        <div
+                            ref={ sectionCard }
+                            className='grid grid-cols-1 sm:grid-cols-3 gap-4 mt-14 '
+                        >
+                            <WorkCard
+                                animateCard={ animateCard }
+                                title={'Legacyier Express'}
+                                description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
+                                tecnologies={'GatsbyJS'}
+                                tecnologies2={'TailwindCSS'}
+                                tecnologies3={'Framer Motion'}
+                                tecnologies4={'VS Code'}
+                            />
+                            <WorkCard 
+                                animateCard={ animateCard2 }
+                                classNamesLink={'hidden'}
+                                title={'Legacyier Expert'}
+                                description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
+                                tecnologies={'ReactJS'}
+                                tecnologies2={'TailwindCSS'}
+                                tecnologies3={'Styled Components'}
+                            />
+                            <WorkCard 
+                                animateCard={ animateCard3 }
+                                classNamesGit={'hidden'}
+                                title={'Proyecto CMO'}
+                                description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
+                                tecnologies={'.NET'}
+                                tecnologies2={'MySQL'}
+                                tecnologies3={'Visual Studio'}
+                            />
+                            <WorkCard 
+                                animateCard={ animateCard4 }
+                                title={'Calculo mano de obra'}
+                                description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
+                                tecnologies={'.NET'}
+                                tecnologies2={'MySQL'}
+                                tecnologies3={'Visual Studio'}
+                                tecnologies4={'Excel'}
+                            />
+                            <WorkCard 
+                                animateCard={ animateCard5 }
+                                classNamesLink={'hidden'}
+                                title={'Gestion de proyectos'}
+                                description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
+                                tecnologies={'.NET'}
+                                tecnologies2={'MySQL'}
+                                tecnologies3={'Visual Studio'}
+                                tecnologies4={'Excel'}
+                            />
+                            <WorkCard 
+                                animateCard={ animateCard6 }
+                                classNamesGit={'hidden'}
+                                title={'Proyecto Bonafont'}
+                                description={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'}
+                                tecnologies={'Excel'}
+                                tecnologies2={'Power BI'}
+                                tecnologies3={'Visual Basic'}
+                                tecnologies4={'SQL Server'}
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
