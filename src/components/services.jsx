@@ -101,7 +101,7 @@ const Services = ({ refServices }) => {
             >
                 <div
                     ref={ ref }
-                    className='max-w-250 flex flex-col my-20 mx-4 sm:mx-0'
+                    className='max-w-250 flex flex-col my-20 mx-4 xl:mx-0'
                 >
                     <Title
                         animateTitle={ animateServicesTitle }
@@ -110,7 +110,7 @@ const Services = ({ refServices }) => {
                     />
                     <div
                         className='grid grid-cols-2 sm:grid-cols-3 gap-4 
-                                sm:gap-8 mt-14'
+                                sm:gap-3 mt-14'
                     >
                         <ServicesCard
                             animateCardServices={ animateCard_1 }
