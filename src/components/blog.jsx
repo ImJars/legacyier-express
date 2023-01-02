@@ -172,7 +172,7 @@ export const Blog = ({ refBlog }) => {
                             }
                             tecnologiesProject={ 'ReactJS' }
                             tecnologiesProject2={ 'TailwindCSS' }
-                            tecnologiesProject3={ 'Styled Compon.' }
+                            tecnologiesProject3={ 'Styled Comp' }
                             tecnologiesProject4={ 'VS Code' }
                             tecnologiesProject5={ 'Github' }
                             urlGithubRepo={ 'https://github.com/ImJars' }

@@ -125,7 +125,7 @@ const AboutMe = ({ refAbout }) => {
                 ref={ refAbout }
                 id='About'
                 className="w-full h-full bg-primary text-white
-                    font-roboto flex justify-center items-center"
+                    font-roboto flex justify-center items-center pt-20"
             >
                 <div
                     
