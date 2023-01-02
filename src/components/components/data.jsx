@@ -18,11 +18,10 @@ const Data = ({ data, children, classNames, link }) => {
                     target="_blank"
                     rel="noreferrer"
                 >
-                    &nbsp;{ children }
+                    { children }
                 </a>
             </div>
         </>
-     );
+    );
 }
- 
 export default Data;

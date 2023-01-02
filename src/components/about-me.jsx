@@ -159,18 +159,20 @@ const AboutMe = ({ refAbout }) => {
                                 className='text-lg sm:text-xl font-normal tracking-wide
                                             text-center sm:text-left'
                             >
-                                Hello my name is <font className="font-semibold">Angel Ramirez</font>, based in Mexico
+                                Hello! My name is <font className="font-semibold">Angel Ramirez</font>
                             </h1>
                             <p
                                 className='text-sm font-roboto mt-2 text-text-mini tracking-wide
                                             text-center sm:text-left'
                             >
-                                <font className="font-extrabold">Hello!</font> My name is <font className="font-extrabold">Ángel</font> and I like technology, I enjoy 
-                                creating web applications and developing software. I started 
-                                programming in 2014 during high school, in 2017 I started with 
-                                web development during professional projects at university, 
-                                I liked it so much that I continue to implement new technologies 
-                                in my developments. 
+                                I like technology, I enjoy creating applications, 
+                                pages and developing software. I started programming 
+                                in VSA and Javascript in 2014 in high school.
+                                In 2017 I started in software engineering and 
+                                I started with professional projects at the 
+                                university together with some companies, 
+                                I liked it so much that I continue to implement 
+                                and learn new technologies for my developments.
                             </p>
                             <div 
                                 className='flex justify-between sm:justify-start mt-6 sm:space-x-5 xl:space-x-20'
@@ -207,7 +209,7 @@ const AboutMe = ({ refAbout }) => {
                                         classNames={'text-septenary'}
                                     />
                                     <Data 
-                                        data='Work status:'
+                                        data='Worked:'
                                         children={ 'Software Developer' }
                                         link={'https://www.linkedin.com/in/angel-ramirez-08468212b/'}
                                         classNames={'text-septenary'}
@@ -272,14 +274,14 @@ const AboutMe = ({ refAbout }) => {
                         <AboutCard
                             animateElement={ animateElement_5 }
                             icon={ <BiCodeAlt /> }
-                            description={ '4000+ lines of code' }
+                            description={ '20000+ lines of code' }
                         >
                             
                         </AboutCard>
                         <AboutCard
                             animateElement={ animateElement_6 }
                             icon={ <MdOutlineWork /> }
-                            description={ '2000+ hours of work' }
+                            description={ '9000+ hours of work' }
                         >
                             
                         </AboutCard>
