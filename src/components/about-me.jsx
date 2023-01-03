@@ -209,7 +209,7 @@ const AboutMe = ({ refAbout }) => {
                                         classNames={'text-septenary'}
                                     />
                                     <Data 
-                                        data='Worked:'
+                                        data='Work status:'
                                         children={ 'Software Developer' }
                                         link={'https://www.linkedin.com/in/angel-ramirez-08468212b/'}
                                         classNames={'text-septenary'}

@@ -106,7 +106,7 @@ const Services = ({ refServices }) => {
                     <Title
                         animateTitle={ animateServicesTitle }
                         title='My Services'
-                        subtitle='My work with several clients'
+                        subtitle='My services with several clients'
                     />
                     <div
                         className='grid grid-cols-2 sm:grid-cols-3 gap-4 
@@ -116,16 +116,15 @@ const Services = ({ refServices }) => {
                             animateCardServices={ animateCard_1 }
                             number='01'
                             title='Web Development'
-                            children='We professionally design, redesign and 
-                                    continuously support customer-facing and 
-                                    enterprise web apps to achieve high conversion 
-                                    and adoption rates.'
+                            children='Design, redesign and support professionally 
+                                    in web applications, customer-oriented web 
+                                    services to successfully achieve the requirements.'
                         />
                         <ServicesCard
                             animateCardServices={ animateCard_2 }
                             number='02'
                             title='Mobile Development'
-                            children='We help global brands design and create digital 
+                            children='He helps global brands design and build digital 
                                     products, enabling seamless user experiences on all 
                                     modern devices.'
                         />
@@ -133,24 +132,24 @@ const Services = ({ refServices }) => {
                             animateCardServices={ animateCard_3 }
                             number='03'
                             title='Blockchain Development'
-                            children='We develop applications based on blockchain. 
-                                    Develop a new blockchain project or upgrade your project
-                                    with our help.'
+                            children='Development of applications based on blockchain. 
+                                    Develop a new blockchain project or update your project 
+                                    with help.'
                         />
                         <ServicesCard
                             animateCardServices={ animateCard_4 }
                             number='05'
                             title='Python Development '
-                            children='We provide bespoke Python development services that 
-                                    target unique business needs and problems.'
+                            children='Development in Python creating applications or support, 
+                                    attending to the needs and problems.'
                         />
                         <ServicesCard
                             animateCardServices={ animateCard_5 }
                             number='04'
                             title='Digital Marketing'
-                            children='We plan, implement, evaluate the control of digital 
-                                    marketing strategies that will allow and meet the 
-                                    objectives and sales of your company.'
+                            children='Planning, implementation, evaluation of the control 
+                                    of digital marketing strategies that will allow and meet 
+                                    the objectives and sales of your company.'
                         />
                         <ServicesCard
                             animateCardServices={ animateCard_6 }
